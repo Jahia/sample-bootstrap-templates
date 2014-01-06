@@ -63,6 +63,7 @@
 <body>
 <template:addResources type="javascript" resources="jquery.min.js" />
 <bootstrap:addThemeJS/>
+<bootstrap:addCSS/>
 
 <template:area path="header"/>
 

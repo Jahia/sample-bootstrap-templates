@@ -5,42 +5,43 @@
                              j:installedModules="sample-bootstrap-templates"
                              j:moduleType="templatesSet"
                              j:title="Sample Bootstrap Templates"
+                                  jcr:mixinTypes="jmix:hasExternalProviderExtension"
                              jcr:primaryType="jnt:module">
                 
                 <templates j:defaultView="bootstrap" jcr:primaryType="jnt:templatesFolder">
-                <files jcr:primaryType="jnt:folder"/>
-                <contents jcr:primaryType="jnt:contentFolder"/>
-                <base j:view="bootstrap" jcr:primaryType="jnt:template">
+                    <files jcr:primaryType="jnt:folder"/>
+                    <contents jcr:primaryType="jnt:contentFolder"/>
+                    <base j:view="bootstrap" jcr:primaryType="jnt:template">
                         <home jcr:primaryType="jnt:pageTemplate"/>
                         <simple jcr:primaryType="jnt:pageTemplate"/>
-                    <pagecontent jcr:primaryType="jnt:contentList">
+                        <pagecontent jcr:primaryType="jnt:contentList">
                             <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area"/>
-                    </pagecontent>
-                    <single-news j:applyOn="jnt:news"
-                                 j:defaultTemplate="true"
-                                 j:hiddenTemplate="true"
-                                 j:priority="100"
-                                 j:view="default"
-                                 jcr:primaryType="jnt:contentTemplate">
-                        <j:translation_en jcr:language="en"
-                                          jcr:mixinTypes="mix:title"
-                                          jcr:primaryType="jnt:translation"
-                                          jcr:title="single-news"/>
+                        </pagecontent>
+                        <single-news j:applyOn="jnt:news"
+                            j:defaultTemplate="true"
+                            j:hiddenTemplate="true"
+                            j:priority="100"
+                            j:view="default"
+                            jcr:primaryType="jnt:contentTemplate">
+                            <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="single-news"/>
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <bootstrap-container fluid="false" jcr:primaryType="jnt:bootstrapContainer">
                                     <bootstrap-container jcr:primaryType="jnt:contentList">
-                                <bootstrap-row fluid="false" jcr:primaryType="jnt:bootstrapRow">
-                                    <bootstrap-column jcr:primaryType="jnt:bootstrapColumn" offset="2" span="8">
-                                        <bootstrap-column jcr:primaryType="jnt:contentList">
-                                            <bootstrap-breadcrumb displayCurrentPage="true"
-                                                    displayHome="true"
-                                                    displayLinkOnCurrentPage="false"
-                                                    displayOnFirstLevel="false"
-                                                    divider="/"
-                                                    jcr:primaryType="jnt:bootstrapBreadcrumb"/>
-                                    </bootstrap-column>
-                                    </bootstrap-column>
-                                </bootstrap-row>
+                                        <bootstrap-row fluid="false" jcr:primaryType="jnt:bootstrapRow">
+                                            <bootstrap-column jcr:primaryType="jnt:bootstrapColumn" offset="2" span="8">
+                                                <bootstrap-column jcr:primaryType="jnt:contentList">
+                                                    <bootstrap-breadcrumb displayCurrentPage="true"
+                                                          displayHome="true"
+                                                          displayLinkOnCurrentPage="false"
+                                                          displayOnFirstLevel="false"
+                                                          divider="/"
+                                                          jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                                </bootstrap-column>
+                                            </bootstrap-column>
+                                        </bootstrap-row>
                                         <bootstrap-row-1 fluid="false" jcr:primaryType="jnt:bootstrapRow">
                                             <bootstrap-column jcr:primaryType="jnt:bootstrapColumn" offset="0" span="12">
                                                 <bootstrap-column jcr:primaryType="jnt:contentList">
@@ -49,10 +50,10 @@
                                                 </bootstrap-column>
                                             </bootstrap-column>
                                         </bootstrap-row-1>
-                                </bootstrap-container>
+                                    </bootstrap-container>
                                 </bootstrap-container>
                             </pagecontent>
-                    </single-news>
+                        </single-news>
                         <header jcr:primaryType="jnt:contentList">
                             <home inverse="true"
                         jcr:primaryType="jnt:bootstrapNavBar"
@@ -78,25 +79,25 @@
                                                     layout="12"
                                                     rowType="predefined">
                                 <bootstrap-layer-container-rows-a jcr:primaryType="jnt:contentList">
-                            <rich-text jcr:primaryType="jnt:bigText">
-                                <j:translation_en jcr:language="en"
-                                       jcr:primaryType="jnt:translation"
-                                       text="&lt;p&gt;&amp;copy; 2002 - 2014 Jahia Solutions Group SA tous droits r&amp;eacute;serv&amp;eacute;s&lt;/p&gt;&#xA;"/>
-                            </rich-text>
+                                    <rich-text jcr:primaryType="jnt:bigText">
+                                        <j:translation_en jcr:language="en"
+                                             jcr:primaryType="jnt:translation"
+                                             text="&lt;p&gt;&amp;copy; 2002 - 2014 Jahia Solutions Group SA tous droits r&amp;eacute;serv&amp;eacute;s&lt;/p&gt;&#xA;"/>
+                                    </rich-text>
                                 </bootstrap-layer-container-rows-a>
                             </bootstrap-layer-container-rows-a>
                         </footer>
-                </base>
-                <content-template j:applyOn="jnt:content"
-                                  j:hiddenTemplate="true"
-                                  j:priority="1"
-                                  j:view="bootstrap"
-                                  jcr:primaryType="jnt:contentTemplate">
-                    <pagecontent jcr:primaryType="jnt:contentList">
-                        <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
-                    </pagecontent>
-                </content-template>
-            </templates>
+                    </base>
+                    <content-template j:applyOn="jnt:content"
+                              j:hiddenTemplate="true"
+                              j:priority="1"
+                              j:view="bootstrap"
+                              jcr:primaryType="jnt:contentTemplate">
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                        </pagecontent>
+                    </content-template>
+                </templates>
                 
                 <portlets jcr:primaryType="jnt:portletFolder"/>
                 <files jcr:primaryType="jnt:folder">
