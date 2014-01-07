@@ -66,6 +66,9 @@
                                                     position="left"
                                                     result="/modules/sample-bootstrap-templates/search-results"/>
                                 <bootstrapmenuloginform jcr:primaryType="jnt:bootstrapMenuLoginForm" position="right"/>
+                                <bootstrapmenulanguageswitcher jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
+                                                    position="right"
+                                                    typeOfDisplay="isoLocaleCountryCode"/>
                             </home>
                         </header>
                         <footer jcr:primaryType="jnt:contentList">
