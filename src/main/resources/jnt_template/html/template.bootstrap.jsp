@@ -55,13 +55,9 @@
     <%-- Google fonts--%>
     <c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
     <link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
-
-    <%-- Les styles--%>
-    <template:addResources type="css" resources="jahia.css"/>
-
 </head>
 <body>
-<template:addResources type="javascript" resources="jquery.min.js,bootstrap-affix.js,bootstrap-alert.js,bootstrap-button.js,bootstrap-carousel.js,bootstrap-collapse.js,bootstrap-dropdown.js,bootstrap-modal.js,bootstrap-scrollspy.js,bootstrap-tab.js,bootstrap-tooltip.js,bootstrap-popover.js,bootstrap-transition.js,bootstrap-typeahead.js" />
+<template:addResources type="javascript" resources="jquery.min.js" />
 <bootstrap:addThemeJS/>
 <bootstrap:addCSS/>
 
