@@ -53,8 +53,8 @@
     <packaging>bundle</packaging>
     <description>Template Set using Bootstrap.</description>
     <scm>
-        <connection>scm:git:git://github.com/Jahia/sample-bootstrap-templates.git</connection>
-        <developerConnection>scm:git@github.com:Jahia/sample-bootstrap-templates.git</developerConnection>
+        <connection>scm:git:https://github.com/Jahia/sample-bootstrap-templates.git</connection>
+        <developerConnection>scm:git:git@github.com:Jahia/sample-bootstrap-templates.git</developerConnection>
         <url>https://github.com/Jahia/sample-bootstrap-templates</url>
     </scm>
     <repositories>
