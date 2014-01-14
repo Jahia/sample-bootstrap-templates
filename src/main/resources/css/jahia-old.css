@@ -823,3 +823,81 @@
 	background-color:#FFF;
 	color: #3399ff;
 }
+/******************************************************************************
+* Forum
+******************************************************************************/
+.wrapper #forum-body  .forum-box {
+    background:none;
+    border:1px solid #e5e5e5;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow:none;
+    box-shadow:none;
+}
+/* box style 1
+----------------------------------------*/
+.wrapper #forum-body  .forum-box-style1 {
+    background:none;
+    background-color:#f5f5f5;
+}
+/* box style 2
+----------------------------------------*/
+.wrapper #forum-body  .forum-box-style2 {
+    background:none;
+    background-color:#fff;
+}
+/* forum
+----------------------------------------*/
+.wrapper #forum-body  .forum-buttons a,
+.wrapper #forum-body  .forum-buttons a:link,
+.wrapper #forum-body  .forum-buttons a:visited{
+    background:none;
+    background-color:#3399ff;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    box-shadow: none;
+    padding-left: 10px;
+
+    -webkit-transition:none;
+    -moz-transition: none;
+    -o-transition:none;
+    transition: none;
+    text-shadow:none;
+    filter: dropshadow(none);
+}
+.wrapper #forum-body .forum-buttons a:hover,
+.wrapper #forum-body .forum-buttons a:active {
+    text-decoration:none;
+    color: #fff;
+    background:none;
+    background-color:#3399ff;
+}
+.wrapper #forum-body .breadcrumb {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0 5px 5px;
+}
+.wrapper #forum-body .breadcrumb > li {
+    display: inline-block;
+    text-shadow: none;
+    padding-right: 10px;
+}
+.wrapper #forum-body .breadcrumb > .active {
+    color: #999999;
+}
+/* wiki
+----------------------------------------*/
+.wrapper h4.boxwiki-title {
+    background: none;
+    background-color: #333;
+    border: 1px solid #333;
+}
+.wrapper .textareawiki     {
+    width: 94%;
+}

@@ -11,6 +11,7 @@ div.box9 {
 	-webkit-box-shadow:none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+    padding: 10px;
 }
 div.box9-bgblack {
 	background:none;
