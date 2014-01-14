@@ -3,21 +3,21 @@
 /******************************************************************************
 * old styles
 ******************************************************************************/
-div.intro{
+.wrapper div.intro{
     color: #000000;
     font-size: 21px;
     font-weight: 200;
     line-height: 30px;
     margin-bottom: 20px
 }
-div.intro p{
+.wrapper div.intro p{
     color: #000000;
     font-size: 21px;
     font-weight: 200;
     line-height: 30px;
     margin-bottom: 20px
 }
-p.intro {
+.wrapper p.intro {
     color: #000000;
     font-size: 21px;
     font-weight: 200;
@@ -25,7 +25,7 @@ p.intro {
     margin-bottom: 20px
 }
 
-p.nomargin {
+.wrapper p.nomargin {
     margin: 0;
 }
 .container_16 .container_16 {
@@ -50,18 +50,18 @@ p.nomargin {
 /******************************************************************************
 * HTML5 tags
 ******************************************************************************/
-header,section,footer,
-aside,nav,article,figure {
+.wrapper header,.wrapper section,.wrapper footer,
+.wrapper aside,.wrapper nav,.wrapper article,.wrapper figure {
 	display: block;
 }
 
 /******************************************************************************
 * Utils
 ******************************************************************************/
- .collapsible {
+.wrapper  .collapsible {
 	display:none;
 }
-.clear {
+.wrapper .clear {
 	clear:both;
     background: 0;
     border: 0;
@@ -77,56 +77,56 @@ aside,nav,article,figure {
     width: 0;
     height: 0;
 }
-.clearitem 	{
+.wrapper .clearitem 	{
 	clear:both;
 }
-br.clear {
+.wrapper br.clear {
 	clear:both;
 	font-family: Arial, Helvetica, sans-serif;
 	line-height:0px;	/* no height ! */
 	font-size:0px;
 }
-.hide, .hidden {
+.wrapper .hide, .wrapper .hidden {
 	display:none;
 }
 
-.floatright {
+.wrapper .floatright {
 	float:right;
 	position:relative;
 	margin: 5px;
 }
-.floatleft {
+.wrapper .floatleft {
 	float:left;
 	position:relative;
 	margin: 5px;
 }
 
-.leftside{
+.wrapper .leftside{
 	float:left;
 	position:relative;
 }
-.rightside{
+.wrapper .rightside{
 	float: right;
 	position:relative;
 }
-.clearMaringPadding{
+.wrapper .clearMaringPadding{
 	padding:0;
 	margin:0;
 }
-.relative{
+.wrapper .relative{
 	position:relative;
 }
 
 /******************************************************************************
 *  Float Right List for ordered or unordered links list
 ******************************************************************************/
-.FloatRightList ul {
+.wrapper .FloatRightList ul {
 	text-align:right;
 	list-style:none;
 	margin:0;
 	padding:0;
 }
-.FloatRightList li {
+.wrapper .FloatRightList li {
 	list-style:none;
 	padding-left:1em;
 	display:inline;
@@ -135,7 +135,7 @@ br.clear {
 /******************************************************************************
 *  Float Left List for unordered links list
 ******************************************************************************/
-.FloatLeftList ul {
+.wrapper .FloatLeftList ul {
     text-align:left;
     list-style:none;
     margin:0;
@@ -143,7 +143,7 @@ br.clear {
     padding:0;
 }
 
-.FloatLeftList li {
+.wrapper .FloatLeftList li {
     list-style:none;
     padding-right:0.5em;
     display:inline;
@@ -151,12 +151,12 @@ br.clear {
 /******************************************************************************
 * list Arrow
 ******************************************************************************/
-ul.arrowList, .arrowList ul {
+.wrapper ul.arrowList, .arrowList ul {
 	margin:5px 0;
 	position:relative;
 	list-style:none;
 }
-.arrowList li {
+.wrapper .arrowList li {
 	background: url(../img/arrow.png) no-repeat 0 2px;
 	padding:0 0 0 12px;
 	clear:left;
@@ -166,7 +166,7 @@ ul.arrowList, .arrowList ul {
 *  Hilight List
 ******************************************************************************/
 
-.hilightList ul {
+.wrapper .hilightList ul {
 	list-style-image:none;
 	list-style-position:outside;
 	list-style-type:none;
@@ -174,30 +174,30 @@ ul.arrowList, .arrowList ul {
 	padding:0;
 	border-bottom:none;
 }
-.hilightList li {
+.wrapper .hilightList li {
 	list-style-type:none;
 	margin:0;
 	border-bottom:1px solid #eaeaea;
 	padding:0.2em 0;
 }
-.hilightList li a, .hilightList li a:link, .hilightList li a:visited {
+.wrapper .hilightList li a, .wrapper .hilightList li a:link, .wrapper .hilightList li a:visited {
 	padding:0 0.5em;
 	text-decoration:none;
 	color:#333;
 }
-.hilightList li a:hover, .hilightList li a:active {
+.wrapper .hilightList li a:hover, .wrapper .hilightList li a:active {
 	text-decoration:none;
 	color:#0073e5;
-	background-color:#EFEFE6;
+	background-color:#EAEAEA;
 }
 /******************************************************************************
 *  HR List
 ******************************************************************************/
-.hr-list ul {
+.wrapper .hr-list ul {
     margin: 0;
     padding: 0;
 }
-.hr-list li {
+.wrapper .hr-list li {
     margin: 0;
     padding:0;
     list-style: none;
@@ -205,15 +205,15 @@ ul.arrowList, .arrowList ul {
     padding-bottom:1.6em;
     border-bottom:4px solid #ccc;
 }
-.hr-list li:last-child {
+.wrapper .hr-list li:last-child {
     margin-bottom: 0;
     background-image:none;
 }
-.hr-list ul ul {
+.wrapper .hr-list ul ul {
     list-style: outside disc;
     margin: 1em 0 2em 2em;
 }
-.hr-list ul ul li {
+.wrapper .hr-list ul ul li {
     margin: 0;
     padding:0;
     list-style: none;
@@ -223,47 +223,47 @@ ul.arrowList, .arrowList ul {
 /******************************************************************************
 *  Images
 ******************************************************************************/
-.imagefloatright {
+.wrapper .imagefloatright {
     float:right;
     margin-bottom:20px;
     padding-left:20px;
 }
-.imagefloatleft {
+.wrapper .imagefloatleft {
     float:left;
     margin-bottom:20px;
     padding-right:20px;
 }
-.imagefloatright {
+.wrapper .imagefloatright {
     float:right;
     margin-bottom:20px;
     padding-left:20px;
 }
 
-.itemImage {
+.wrapper .itemImage {
     background-color:#F4F4F4;
     border:1px solid #eaeaea;
     position:relative;
     padding:1px;
     margin-bottom:10px;
 }
-.imagefloatleft .itemImage  {
+.wrapper .imagefloatleft .itemImage  {
     margin-bottom:0px;
 }
-.imagefloatright .itemImage  {
+.wrapper .imagefloatright .itemImage  {
     margin-bottom:0px;
 }
-div.itemImageRight {
+.wrapper div.itemImageRight {
     float:right;
 }
-div.itemImageLeft {
+.wrapper div.itemImageLeft {
     float:left;
 }
-.itemImage img {
+.wrapper .itemImage img {
     background-color:#e1e1e1;
     display: block;
     padding:9px;
 }
-.itemImagewhite img{
+.wrapper .itemImagewhite img{
     background-color:#fff;
     display: block;
 }
@@ -271,7 +271,7 @@ div.itemImageLeft {
 *  list checkmarks
 ******************************************************************************/
 
-ul.list-checkmarks {
+.wrapper ul.list-checkmarks {
 	list-style-image:none;
 	list-style-position:outside;
 	list-style-type:none;
@@ -280,7 +280,7 @@ ul.list-checkmarks {
 	border-bottom:none;
 	margin-bottom:1em;
 }
-.list-checkmarks li {
+.wrapper .list-checkmarks li {
 	list-style-type:none;
 	margin:0;
 	padding:0.2em 0;
@@ -292,7 +292,7 @@ ul.list-checkmarks {
 *  list arrows
 ******************************************************************************/
 
-ul.list-arrows {
+.wrapper ul.list-arrows {
 	list-style-image:none;
 	list-style-position:outside;
 	list-style-type:none;
@@ -301,7 +301,7 @@ ul.list-arrows {
 	border-bottom:none;
 	margin-bottom:1em;
 }
-.list-arrows li {
+.wrapper .list-arrows li {
 	list-style-type:none;
 	margin:0;
 	padding:0.2em 0;
@@ -315,13 +315,13 @@ ul.list-arrows {
 /******************************************************************************
 *  Float Right Links List ordered or unordered
 ******************************************************************************/
-ul.FloatRightList {
+.wrapper ul.FloatRightList {
 	text-align:right;
 	list-style:none;
 	margin:0;
 	padding:0;
 }
-.FloatRightList li {
+.wrapper .FloatRightList li {
 	list-style:none;
 	padding-left:1em;
 	display:inline;
@@ -330,43 +330,43 @@ ul.FloatRightList {
 /******************************************************************************
 *  Images
 ******************************************************************************/
-.imagefloatright {
+.wrapper .imagefloatright {
 	float:right;
 	margin-bottom:20px;
 	padding-left:20px;
 }
-.imagefloatleft {
+.wrapper .imagefloatleft {
 	float:left;
 	margin-bottom:20px;
 	padding-right:20px;
 }
-.imagefloatright {
+.wrapper .imagefloatright {
 	float:right;
 	margin-bottom:20px;
 	padding-left:20px;
 }
-.itemImage {
+.wrapper .itemImage {
 	position:relative;
 	padding:1px;
 	margin-bottom:10px;
 }
-.imagefloatleft .itemImage {
+.wrapper .imagefloatleft .itemImage {
 	margin-bottom:0px;
 }
-.imagefloatright .itemImage {
+.wrapper .imagefloatright .itemImage {
 	margin-bottom:0px;
 }
-div.itemImageRight {
+.wrapper div.itemImageRight {
 	float:right;
 }
-div.itemImageLeft {
+.wrapper div.itemImageLeft {
 	float:left;
 }
-.itemImage img {
+.wrapper .itemImage img {
 	display: block;
 	padding:9px;
 }
-.itemImagewhite img {
+.wrapper .itemImagewhite img {
 	background-color:#fff;
 	display: block;
 }
@@ -381,37 +381,37 @@ div.itemImageLeft {
 .pagination:first-child {
 	margin-top: 0;
 }
-div.pagination label {
+.wrapper div.pagination label {
     display: inline;
 }
-div.pagination select {
+.wrapper div.pagination select {
 	padding:2px;
     width: auto;
     height: auto;
     margin-bottom: 0;
 }
-.paginationPosition {
+.wrapper .paginationPosition {
 	float:left;
 	color:#36393d;
 	padding:0;
 }
-.paginationNavigation {
+.wrapper .paginationNavigation {
 	float:right;
 }
-.paginationNavigation a:link, .paginationNavigation a:visited, .paginationNavigation a:hover, .paginationNavigation a:active {
+.wrapper .paginationNavigation a:link, .wrapper .paginationNavigation a:visited, .wrapper .paginationNavigation a:hover, .wrapper .paginationNavigation a:active {
 	text-decoration:none;
 	padding:0.2em 0.5em;
 }
-.paginationNavigation a:hover {
+.wrapper .paginationNavigation a:hover {
 	background:#3399ff;
 	color:#fff;
 }
-.paginationNavigation .currentPage {
+.wrapper .paginationNavigation .currentPage {
 	background:#3399ff;
 	color:#fff;
 	padding:0.2em 0.5em;
 }
-.paginationNavigation span {
+.wrapper .paginationNavigation span {
 	text-decoration:none;
 	color:#666;
 	padding:0;
@@ -419,23 +419,23 @@ div.pagination select {
 /******************************************************************************
 *  AlphabeticalMenu
 ******************************************************************************/
-div.alphabeticalMenu {
+.wrapper div.alphabeticalMenu {
 	height:1%;
 	overflow:hidden;
 	text-transform:uppercase;
 	padding:0.2em 0.5em;
 	margin:0.5em 0;
-	background-color:#EFEFE6;
+	background-color:#EAEAEA;
 }
-.alphabeticalLabel {
+.wrapper .alphabeticalLabel {
 	float:left;
 	font-weight:bold;
 	color:#333;
 }
-.alphabeticalNavigation {
+.wrapper .alphabeticalNavigation {
 	float:left;
 }
-.alphabeticalNavigation a:link, .alphabeticalNavigation a:visited, .alphabeticalNavigation a:hover, .alphabeticalNavigation a:active {
+.wrapper .alphabeticalNavigation a:link, .wrapper .alphabeticalNavigation a:visited, .wrapper .alphabeticalNavigation a:hover, .wrapper .alphabeticalNavigation a:active {
 	height:28px;
 	line-height:28px;
 	border:1px solid #eaeaea;
@@ -443,11 +443,11 @@ div.alphabeticalMenu {
 	padding: 2px 4px;
 	text-decoration:none;
 }
-.alphabeticalNavigation a:hover {
+.wrapper .alphabeticalNavigation a:hover {
 	background:#3399ff;
 	color:#fff;
 }
-.alphabeticalNavigation a.current {
+.wrapper .alphabeticalNavigation a.current {
 	height:28px;
 	line-height:28px;
 	border:1px solid #eaeaea;
@@ -456,7 +456,7 @@ div.alphabeticalMenu {
 	padding: 2px 4px;
 	text-decoration:none;
 }
-.alphabeticalNavigation span {
+.wrapper .alphabeticalNavigation span {
 	text-decoration:none;
 	color:#666;
 	padding:0;
@@ -465,19 +465,19 @@ div.alphabeticalMenu {
 /******************************************************************************
 *  Button
 ******************************************************************************/
-.divButton {
+.wrapper .divButton {
 	text-align:center;
 	margin:0 0 10px 0;	
 	overflow:hidden;
 }
-.divButtonRight {
+.wrapper .divButtonRight {
 	text-align:right;
 	overflow:hidden;
 }
-input.button {
+.wrapper input.button {
 	margin-right:0.5em;
 }
-input.button {
+.wrapper input.button {
 	display: inline-block;
  	*display: inline;
   	/* IE7 inline-block hack */
@@ -505,7 +505,7 @@ input.button {
     border-radius:3px
 }
 
-input.button:hover {
+.wrapper input.button:hover {
 	color: #FFF;
 	text-decoration: none;
 	background-color: #0073E5;
@@ -513,7 +513,7 @@ input.button:hover {
 	/* Buttons in IE7 don't get borders, so darken on hover */
 
 }
-input.button:focus {
+.wrapper input.button:focus {
 	outline: thin dotted #333;
 	outline: 5px auto -webkit-focus-ring-color;
 	outline-offset: -2px;
@@ -522,7 +522,7 @@ input.button:focus {
 *  <A> Button
 ******************************************************************************/
 
-a.aButton, a.aButton:link, a.aButton:visited {
+.wrapper a.aButton, .wrapper a.aButton:link, .wrapper a.aButton:visited {
 	background-color:#3399ff;
 	color:#fff;
 	border:none;
@@ -533,56 +533,56 @@ a.aButton, a.aButton:link, a.aButton:visited {
     -moz-border-radius:3px;
     border-radius:3px
 }
-a.aButton:hover, a.aButton:hover {
+.wrapper a.aButton:hover, .wrapper a.aButton:hover {
 	cursor: pointer;
 	color:#fff;
 	background-color:#008ae5;
 	text-decoration:none;
 }
-a.aButtonMarginBottom {
+.wrapper a.aButtonMarginBottom {
 	margin-bottom:1.5em;
 }
-a.aButtonRight, a.aButtonRight:link, a.aButtonRight:visited {
+.wrapper a.aButtonRight, .wrapper a.aButtonRight:link, .wrapper a.aButtonRight:visited {
 	float: right;
 }
 /******************************************************************************
 *  Anchor
 ******************************************************************************/
-div.bottomanchor {
+.wrapper div.bottomanchor {
 	padding:0.2em;
 	margin: 1em 0;
 	clear:both
 }
-.bottomanchor a, .bottomanchor a:link, .bottomanchor a:visited {
+.wrapper .bottomanchor a, .wrapper .bottomanchor a:link, .wrapper .bottomanchor a:visited {
 	float:right;
 	margin:0;
 	text-transform:uppercase
 }
-.bottomanchor a:hover, .bottomanchor a:active {
+.wrapper .bottomanchor a:hover, .wrapper .bottomanchor a:active {
 	cursor: pointer;
 	text-decoration: underline;
 }
 /******************************************************************************
 *  Thumbnails
 ******************************************************************************/
-div.thumbnail {
+.wrapper div.thumbnail {
 	float:left;
 	position:relative;
 	margin-right:20px;
 }
-div.thumbnailRight {
+.wrapper div.thumbnailRight {
 	float:right;
 	position:relative;
 	margin-left:20px;
 }
-div.thumbnail img {
+.wrapper div.thumbnail img {
 	position:relative
 }
 
 /******************************************************************************
 *  Summary
 ******************************************************************************/
-ul.summary, .summary {
+.wrapper ul.summary, .wrapper .summary {
 	margin:10px 0;
 	line-height:130%;
 	padding: 10px;
@@ -591,63 +591,110 @@ ul.summary, .summary {
 	margin:0;
 	list-style:none;
 }
-.summary a, .summary a:link, .summary a:visited {
+.wrapper .summary a, .wrapper .summary a:link, .wrapper .summary a:visited {
 	text-decoration:none;
 }
-.summary a:hover, .summary a:active {
+.wrapper .summary a:hover, .wrapper .summary a:active {
 	text-decoration:underline;
 }
-.summary ul {
+.wrapper .summary ul {
 	margin:0;
 	padding:0 0 0 2em;
 	list-style:none;
 }
-.summary li {
+.wrapper .summary li {
 	padding:0;
 	margin-bottom:10px
 }
 /******************************************************************************
 * Form
 ******************************************************************************/
-.Form p {
+.wrapper .Form p {
 	clear:both;
 	margin:0.4em 0;
 	padding:0px
 }
-.Form {
+.wrapper .Form {
 	margin:1em 0 0 0;
 	overflow:hidden;
 }
-.formMarginLeft {
+.wrapper .formMarginLeft {
 	margin:0 0 0 25%;
 	padding:0 1em 0 2.3em;
 }
-.Form label.left {
+.wrapper .Form label.left {
 	float:left;
 	width:25%;
 	margin:0 1em 0 1em;
 	padding:2px;
 	text-align:right;
 }
-.divButton {
+.wrapper .divButton {
 	text-align:center;
 	margin:0.5em 0;
 }
-
+/******************************************************************************
+*  error and messages
+******************************************************************************/
+.wrapper .error {
+    border:1px solid #cc3300;
+    background-color:#ffebe8;
+}
+.wrapper label.error {
+    margin: 0 10px;
+    padding:10px !important;
+    padding-left:35px !important;
+    border:1px solid #cc3300;
+    background:#ffebe8 url(../img/error-messages.png) no-repeat 5px 50%;
+}
+.wrapper .FormBuilder label.error{
+    background:none;
+    white-space:nowrap;
+}
+.wrapper .error-message {
+    padding:10px !important;
+    padding-left:35px !important;
+    border:1px solid #cc3300;
+    background:#ffebe8 url(../img/error-messages.png) no-repeat 5px 50%;
+}
+.wrapper .warning-message {
+    padding:10px !important;
+    padding-left:35px !important;
+    border:1px solid #ff9900;
+    background:#ffdaa3 url(../img/warning-messages.png) no-repeat 5px 50%;
+}
+.wrapper .help-message {
+    padding:10px !important;
+    padding-left:35px !important;
+    border:1px solid #99cc99;
+    background:#ccffcc url(../img/help-messages.png) no-repeat 5px 50%;
+}
+.wrapper .lock-message {
+    padding:10px !important;
+    padding-left:35px !important;
+    border:1px solid #eaeaea;
+    background:#f5f4ef url(../img/lock-messages.png) no-repeat 5px 50%;
+}
+.wrapper .tips-message {
+    padding:10px !important;
+    padding-left:35px!important;
+    border:1px solid #e8e88a;
+    background:#ffffcc url(../img/tips-messages.png) no-repeat 5px 50%;
+}
 /******************************************************************************
 * Links
 ******************************************************************************/
-div.more {
+.wrapper div.more {
     float: right;
     display: block;
 }
-div.more {
+.wrapper div.more {
     float: right;
     display: block;
 }
-a.more,
-a.more:link,
-a.more:visited{
+.wrapper a.more,
+.wrapper a.more:link,
+.wrapper a.more:visited{
     background-color:#3399ff;
     color:#fff;
     border:none;
@@ -656,17 +703,17 @@ a.more:visited{
     display:inline-block;
 
 }
-a.more:hover,
-a.more:active {
+.wrapper a.more:hover,
+.wrapper a.more:active {
     cursor: pointer;
     color:#fff;
     background-color:#008ae5;
     text-decoration:none;
 }
 
-a.more2,
-a.more2:link,
-a.more2:visited {
+.wrapper a.more2,
+.wrapper a.more2:link,
+.wrapper a.more2:visited {
     background-color:#3399ff;
     color:#fff;
     border:none;
@@ -674,17 +721,17 @@ a.more2:visited {
     padding:6px 6px;
     display:inline-block;
 }
-a.more2:hover,
-a.more2:active {
+.wrapper a.more2:hover,
+.wrapper a.more2:active {
     cursor: pointer;
     color:#fff;
     background-color:#008ae5;
     text-decoration:none;
 }
 
-a.returnLink,
-a.returnLink a:link,
-a.returnLink:visited{
+.wrapper a.returnLink,
+.wrapper a.returnLink a:link,
+.wrapper a.returnLink:visited{
     background-color:#3399ff;
     color:#fff;
     border:none;
@@ -695,30 +742,30 @@ a.returnLink:visited{
     -moz-border-radius:3px;
     border-radius:3px
 }
-a.returnLink:hover,
-a.returnLink:active {
+.wrapper a.returnLink:hover,
+.wrapper a.returnLink:active {
     cursor: pointer;
     color:#fff;
     background-color:#008ae5;
     text-decoration:none;
 }
-.divReturnLink{
+.wrapper .divReturnLink{
     margin:0.5em 0;
 }
 
 /******************************************************************************
 * Mod tabular List
 ******************************************************************************/
-.tabularlistitem {
+.wrapper .tabularlistitem {
 	background-color:#FFF;
 	overflow:hidden;
 	padding:0.2em;
 	border-top:none;
 	margin:1em 0;
-	border:1px solid #EFEFE6;
+	border:1px solid #EAEAEA;
     clear: both;
 }
-ul.idTabs {
+.wrapper ul.idTabs {
 	background-image:none;
 	margin:0;
 	margin-bottom:1em;
@@ -729,20 +776,20 @@ ul.idTabs {
 	background-color:#eee;
 	overflow:hidden;
 }
-.idTabs li {
+.wrapper .idTabs li {
 	list-style: none;
     *display: inline;
     /* IE7 inline-block hack */
 
 }
-.tabContainer {
+.wrapper .tabContainer {
 	background-color:#FFF;
 	overflow:hidden;
 	padding:20px;
 	border-top:none;
 	margin-bottom:1em;
 }
-.idTabs li a {
+.wrapper .idTabs li a {
 	background:none;
 	display:inline;
 	float:left;
@@ -753,11 +800,11 @@ ul.idTabs {
 	margin-right:2px;
 	font-weight:bold;
 }
-.idTabs li a.selected, .idTabs li a:hover, .idTabs li a.selected {
+.wrapper .idTabs li a.selected, .wrapper .idTabs li a:hover, .wrapper .idTabs li a.selected {
 	text-decoration:none;
 	color: #3399ff;
 }
-.idTabs li a span {
+.wrapper .idTabs li a span {
 	background:none;
 	color:#666;
 	cursor:pointer;
@@ -771,7 +818,7 @@ ul.idTabs {
     -moz-border-radius:4px 4px 0 0;
     border-radius:4px 4px 0 0;
 }
-.idTabs li a.selected span, .idTabs li a:hover span, .idTabs li a.idTabs span {
+.wrapper .idTabs li a.selected span, .wrapper .idTabs li a:hover span, .wrapper .idTabs li a.idTabs span {
 	text-decoration:none;
 	background-color:#FFF;
 	color: #3399ff;
