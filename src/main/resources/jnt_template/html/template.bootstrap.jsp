@@ -57,6 +57,10 @@
     <link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+<%-- Les styles old--%>
+<template:addResources type="css" resources="jahia-old-responsive.css,jahia-old.css"/>
+
 <template:addResources type="javascript" resources="jquery.min.js" />
 <bootstrap:addThemeJS/>
 <bootstrap:addCSS/>

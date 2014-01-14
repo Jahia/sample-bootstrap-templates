@@ -1,0 +1,778 @@
+
+
+/******************************************************************************
+* old styles
+******************************************************************************/
+div.intro{
+    color: #000000;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 20px
+}
+div.intro p{
+    color: #000000;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 20px
+}
+p.intro {
+    color: #000000;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 30px;
+    margin-bottom: 20px
+}
+
+p.nomargin {
+    margin: 0;
+}
+.container_16 .container_16 {
+    width: auto;
+}
+.aligncenter {
+    text-align: center;
+}
+.alignright {
+    text-align: right;
+}
+.alignleft {
+    text-align: right;
+}
+
+/******************************************************************************
+* 960 grid system row into row
+******************************************************************************/
+.container_16 .container_16 {
+    width: auto;
+}
+/******************************************************************************
+* HTML5 tags
+******************************************************************************/
+header,section,footer,
+aside,nav,article,figure {
+	display: block;
+}
+
+/******************************************************************************
+* Utils
+******************************************************************************/
+ .collapsible {
+	display:none;
+}
+.clear {
+	clear:both;
+    background: 0;
+    border: 0;
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.clearitem 	{
+	clear:both;
+}
+br.clear {
+	clear:both;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height:0px;	/* no height ! */
+	font-size:0px;
+}
+.hide, .hidden {
+	display:none;
+}
+
+.floatright {
+	float:right;
+	position:relative;
+	margin: 5px;
+}
+.floatleft {
+	float:left;
+	position:relative;
+	margin: 5px;
+}
+
+.leftside{
+	float:left;
+	position:relative;
+}
+.rightside{
+	float: right;
+	position:relative;
+}
+.clearMaringPadding{
+	padding:0;
+	margin:0;
+}
+.relative{
+	position:relative;
+}
+
+/******************************************************************************
+*  Float Right List for ordered or unordered links list
+******************************************************************************/
+.FloatRightList ul {
+	text-align:right;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.FloatRightList li {
+	list-style:none;
+	padding-left:1em;
+	display:inline;
+	line-height:125%
+}
+/******************************************************************************
+*  Float Left List for unordered links list
+******************************************************************************/
+.FloatLeftList ul {
+    text-align:left;
+    list-style:none;
+    margin:0;
+    margin-bottom:0.8em;
+    padding:0;
+}
+
+.FloatLeftList li {
+    list-style:none;
+    padding-right:0.5em;
+    display:inline;
+}
+/******************************************************************************
+* list Arrow
+******************************************************************************/
+ul.arrowList, .arrowList ul {
+	margin:5px 0;
+	position:relative;
+	list-style:none;
+}
+.arrowList li {
+	background: url(../img/arrow.png) no-repeat 0 2px;
+	padding:0 0 0 12px;
+	clear:left;
+	list-style:none;
+}
+/******************************************************************************
+*  Hilight List
+******************************************************************************/
+
+.hilightList ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	border-bottom:none;
+}
+.hilightList li {
+	list-style-type:none;
+	margin:0;
+	border-bottom:1px solid #eaeaea;
+	padding:0.2em 0;
+}
+.hilightList li a, .hilightList li a:link, .hilightList li a:visited {
+	padding:0 0.5em;
+	text-decoration:none;
+	color:#333;
+}
+.hilightList li a:hover, .hilightList li a:active {
+	text-decoration:none;
+	color:#0073e5;
+	background-color:#EFEFE6;
+}
+/******************************************************************************
+*  HR List
+******************************************************************************/
+.hr-list ul {
+    margin: 0;
+    padding: 0;
+}
+.hr-list li {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    margin-bottom:1.6em;
+    padding-bottom:1.6em;
+    border-bottom:4px solid #ccc;
+}
+.hr-list li:last-child {
+    margin-bottom: 0;
+    background-image:none;
+}
+.hr-list ul ul {
+    list-style: outside disc;
+    margin: 1em 0 2em 2em;
+}
+.hr-list ul ul li {
+    margin: 0;
+    padding:0;
+    list-style: none;
+    background:none;
+    list-style: outside disc;
+}
+/******************************************************************************
+*  Images
+******************************************************************************/
+.imagefloatright {
+    float:right;
+    margin-bottom:20px;
+    padding-left:20px;
+}
+.imagefloatleft {
+    float:left;
+    margin-bottom:20px;
+    padding-right:20px;
+}
+.imagefloatright {
+    float:right;
+    margin-bottom:20px;
+    padding-left:20px;
+}
+
+.itemImage {
+    background-color:#F4F4F4;
+    border:1px solid #eaeaea;
+    position:relative;
+    padding:1px;
+    margin-bottom:10px;
+}
+.imagefloatleft .itemImage  {
+    margin-bottom:0px;
+}
+.imagefloatright .itemImage  {
+    margin-bottom:0px;
+}
+div.itemImageRight {
+    float:right;
+}
+div.itemImageLeft {
+    float:left;
+}
+.itemImage img {
+    background-color:#e1e1e1;
+    display: block;
+    padding:9px;
+}
+.itemImagewhite img{
+    background-color:#fff;
+    display: block;
+}
+/******************************************************************************
+*  list checkmarks
+******************************************************************************/
+
+ul.list-checkmarks {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	border-bottom:none;
+	margin-bottom:1em;
+}
+.list-checkmarks li {
+	list-style-type:none;
+	margin:0;
+	padding:0.2em 0;
+	line-height:40px;
+	padding-left:30px;
+	background:transparent url(../img/checkmark.png) no-repeat 2px 12px;
+}
+/******************************************************************************
+*  list arrows
+******************************************************************************/
+
+ul.list-arrows {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	border-bottom:none;
+	margin-bottom:1em;
+}
+.list-arrows li {
+	list-style-type:none;
+	margin:0;
+	padding:0.2em 0;
+	line-height:40px;
+	padding-left:30px;
+	background:transparent url(../img/arrow.png) no-repeat 2px 12px;
+}
+
+
+
+/******************************************************************************
+*  Float Right Links List ordered or unordered
+******************************************************************************/
+ul.FloatRightList {
+	text-align:right;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.FloatRightList li {
+	list-style:none;
+	padding-left:1em;
+	display:inline;
+	line-height:125%
+}
+/******************************************************************************
+*  Images
+******************************************************************************/
+.imagefloatright {
+	float:right;
+	margin-bottom:20px;
+	padding-left:20px;
+}
+.imagefloatleft {
+	float:left;
+	margin-bottom:20px;
+	padding-right:20px;
+}
+.imagefloatright {
+	float:right;
+	margin-bottom:20px;
+	padding-left:20px;
+}
+.itemImage {
+	position:relative;
+	padding:1px;
+	margin-bottom:10px;
+}
+.imagefloatleft .itemImage {
+	margin-bottom:0px;
+}
+.imagefloatright .itemImage {
+	margin-bottom:0px;
+}
+div.itemImageRight {
+	float:right;
+}
+div.itemImageLeft {
+	float:left;
+}
+.itemImage img {
+	display: block;
+	padding:9px;
+}
+.itemImagewhite img {
+	background-color:#fff;
+	display: block;
+}
+/******************************************************************************
+*  Pagination
+******************************************************************************/
+.pagination {
+	height:1%;
+	overflow:hidden;
+	margin:1em 0;
+}
+.pagination:first-child {
+	margin-top: 0;
+}
+div.pagination label {
+    display: inline;
+}
+div.pagination select {
+	padding:2px;
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+}
+.paginationPosition {
+	float:left;
+	color:#36393d;
+	padding:0;
+}
+.paginationNavigation {
+	float:right;
+}
+.paginationNavigation a:link, .paginationNavigation a:visited, .paginationNavigation a:hover, .paginationNavigation a:active {
+	text-decoration:none;
+	padding:0.2em 0.5em;
+}
+.paginationNavigation a:hover {
+	background:#3399ff;
+	color:#fff;
+}
+.paginationNavigation .currentPage {
+	background:#3399ff;
+	color:#fff;
+	padding:0.2em 0.5em;
+}
+.paginationNavigation span {
+	text-decoration:none;
+	color:#666;
+	padding:0;
+}
+/******************************************************************************
+*  AlphabeticalMenu
+******************************************************************************/
+div.alphabeticalMenu {
+	height:1%;
+	overflow:hidden;
+	text-transform:uppercase;
+	padding:0.2em 0.5em;
+	margin:0.5em 0;
+	background-color:#EFEFE6;
+}
+.alphabeticalLabel {
+	float:left;
+	font-weight:bold;
+	color:#333;
+}
+.alphabeticalNavigation {
+	float:left;
+}
+.alphabeticalNavigation a:link, .alphabeticalNavigation a:visited, .alphabeticalNavigation a:hover, .alphabeticalNavigation a:active {
+	height:28px;
+	line-height:28px;
+	border:1px solid #eaeaea;
+	background:#eaeaea;
+	padding: 2px 4px;
+	text-decoration:none;
+}
+.alphabeticalNavigation a:hover {
+	background:#3399ff;
+	color:#fff;
+}
+.alphabeticalNavigation a.current {
+	height:28px;
+	line-height:28px;
+	border:1px solid #eaeaea;
+	background:#3399ff;
+	color:#fff;
+	padding: 2px 4px;
+	text-decoration:none;
+}
+.alphabeticalNavigation span {
+	text-decoration:none;
+	color:#666;
+	padding:0;
+}
+
+/******************************************************************************
+*  Button
+******************************************************************************/
+.divButton {
+	text-align:center;
+	margin:0 0 10px 0;	
+	overflow:hidden;
+}
+.divButtonRight {
+	text-align:right;
+	overflow:hidden;
+}
+input.button {
+	margin-right:0.5em;
+}
+input.button {
+	display: inline-block;
+ 	*display: inline;
+  	/* IE7 inline-block hack */
+
+  	*zoom: 1;
+
+	padding: 5px 14px;
+	margin-bottom: 0;
+	font-size: 14px;
+	line-height: 20px;
+ 	*line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #fff;
+	background-color: #3399ff;
+	border:0;
+ 	*background-color: #3399ff;
+ 	 /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+ 	*border: 0;
+
+ 	*margin-left: .3em;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px
+}
+
+input.button:hover {
+	color: #FFF;
+	text-decoration: none;
+	background-color: #0073E5;
+    *background-color: #0073E5;
+	/* Buttons in IE7 don't get borders, so darken on hover */
+
+}
+input.button:focus {
+	outline: thin dotted #333;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+/******************************************************************************
+*  <A> Button
+******************************************************************************/
+
+a.aButton, a.aButton:link, a.aButton:visited {
+	background-color:#3399ff;
+	color:#fff;
+	border:none;
+	text-align:center;
+	padding:6px 6px;
+	display:inline-block;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px
+}
+a.aButton:hover, a.aButton:hover {
+	cursor: pointer;
+	color:#fff;
+	background-color:#008ae5;
+	text-decoration:none;
+}
+a.aButtonMarginBottom {
+	margin-bottom:1.5em;
+}
+a.aButtonRight, a.aButtonRight:link, a.aButtonRight:visited {
+	float: right;
+}
+/******************************************************************************
+*  Anchor
+******************************************************************************/
+div.bottomanchor {
+	padding:0.2em;
+	margin: 1em 0;
+	clear:both
+}
+.bottomanchor a, .bottomanchor a:link, .bottomanchor a:visited {
+	float:right;
+	margin:0;
+	text-transform:uppercase
+}
+.bottomanchor a:hover, .bottomanchor a:active {
+	cursor: pointer;
+	text-decoration: underline;
+}
+/******************************************************************************
+*  Thumbnails
+******************************************************************************/
+div.thumbnail {
+	float:left;
+	position:relative;
+	margin-right:20px;
+}
+div.thumbnailRight {
+	float:right;
+	position:relative;
+	margin-left:20px;
+}
+div.thumbnail img {
+	position:relative
+}
+
+/******************************************************************************
+*  Summary
+******************************************************************************/
+ul.summary, .summary {
+	margin:10px 0;
+	line-height:130%;
+	padding: 10px;
+	background-color:#eee;
+	border:1px solid #ccc;
+	margin:0;
+	list-style:none;
+}
+.summary a, .summary a:link, .summary a:visited {
+	text-decoration:none;
+}
+.summary a:hover, .summary a:active {
+	text-decoration:underline;
+}
+.summary ul {
+	margin:0;
+	padding:0 0 0 2em;
+	list-style:none;
+}
+.summary li {
+	padding:0;
+	margin-bottom:10px
+}
+/******************************************************************************
+* Form
+******************************************************************************/
+.Form p {
+	clear:both;
+	margin:0.4em 0;
+	padding:0px
+}
+.Form {
+	margin:1em 0 0 0;
+	overflow:hidden;
+}
+.formMarginLeft {
+	margin:0 0 0 25%;
+	padding:0 1em 0 2.3em;
+}
+.Form label.left {
+	float:left;
+	width:25%;
+	margin:0 1em 0 1em;
+	padding:2px;
+	text-align:right;
+}
+.divButton {
+	text-align:center;
+	margin:0.5em 0;
+}
+
+/******************************************************************************
+* Links
+******************************************************************************/
+div.more {
+    float: right;
+    display: block;
+}
+div.more {
+    float: right;
+    display: block;
+}
+a.more,
+a.more:link,
+a.more:visited{
+    background-color:#3399ff;
+    color:#fff;
+    border:none;
+    text-align:center;
+    padding:6px 6px;
+    display:inline-block;
+
+}
+a.more:hover,
+a.more:active {
+    cursor: pointer;
+    color:#fff;
+    background-color:#008ae5;
+    text-decoration:none;
+}
+
+a.more2,
+a.more2:link,
+a.more2:visited {
+    background-color:#3399ff;
+    color:#fff;
+    border:none;
+    text-align:center;
+    padding:6px 6px;
+    display:inline-block;
+}
+a.more2:hover,
+a.more2:active {
+    cursor: pointer;
+    color:#fff;
+    background-color:#008ae5;
+    text-decoration:none;
+}
+
+a.returnLink,
+a.returnLink a:link,
+a.returnLink:visited{
+    background-color:#3399ff;
+    color:#fff;
+    border:none;
+    text-align:center;
+    padding:6px 6px;
+    display:inline-block;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px
+}
+a.returnLink:hover,
+a.returnLink:active {
+    cursor: pointer;
+    color:#fff;
+    background-color:#008ae5;
+    text-decoration:none;
+}
+.divReturnLink{
+    margin:0.5em 0;
+}
+
+/******************************************************************************
+* Mod tabular List
+******************************************************************************/
+.tabularlistitem {
+	background-color:#FFF;
+	overflow:hidden;
+	padding:0.2em;
+	border-top:none;
+	margin:1em 0;
+	border:1px solid #EFEFE6;
+    clear: both;
+}
+ul.idTabs {
+	background-image:none;
+	margin:0;
+	margin-bottom:1em;
+	border:none;
+	margin-bottom:0;
+	padding:0.2em;
+	padding-bottom:0;
+	background-color:#eee;
+	overflow:hidden;
+}
+.idTabs li {
+	list-style: none;
+    *display: inline;
+    /* IE7 inline-block hack */
+
+}
+.tabContainer {
+	background-color:#FFF;
+	overflow:hidden;
+	padding:20px;
+	border-top:none;
+	margin-bottom:1em;
+}
+.idTabs li a {
+	background:none;
+	display:inline;
+	float:left;
+	height:auto;
+	line-height:2em;
+	padding-left:1px;
+	text-decoration:none;
+	margin-right:2px;
+	font-weight:bold;
+}
+.idTabs li a.selected, .idTabs li a:hover, .idTabs li a.selected {
+	text-decoration:none;
+	color: #3399ff;
+}
+.idTabs li a span {
+	background:none;
+	color:#666;
+	cursor:pointer;
+	display:inline;
+	float:left;
+	height:auto;
+	line-height:3em;
+	padding:0 10px;
+	text-decoration:none;
+    -webkit-border-top-radius:4px 4px 0 0;
+    -moz-border-radius:4px 4px 0 0;
+    border-radius:4px 4px 0 0;
+}
+.idTabs li a.selected span, .idTabs li a:hover span, .idTabs li a.idTabs span {
+	text-decoration:none;
+	background-color:#FFF;
+	color: #3399ff;
+}
