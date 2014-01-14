@@ -850,6 +850,30 @@
 }
 /* forum
 ----------------------------------------*/
+.wrapper .post-date {
+    background: none;
+    background-color: #3399ff;
+    color: #FFF;
+    float: left;
+    font-size: 1.6em;
+    font-weight: bold;
+    height: 50px;
+    line-height: 140%;
+    margin: 0 5px 0 0;
+    padding: 0 2px 0 0;
+    text-align: center;
+    width: 45px;
+}
+.wrapper .post-date span {
+    color: #FFFFFF;
+    display: block;
+    font: 10px Arial,Helvetica,sans-serif;
+    height: 16px;
+    padding-top: 4px;
+    text-align: center;
+}
+/* forum
+----------------------------------------*/
 .wrapper #forum-body  .forum-buttons a,
 .wrapper #forum-body  .forum-buttons a:link,
 .wrapper #forum-body  .forum-buttons a:visited{
