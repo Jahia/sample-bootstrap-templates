@@ -184,6 +184,7 @@
 	padding:0 0.5em;
 	text-decoration:none;
 	color:#333;
+    display: block;
 }
 .wrapper .hilightList li a:hover, .wrapper .hilightList li a:active {
 	text-decoration:none;
@@ -657,30 +658,7 @@
     border:1px solid #cc3300;
     background:#ffebe8 url(../img/error-messages.png) no-repeat 5px 50%;
 }
-.wrapper .warning-message {
-    padding:10px !important;
-    padding-left:35px !important;
-    border:1px solid #ff9900;
-    background:#ffdaa3 url(../img/warning-messages.png) no-repeat 5px 50%;
-}
-.wrapper .help-message {
-    padding:10px !important;
-    padding-left:35px !important;
-    border:1px solid #99cc99;
-    background:#ccffcc url(../img/help-messages.png) no-repeat 5px 50%;
-}
-.wrapper .lock-message {
-    padding:10px !important;
-    padding-left:35px !important;
-    border:1px solid #eaeaea;
-    background:#f5f4ef url(../img/lock-messages.png) no-repeat 5px 50%;
-}
-.wrapper .tips-message {
-    padding:10px !important;
-    padding-left:35px!important;
-    border:1px solid #e8e88a;
-    background:#ffffcc url(../img/tips-messages.png) no-repeat 5px 50%;
-}
+
 /******************************************************************************
 * Links
 ******************************************************************************/
@@ -848,32 +826,7 @@
     background:none;
     background-color:#fff;
 }
-/* forum
-----------------------------------------*/
-.wrapper .post-date {
-    background: none;
-    background-color: #3399ff;
-    color: #FFF;
-    float: left;
-    font-size: 1.6em;
-    font-weight: bold;
-    height: 50px;
-    line-height: 140%;
-    margin: 0 5px 0 0;
-    padding: 0 2px 0 0;
-    text-align: center;
-    width: 45px;
-}
-.wrapper .post-date span {
-    color: #FFFFFF;
-    display: block;
-    font: 10px Arial,Helvetica,sans-serif;
-    height: 16px;
-    padding-top: 4px;
-    text-align: center;
-}
-/* forum
-----------------------------------------*/
+
 .wrapper #forum-body  .forum-buttons a,
 .wrapper #forum-body  .forum-buttons a:link,
 .wrapper #forum-body  .forum-buttons a:visited{
@@ -915,6 +868,75 @@
 .wrapper #forum-body .breadcrumb > .active {
     color: #999999;
 }
+/* blog
+----------------------------------------*/
+.wrapper .post-date {
+    background: none;
+    background-color: #3399ff;
+    color: #FFF;
+    float: left;
+    font-size: 1.6em;
+    font-weight: bold;
+    height: 50px;
+    line-height: 140%;
+    margin: 0 5px 0 0;
+    padding: 0 2px 0 0;
+    text-align: center;
+    width: 45px;
+}
+.wrapper .post-date span {
+    color: #FFFFFF;
+    display: block;
+    font: 10px Arial,Helvetica,sans-serif;
+    height: 16px;
+    padding-top: 4px;
+    text-align: center;
+}
+.wrapper a.atopblog {
+    background-image:url(../img/arrow.png);
+    background-position: 0.2em 0;
+}
+.wrapper a.atopblogcontents {
+    background-image:url(../img/post.png);
+}
+.wrapper a.atopblogcomments,
+.wrapper .post-info-links a.comment_count {
+    background-image:url(../img/comment.png);
+}
+.wrapper .post-tags li {
+    background-image:url(../img/tag.png);
+}
+.wrapper a.postedit, .wrapper a.pageedit {
+    background-image: url("../img/postedit.png");
+}
+.wrapper a.postdelete, .wrapper a.pagedelete {
+    background-image: url("../img/delete.png");
+}
+.wrapper .post-info-links a,.wrapper .post-tags li {
+    padding-right: 22px;
+}
+.wrapper .addArticle a, .wrapper .addArticle a:link {
+    background: url("../img/addarticle.png") no-repeat scroll 2% 50% #3399ff;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.4em;
+    padding: 5px 5px 5px 35px;
+    text-shadow: none;
+}
+.wrapper .addArticle a:hover, .wrapper .addArticle a:focus {
+    background-color: #333333;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out 0s;
+}
+.wrapper .fc-event-skin {
+    background-color: #3399ff;
+    border-color: #3399ff;
+    color: #FFFFFF;
+}
 /* wiki
 ----------------------------------------*/
 .wrapper h4.boxwiki-title {
@@ -924,4 +946,7 @@
 }
 .wrapper .textareawiki     {
     width: 94%;
+}
+.wrapper a.wikipagedelete {
+    background-image: url("../img/delete.png");
 }
