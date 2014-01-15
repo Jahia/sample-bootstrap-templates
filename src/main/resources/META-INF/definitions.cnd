@@ -8,3 +8,9 @@
  - lead (string) i18n mandatory
  - image (weakreference, picker[type='image']) i18n < jnt:file
   - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'internal' < 'internal', 'external'
+
+[jnt:bootstrapBigText] > jnt:bigText
+ - text  (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) i18n i18n primary
+
+[jnt:bootstrapMainContent] > jnt:mainContent
+ - body (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) i18n
