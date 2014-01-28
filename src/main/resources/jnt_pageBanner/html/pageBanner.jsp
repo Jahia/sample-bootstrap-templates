@@ -3,6 +3,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
@@ -11,9 +12,7 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
-<c:set var="lead" value="${currentNode.properties['lead'].string}"/>
-<c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
+<jcr:nodeProperty var="bgimage" node="${currentNode}" name="bgimage"/>
 <c:set var="linkType" value="${currentNode.properties['linkType'].string}"/>
 
 <c:set var="linkUrl"/>
@@ -44,33 +43,24 @@
     </c:otherwise>
 </c:choose>
 
-<c:choose>
-    <c:when test="${renderContext.editMode}">
-        <p>
-            <jcr:nodeProperty var="image" node="${currentNode}" name="image"/>
-            <img src="${image.node.url}" alt="${image.node.displayableName}" align="left" width="100" style="padding-right: 10px;"/>
-            <strong>${title}</strong><br/>
-                ${lead}<br/>
-            <a href="${linkUrl}">${linkTitle}</a>
-        </p>
-    </c:when>
-    <c:otherwise>
-        <div class="container">
-            <div class="carousel-caption">
-
-                <h2>${title}</h2>
-
-                <p class="lead inverse">${lead}</p>
-                <a href="${linkUrl}" class="btn btn-large btn-primary"><i class="fa fa-chevron-right"></i>
-                    <fmt:message key="sampleBootsrapTemplate.message.readMore"/>
-                </a>
-            </div>
-
-            <div class="carousel-img">
-                <jcr:nodeProperty var="image" node="${currentNode}" name="image"/>
-                <a href="${linkUrl}"><img src="${image.node.url}" alt="${image.node.displayableName}"/></a>
-                <div class="clearfix"></div>
+<section class="illustration-section" style="background: #ccc url('${bgimage.node.url}') no-repeat 50% 50%">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="center-on-phone">
+                <div class="span4">
+                    <div class="center-on-phone">
+                        <a href="${linkUrl}">
+                            <jcr:nodeProperty var="image" node="${currentNode}" name="image"/>
+                            <img src="${image.node.url}" alt="${image.node.displayableName}"/>
+                        </a>
+                    </div>
+                </div>
+                <div class="span8">
+                    <div class="center-on-phone">
+                        ${currentNode.properties.text.string}
+                    </div>
+                </div>
             </div>
         </div>
-    </c:otherwise>
-</c:choose>
+    </div>
+</section>
