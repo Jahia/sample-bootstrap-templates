@@ -24,7 +24,7 @@
         </li>
         <c:forEach items="${jcr:getChildrenOfType(rootNode, 'jnt:page,jnt:nodeLink,jnt:navMenuText,jnt:externalLink')}"
                    var="menuElement">
-            <c:if test="${! jcr:isNodeType(menuElement, 'genericmix:hidePage')}">
+            <c:if test="${! jcr:isNodeType(menuElement, 'jmix:hidePage')}">
                 <c:set var="activeClass" value=""/>
                 <c:set var="menuElementPath" value="${menuElement.path}/"/>
                 <c:if test="${fn:startsWith(renderContext.mainResource.node.path, menuElementPath) || renderContext.mainResource.node.path eq menuElement.path}">
