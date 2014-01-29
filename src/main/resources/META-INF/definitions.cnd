@@ -15,6 +15,7 @@
  - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'internal' autocreated < 'internal', 'external'
 
 [jnt:sampleCarousel] > jnt:content, jmix:multimediaContent
+ - bgimage (weakreference, picker[type='image']) i18n mandatory < jnt:file
 + * (jnt:sampleCarouselItem)
 
 [jnt:sampleCarouselItem] > jnt:content, mix:title, jmix:alink

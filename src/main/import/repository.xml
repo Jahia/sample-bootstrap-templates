@@ -101,19 +101,9 @@
                                     jcr:primaryType="jnt:translation"
                                     jcr:title="Home"/>
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <slider containerType="fluid"
-                             jcr:mixinTypes="jmix:bootstrapFullComponentAdvancedProps jmix:bootstrapFullComponentRowPredefined"
-                             jcr:primaryType="jnt:bootstrapFullComponent"
-                             layout="0"
-                             rowType="predefined"
-                             sectionCssClass="slider slider-section"
-                             sectionElement="section">
-                                    <slider jcr:primaryType="jnt:contentList">
-                                        <slider j:allowedTypes="jnt:sampleCarousel"
-                                   j:numberOfItems="1"
-                                   jcr:primaryType="jnt:area"/>
-                                </slider>
-                                </slider>
+                                <slider j:allowedTypes="jnt:sampleCarousel"
+                               j:numberOfItems="1"
+                               jcr:primaryType="jnt:area"/>
                                 <teasers containerType="fluid"
                               jcr:mixinTypes="jmix:bootstrapFullComponentAdvancedProps jmix:bootstrapFullComponentRowPredefined"
                               jcr:primaryType="jnt:bootstrapFullComponent"
@@ -245,8 +235,8 @@
                                 <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
                                 <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
                             </glyphicons-halflings.png>
-                            <body-bg.png j:height="400"
-                               j:width="400"
+                            <body-bg.png j:height="178"
+                               j:width="188"
                                jcr:mixinTypes="jmix:image"
                                jcr:primaryType="jnt:file">
                                 <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
