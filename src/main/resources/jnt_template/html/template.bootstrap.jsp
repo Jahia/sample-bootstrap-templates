@@ -56,7 +56,7 @@
 
     <%-- Google fonts--%>
     <c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
-    <link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
 </head>
 <body>
 

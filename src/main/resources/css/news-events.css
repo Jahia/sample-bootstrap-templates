@@ -1,4 +1,3 @@
-
 /*media-list*/
 /*media-small*/
 li.media-small .media-photo {
@@ -42,7 +41,7 @@ li.media-small h3 {
 }
 .media-heading a:hover,
 .media-heading a:focus {
-  color: #39f;
+  color: #6600cc;
   text-decoration: none;
 }
 li.media-small,
@@ -89,7 +88,7 @@ div.media-date {
   min-width: 60px;
   float: left;
   margin: 0 5px 5px 0;
-  background: #39f;
+  background: #6600cc;
   text-align: center;
 }
 div.media-date-big-end {

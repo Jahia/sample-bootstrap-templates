@@ -1,5 +1,4 @@
 
-
 /******************************************************************************
 * old styles
 ******************************************************************************/
@@ -404,11 +403,11 @@
 	padding:0.2em 0.5em;
 }
 .wrapper .paginationNavigation a:hover {
-	background:#3399ff;
+	background:#6600cc;
 	color:#fff;
 }
 .wrapper .paginationNavigation .currentPage {
-	background:#3399ff;
+	background:#6600cc;
 	color:#fff;
 	padding:0.2em 0.5em;
 }
@@ -445,14 +444,14 @@
 	text-decoration:none;
 }
 .wrapper .alphabeticalNavigation a:hover {
-	background:#3399ff;
+	background:#6600cc;
 	color:#fff;
 }
 .wrapper .alphabeticalNavigation a.current {
 	height:28px;
 	line-height:28px;
 	border:1px solid #eaeaea;
-	background:#3399ff;
+	background:#6600cc;
 	color:#fff;
 	padding: 2px 4px;
 	text-decoration:none;
@@ -494,9 +493,9 @@
 	vertical-align: middle;
 	cursor: pointer;
 	color: #fff;
-	background-color: #3399ff;
+	background-color: #6600cc;
 	border:0;
- 	*background-color: #3399ff;
+ 	*background-color: #6600cc;
  	 /* Darken IE7 buttons by default so they stand out more given they won't have borders */
  	*border: 0;
 
@@ -524,7 +523,7 @@
 ******************************************************************************/
 
 .wrapper a.aButton, .wrapper a.aButton:link, .wrapper a.aButton:visited {
-	background-color:#3399ff;
+	background-color:#6600cc;
 	color:#fff;
 	border:none;
 	text-align:center;
@@ -537,7 +536,7 @@
 .wrapper a.aButton:hover, .wrapper a.aButton:hover {
 	cursor: pointer;
 	color:#fff;
-	background-color:#008ae5;
+	background-color:#5500aa;
 	text-decoration:none;
 }
 .wrapper a.aButtonMarginBottom {
@@ -673,7 +672,7 @@
 .wrapper a.more,
 .wrapper a.more:link,
 .wrapper a.more:visited{
-    background-color:#3399ff;
+    background-color:#6600cc;
     color:#fff;
     border:none;
     text-align:center;
@@ -685,14 +684,14 @@
 .wrapper a.more:active {
     cursor: pointer;
     color:#fff;
-    background-color:#008ae5;
+    background-color:#5500aa;
     text-decoration:none;
 }
 
 .wrapper a.more2,
 .wrapper a.more2:link,
 .wrapper a.more2:visited {
-    background-color:#3399ff;
+    background-color:#6600cc;
     color:#fff;
     border:none;
     text-align:center;
@@ -703,14 +702,14 @@
 .wrapper a.more2:active {
     cursor: pointer;
     color:#fff;
-    background-color:#008ae5;
+    background-color:#5500aa;
     text-decoration:none;
 }
 
 .wrapper a.returnLink,
 .wrapper a.returnLink a:link,
 .wrapper a.returnLink:visited{
-    background-color:#3399ff;
+    background-color:#6600cc;
     color:#fff;
     border:none;
     text-align:center;
@@ -724,7 +723,7 @@
 .wrapper a.returnLink:active {
     cursor: pointer;
     color:#fff;
-    background-color:#008ae5;
+    background-color:#5500aa;
     text-decoration:none;
 }
 .wrapper .divReturnLink{
@@ -780,7 +779,7 @@
 }
 .wrapper .idTabs li a.selected, .wrapper .idTabs li a:hover, .wrapper .idTabs li a.selected {
 	text-decoration:none;
-	color: #3399ff;
+	color: #6600cc;
 }
 .wrapper .idTabs li a span {
 	background:none;
@@ -799,7 +798,7 @@
 .wrapper .idTabs li a.selected span, .wrapper .idTabs li a:hover span, .wrapper .idTabs li a.idTabs span {
 	text-decoration:none;
 	background-color:#FFF;
-	color: #3399ff;
+	color: #6600cc;
 }
 /******************************************************************************
 * Forum
@@ -831,7 +830,7 @@
 .wrapper #forum-body  .forum-buttons a:link,
 .wrapper #forum-body  .forum-buttons a:visited{
     background:none;
-    background-color:#3399ff;
+    background-color:#6600cc;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -853,7 +852,7 @@
     text-decoration:none;
     color: #fff;
     background:none;
-    background-color:#3399ff;
+    background-color:#6600cc;
 }
 .wrapper #forum-body .breadcrumb {
     list-style: none outside none;
@@ -872,7 +871,7 @@
 ----------------------------------------*/
 .wrapper .post-date {
     background: none;
-    background-color: #3399ff;
+    background-color: #6600cc;
     color: #FFF;
     float: left;
     font-size: 1.6em;
@@ -916,7 +915,7 @@
     padding-right: 22px;
 }
 .wrapper .addArticle a, .wrapper .addArticle a:link {
-    background: url("../img/addarticle.png") no-repeat scroll 2% 50% #3399ff;
+    background: url("../img/addarticle.png") no-repeat scroll 2% 50% #6600cc;
     border-radius: 3px;
     color: #fff;
     display: block;
@@ -933,8 +932,8 @@
     transition: all 0.3s ease-in-out 0s;
 }
 .wrapper .fc-event-skin {
-    background-color: #3399ff;
-    border-color: #3399ff;
+    background-color: #6600cc;
+    border-color: #6600cc;
     color: #FFFFFF;
 }
 /* wiki
