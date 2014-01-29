@@ -11,7 +11,8 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <jcr:nodeProperty var="bgimage" node="${currentNode}" name="bgimage"/>
-<section class="illustration-section" style="background: #ccc url('${bgimage.node.url}') no-repeat 50% 50%">
+<c:set var="bgimageUrl" value="${bgimage.node.url}"/>
+<section class="illustration-section" <c:if test="${! empty bgimageUrl}"> style="background: url('${bgimage.node.url}') no-repeat 50% 50%"</c:if>>
     <div class="container-fluid ">
         <div class="flexslider carousel">
             <ul class="${renderContext.editMode?'':'slides'}">
