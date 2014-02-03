@@ -10,23 +10,21 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
-<jcr:nodeProperty var="bgimage" node="${currentNode}" name="bgimage"/>
-<section class="illustration-section" style="background: #ccc url('${bgimage.node.url}') no-repeat 50% 50%">
-    <div class="container-fluid ">
-        <div class="flexslider carousel">
-            <ul class="${renderContext.editMode?'':'slides'}">
-                <c:forEach items="${jcr:getChildrenOfType(currentNode, 'jnt:sampleCarouselItem')}" var="item">
-                    <li>
-                        <template:module node="${item}" nodeTypes="jnt:sampleCarouselItem" editable="true"/>
-                    </li>
-                </c:forEach>
-            </ul>
-        </div>
+
+<div class="container-fluid ">
+    <div class="flexslider carousel">
+        <ul class="${renderContext.editMode?'':'slides'}">
+            <c:forEach items="${jcr:getChildrenOfType(currentNode, 'jnt:sampleCarouselItem')}" var="item">
+                <li>
+                    <template:module node="${item}" nodeTypes="jnt:sampleCarouselItem" editable="true"/>
+                </li>
+            </c:forEach>
+        </ul>
     </div>
-    <c:if test="${renderContext.editMode}">
-        <template:module path="*" nodeTypes="jnt:sampleCarouselItem"/>
-    </c:if>
-</section>
+</div>
+<c:if test="${renderContext.editMode}">
+    <template:module path="*" nodeTypes="jnt:sampleCarouselItem"/>
+</c:if>
 <template:addResources type="css" resources="flexslider.css" media="screen"/>
 
 <%-- FlexSlider --%>
