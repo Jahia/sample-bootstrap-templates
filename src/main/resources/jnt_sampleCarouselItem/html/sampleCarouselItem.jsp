@@ -16,22 +16,16 @@
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
 <c:set var="linkType" value="${currentNode.properties['linkType'].string}"/>
 
+<c:set var="linkTitle"/>
 <c:set var="linkUrl"/>
-<c:set var="linkTitle" value="${currentNode.properties.linkTitle.string}"/>
 <c:choose>
     <c:when test="${linkType == 'internal'}">
         <c:set var="linkNode" value="${currentNode.properties.internalLink.node}"/>
-        <c:if test="${empty linkTitle}">
-            <c:set var="linkTitle" value="${linkNode.displayableName}"/>
-        </c:if>
+        <c:set var="linkTitle" value="${linkNode.displayableName}"/>
         <c:url var="linkUrl" value="${url.base}${linkNode.path}.html"/>
     </c:when>
     <c:when test="${linkType == 'external'}">
         <c:set var="linkTitle" value="${currentNode.properties.linkTitle.string}"/>
-        <c:if test="${empty linkTitle}">
-            <fmt:message var="linkTitle" key="jmix_alink.noTitle"/>
-        </c:if>
-
         <c:set var="linkUrl" value="${currentNode.properties.externalLink.string}"/>
     </c:when>
     <c:otherwise>
