@@ -476,6 +476,16 @@
                                   j:isExternalProviderRoot="false"
                                   jcr:mixinTypes="jmix:externalProviderExtension"
                                   jcr:primaryType="jnt:externalProviderExtension"/>
+                                    <flexslider.css j:extendedType="jnt:cssFile"
+                                        j:externalNodeIdentifier="fffffff1-687d-423b-925d-b9625f2f674d"
+                                        j:isExternalProviderRoot="false"
+                                        jcr:mixinTypes="jmix:externalProviderExtension"
+                                        jcr:primaryType="jnt:externalProviderExtension"/>
+                                    <bootstrapComponents.css j:extendedType="jnt:cssFile"
+                                                 j:externalNodeIdentifier="fffffff1-480c-4ea8-9fd3-a323c0018096"
+                                                 j:isExternalProviderRoot="false"
+                                                 jcr:mixinTypes="jmix:externalProviderExtension"
+                                                 jcr:primaryType="jnt:externalProviderExtension"/>
                                 </css>
                                 <jnt_template j:extendedType="jnt:nodeTypeFolder"
                                    j:externalNodeIdentifier="fffffff1-aab6-4f62-8cd7-4cbdf19a47cd"
