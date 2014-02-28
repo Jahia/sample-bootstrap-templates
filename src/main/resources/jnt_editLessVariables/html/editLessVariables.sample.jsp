@@ -126,7 +126,13 @@
     </div></label>
     <label><div class="row-fluid">
         <div class="span3">headingsFontWeight</div>
-        <div class="span9"><input type="text" name="headingsFontWeight" value="${fn:escapeXml(headingsFontWeight)}" /></div>
+        <div class="span9">
+            <select name="headingsFontWeight">
+                <option value="normal" <c:if test="${headingsFontWeight eq 'normal'}">selected="selected" </c:if>>normal</option>
+                <option value="bold" <c:if test="${headingsFontWeight eq 'bold'}">selected="selected" </c:if>>bold</option>
+            </select>
+
+        </div>
     </div></label>
     <label><div class="row-fluid">
         <div class="span3">headingsColor</div>
