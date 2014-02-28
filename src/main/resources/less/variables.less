@@ -7,12 +7,6 @@
 // --------------------------------------------------
 
 
-// Navbar logo
-// -------------------------
-@logoPath:              "../img/logo.png";
-@logoSmallPath:         "../img/logo-small.png";
-
-
 // Grays
 // -------------------------
 @black:                 #000;
@@ -59,7 +53,7 @@
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    'Scada',Arial,"Helvetica Neue", Helvetica,sans-serif; // inherit; empty to use BS default, @baseFontFamily
+@headingsFontFamily:    'Scada',@sansFontFamily; // inherit; empty to use BS default, @baseFontFamily
 @headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         @black; // empty to use BS default, @textColor
 
@@ -221,6 +215,10 @@
 @navbarInverseSearchPlaceholderColor:    #ccc;
 
 @navbarInverseBrandColor:                @navbarInverseLinkColor;
+
+@navbarTopBorder:                 #612d50;
+@logoPath:                        "../img/logo.png";
+@logoSmallPath:                   "../img/logo-small.png";
 
 
 // Pagination
