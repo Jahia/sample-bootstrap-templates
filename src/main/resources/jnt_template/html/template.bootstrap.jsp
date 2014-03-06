@@ -5,6 +5,8 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="jcr" uri="http://www.jahia.org/tags/jcr" %>
 <%@ taglib prefix="bootstrap" uri="http://www.jahia.org/tags/bootstrapLib" %>
+<%@ taglib prefix="functions" uri="http://www.jahia.org/tags/functions" %>
+
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="out" type="java.io.PrintWriter"--%>
 <%--@elvariable id="script" type="org.jahia.services.render.scripting.Script"--%>
@@ -67,13 +69,76 @@
 <bootstrap:addThemeJS/>
 <bootstrap:addCSS/>
 
-<template:area path="header"/>
-
 <div class="wrapper">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <div class="nav-collapse collapse">
+                    <template:area path="bootstrap-nav"/>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="span12">
+                <div class="navbar-inner">
+                    <jcr:node var="logoFolder" path="${renderContext.site.path}/files/logo"/>
+                    <c:forEach items="${jcr:getChildrenOfType(logoFolder,'jnt:file')}" var="logo">
+                        <c:url value="${logo.url}" context="/" var="logoURL"/>
+                    </c:forEach>
+                    <a href="${renderContext.site.home.url}">
+                        <img src="${logoURL}" alt="${fn:escapeXml(renderContext.site.properties["j:title"].string)}"/>
+                    </a>
+                    <div class="nav-collapse collapse">
+                        <template:area path="navBar" listLimit="1"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <template:area path="pagecontent"/>
+
+
+    <jcr:nodeProperty node="${renderContext.site}" name="displayFooterLinks" var="displayLinks"/>
+    <c:set var="displayFooterLinks" value="false"/>
+    <c:choose>
+        <c:when test="${displayLinks.string == 'home' and renderContext.site.home.path == renderContext.mainResource.node.path}">
+            <c:set var="displayFooterLinks" value="true"/>
+        </c:when>
+        <c:when test="${displayLinks.string == 'all'}">
+            <c:set var="displayFooterLinks" value="true"/>
+        </c:when>
+    </c:choose>
+    <c:if test="${displayFooterLinks}">
+        <section class="footer-links" id="footer-links">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <c:forEach items="${jcr:getChildrenOfType(renderContext.site.home, 'jnt:page')}" var="page">
+                        <div class="span2"><h4>${page.displayableName}</h4>
+                            <ul class="icons-ul">
+                                <c:forEach items="${jcr:getChildrenOfType(page, 'jnt:page')}" var="childpage">
+                                    <li><i class="icon-li icon-angle-right"></i>
+                                        <a href="<c:url value="${childpage.url}" context="/"/>" title="${childpage.displayableName}">${childpage.displayableName}</a>
+                                    </li>
+                                </c:forEach>
+                            </ul><div class="clear"></div></div>
+                    </c:forEach>
+                </div>
+            </div>
+        </section><div class="clear"></div>
+    </c:if>
+
+
     <div class="copyright">
         <template:area path="footer"/>
     </div>
+
 </div>
 
 

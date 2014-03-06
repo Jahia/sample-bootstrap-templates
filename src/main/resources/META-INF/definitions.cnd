@@ -1,16 +1,22 @@
-<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
 
 [jnt:sampleCarousel] > jnt:content, jmix:multimediaContent
-+ * (jnt:sampleCarouselItem)
+ + * (jnt:sampleCarouselItem)
 
 [jnt:sampleCarouselItem] > jnt:content, mix:title
- - lead (string) i18n mandatory
- - image (weakreference, picker[type='image']) i18n < jnt:file
-  - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'internal' < 'internal', 'external'
+ - lead (string) mandatory internationalized
+ - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
+ - linkType (string, choicelist[linkInitializer,resourceBundle]) = 'internal' < 'internal', 'external'
 
 [jnt:bootstrapBigText] > jnt:bigText
- - text  (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) i18n
+ - text (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) internationalized
 
 [jnt:bootstrapMainContent] > jnt:mainContent
- - body (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) i18n
+ - body (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) internationalized
+
+[jnt:bootstrapTemplateCustomization] > jnt:content, mix:title, jmix:studioOnly, jmix:siteComponent
+
+[jmix:bootstrapTemplateCustomization] mixin
+ - displayFooterLinks (string, choicelist) = 'home' < 'home', 'all', 'none'
