@@ -6354,7 +6354,8 @@ header .container {
   transition: all 0.3s ease-in;
 }
 .navbar .nav {
-  margin: 10px 0;
+  margin: 10px 0 10px 10px;
+  float: right;
 }
 .dropdown .caret {
   margin-left: 7px;
@@ -6413,7 +6414,7 @@ header .container {
 /* = Copyright
 -------------------------------------------------------------- */
 .copyright {
-  background-color: #000;
+  background-color: #333333;
   color: #fff;
   font-weight: 300;
   padding: 15px 0;

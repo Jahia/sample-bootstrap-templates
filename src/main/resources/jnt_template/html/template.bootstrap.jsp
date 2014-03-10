@@ -74,63 +74,64 @@
 
 <div class="wrapper bodywrapper">
 
+    <header>
 
-<header>
-    <div id="header-top" class="header-top-content">
-        <div class="container-fluid">
-            <div class="span12">
-                <template:area path="bootstrap-header"/>
-            </div>
-        </div>
-    </div>
-
-
-    <nav id="nav" class="navbar">
-        <template:area path="bootstrap-nav"/>
-    </nav>
-
-</header>
-
-<section id="content" class="content-section">
-    <template:area path="pagecontent"/>
-</section>
-
-    <jcr:nodeProperty node="${renderContext.site}" name="displayFooterLinks" var="displayLinks"/>
-    <c:set var="displayFooterLinks" value="false"/>
-    <c:choose>
-        <c:when test="${displayLinks.string == 'home' and renderContext.site.home.path == renderContext.mainResource.node.path}">
-            <c:set var="displayFooterLinks" value="true"/>
-        </c:when>
-        <c:when test="${displayLinks.string == 'all'}">
-            <c:set var="displayFooterLinks" value="true"/>
-        </c:when>
-    </c:choose>
-    <c:if test="${displayFooterLinks}">
-        <section class="footer-links" id="footer-links">
+        <div id="header-top" class="header-top-content">
             <div class="container-fluid">
                 <div class="row-fluid">
-                    <c:forEach items="${jcr:getChildrenOfType(renderContext.site.home, 'jnt:page')}" var="page">
-                        <div class="span2"><h4>${page.displayableName}</h4>
-                            <ul class="icons-ul">
-                                <c:forEach items="${jcr:getChildrenOfType(page, 'jnt:page')}" var="childpage">
-                                    <li><i class="icon-li icon-angle-right"></i>
-                                        <a href="<c:url value="${childpage.url}" context="/"/>" title="${childpage.displayableName}">${childpage.displayableName}</a>
-                                    </li>
-                                </c:forEach>
-                            </ul><div class="clear"></div>
-                        </div>
-                    </c:forEach>
+                    <div class="span12">
+                        <template:area path="bootstrap-header"/>
+                    </div>
                 </div>
             </div>
-        </section><div class="clear"></div>
+        </div>
+
+        <nav id="nav">
+            <template:area path="bootstrap-nav"/>
+        </nav>
+
+    </header>
+
+    <section id="content" class="content-section">
+        <template:area path="pagecontent"/>
+    </section>
+
+        <jcr:nodeProperty node="${renderContext.site}" name="displayFooterLinks" var="displayLinks"/>
+        <c:set var="displayFooterLinks" value="false"/>
+        <c:choose>
+            <c:when test="${displayLinks.string == 'home' and renderContext.site.home.path == renderContext.mainResource.node.path}">
+                <c:set var="displayFooterLinks" value="true"/>
+            </c:when>
+            <c:when test="${displayLinks.string == 'all'}">
+                <c:set var="displayFooterLinks" value="true"/>
+            </c:when>
+        </c:choose>
+        <c:if test="${displayFooterLinks}">
+
+    <section class="footer-links" id="footer-links">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <c:forEach items="${jcr:getChildrenOfType(renderContext.site.home, 'jnt:page')}" var="page">
+                    <div class="span2"><h4>${page.displayableName}</h4>
+                        <ul class="icons-ul">
+                            <c:forEach items="${jcr:getChildrenOfType(page, 'jnt:page')}" var="childpage">
+                                <li><i class="icon-li icon-angle-right"></i>
+                                    <a href="<c:url value="${childpage.url}" context="/"/>" title="${childpage.displayableName}">${childpage.displayableName}</a>
+                                </li>
+                            </c:forEach>
+                        </ul><div class="clear"></div>
+                    </div>
+                </c:forEach>
+            </div>
+        </div>
+    </section><div class="clear"></div>
     </c:if>
     <footer>
         <section id="copyright" class="copyright">
-            <div class="copyright">
                 <template:area path="footer"/>
-            </div>
         </section>
     </footer>
+
 </div>
 
 
