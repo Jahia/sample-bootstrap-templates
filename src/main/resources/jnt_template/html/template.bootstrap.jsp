@@ -60,16 +60,7 @@
     <c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
     <link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
 
-<jcr:node var="logoFolder" path="${renderContext.site.path}/files/logo"/>
-<c:forEach items="${jcr:getChildrenOfType(logoFolder,'jnt:file')}" var="logo">
-    <c:url value="${logo.url}" context="/" var="logoURL"/>
-</c:forEach>
-<style>
-    .navbar .brand {
-        background: url("${logoURL}") no-repeat top left;
 
-    }
-</style>
 </head>
 
 <body>
@@ -82,8 +73,6 @@
 <bootstrap:addCSS/>
 
 <div class="wrapper bodywrapper">
-
-
 
 
 <header>
@@ -135,13 +124,13 @@
             </div>
         </section><div class="clear"></div>
     </c:if>
-<footer>
-    <section id="copyright" class="copyright">
-        <div class="copyright">
-            <template:area path="footer"/>
-        </div>
-    </section>
-</footer>
+    <footer>
+        <section id="copyright" class="copyright">
+            <div class="copyright">
+                <template:area path="footer"/>
+            </div>
+        </section>
+    </footer>
 </div>
 
 
