@@ -113,9 +113,9 @@
             <div class="row-fluid">
                 <c:forEach items="${jcr:getChildrenOfType(renderContext.site.home, 'jnt:page')}" var="page">
                     <div class="span2"><h4>${page.displayableName}</h4>
-                        <ul class="icons-ul">
+                        <ul class="fa-ul">
                             <c:forEach items="${jcr:getChildrenOfType(page, 'jnt:page')}" var="childpage">
-                                <li><i class="icon-li icon-angle-right"></i>
+                                <li><i class="fa-li fa fa-angle-right"></i>
                                     <a href="<c:url value="${childpage.url}" context="/"/>" title="${childpage.displayableName}">${childpage.displayableName}</a>
                                 </li>
                             </c:forEach>
