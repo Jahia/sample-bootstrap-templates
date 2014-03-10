@@ -42,7 +42,7 @@
                     <span class='flag flag_${language}${flag}_off'></span>
                 </c:set>
             </c:if>
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">${renderedLanguage}<span
+            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">${renderedLanguage}<span
                     class="caret"></span></a>
         </c:if>
     </c:forEach>

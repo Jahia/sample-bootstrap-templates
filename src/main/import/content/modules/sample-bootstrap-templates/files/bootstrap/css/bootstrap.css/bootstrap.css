@@ -6240,6 +6240,14 @@ a.badge:focus {
   padding-left: 0;
   padding-right: 0;
 }
+/* = header correction
+ -------------------------------------------------------------- */
+.header-top-content span.flag {
+  padding-left: 20px;
+}
+.header-top-content .navbar-search {
+  margin-top: 0;
+}
 /* = Utils
  -------------------------------------------------------------- */
 .navbar .brand {
@@ -6278,7 +6286,7 @@ a.badge:focus {
   color: #fff;
   font-size: 12px;
   margin-bottom: 25px;
-  border-top: 4px solid #000000;
+  border-top: 4px solid #612d50;
 }
 #loginForm {
   color: #000;
