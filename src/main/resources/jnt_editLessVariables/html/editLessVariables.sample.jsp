@@ -29,7 +29,7 @@
     <jcr:nodeProperty node="${bootstrapVariables}" name="headingsFontFamily" var="headingsFontFamily" />
     <jcr:nodeProperty node="${bootstrapVariables}" name="headingsFontWeight" var="headingsFontWeight" />
     <jcr:nodeProperty node="${bootstrapVariables}" name="headingsColor" var="headingsColor" />
-    <jcr:nodeProperty node="${bootstrapVariables}" name="navbarTopBorder" var="navbarTopBorder" />
+    <jcr:nodeProperty node="${bootstrapVariables}" name="headerTopBorder" var="headerTopBorder" />
 </c:if>
 <c:choose>
     <c:when test="${empty bodyBackground}"><c:set var="bodyBackground" value="@white" /></c:when>
@@ -68,8 +68,8 @@
     <c:otherwise><c:set var="headingsColor" value="${headingsColor.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
-    <c:when test="${empty navbarTopBorder}"><c:set var="navbarTopBorder" value="#612d50" /></c:when>
-    <c:otherwise><c:set var="navbarTopBorder" value="${navbarTopBorder.string}" /></c:otherwise>
+    <c:when test="${empty headerTopBorder}"><c:set var="headerTopBorder" value="#000" /></c:when>
+    <c:otherwise><c:set var="headerTopBorder" value="${headerTopBorder.string}" /></c:otherwise>
 </c:choose>
 
 <div class="alert alert-block">
@@ -140,10 +140,10 @@
     </div></label>
 </fieldset>
 <fieldset class="box-1">
-    <legend>Navbar</legend>
+    <legend>Header</legend>
     <label><div class="row-fluid">
-        <div class="span3">navbarTopBorder</div>
-        <div class="span9"><input type="text" id="navbarTopBorder" name="navbarTopBorder" value="${navbarTopBorder}" /></div>
+        <div class="span3">headerTopBorder</div>
+        <div class="span9"><input type="text" id="headerTopBorder" name="headerTopBorder" value="${headerTopBorder}" /></div>
     </div></label>
 </fieldset>
 
@@ -152,10 +152,10 @@
     $("#textColor").spectrum({preferredFormat: "hex"});
     $("#linkColor").spectrum({preferredFormat: "hex"});
     $("#headingsColor").spectrum({preferredFormat: "hex"});
-    $("#navbarTopBorder").spectrum({preferredFormat: "hex"});
+    $("#headerTopBorder").spectrum({preferredFormat: "hex"});
     $("#bodyBackground").show();
     $("#textColor").show();
     $("#linkColor").show();
     $("#headingsColor").show();
-    $("#navbarTopBorder").show();
+    $("#headerTopBorder").show();
 </script>
