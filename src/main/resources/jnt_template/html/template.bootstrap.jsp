@@ -59,7 +59,19 @@
     <%-- Google fonts--%>
     <c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
     <link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
+
+<jcr:node var="logoFolder" path="${renderContext.site.path}/files/logo"/>
+<c:forEach items="${jcr:getChildrenOfType(logoFolder,'jnt:file')}" var="logo">
+    <c:url value="${logo.url}" context="/" var="logoURL"/>
+</c:forEach>
+<style>
+    .navbar .brand {
+        background: url("${logoURL}") no-repeat top left;
+
+    }
+</style>
 </head>
+
 <body>
 
 <%-- Les styles old--%>
@@ -69,41 +81,30 @@
 <bootstrap:addThemeJS/>
 <bootstrap:addCSS/>
 
-<div class="wrapper">
-    <div class="navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <div class="nav-collapse collapse">
-                    <template:area path="bootstrap-nav"/>
-                </div>
-            </div>
-        </div>
-        <div class="navbar">
+<div class="wrapper bodywrapper">
+
+
+
+
+<header>
+    <div id="header-top" class="header-top-content">
+        <div class="container-fluid">
             <div class="span12">
-                <div class="navbar-inner">
-                    <jcr:node var="logoFolder" path="${renderContext.site.path}/files/logo"/>
-                    <c:forEach items="${jcr:getChildrenOfType(logoFolder,'jnt:file')}" var="logo">
-                        <c:url value="${logo.url}" context="/" var="logoURL"/>
-                    </c:forEach>
-                    <a href="${renderContext.site.home.url}">
-                        <img src="${logoURL}" alt="${fn:escapeXml(renderContext.site.properties["j:title"].string)}"/>
-                    </a>
-                    <div class="nav-collapse collapse">
-                        <template:area path="navBar" listLimit="1"/>
-                    </div>
-                </div>
+                <template:area path="bootstrap-header"/>
             </div>
         </div>
     </div>
 
-    <template:area path="pagecontent"/>
 
+    <nav id="nav" class="navbar">
+        <template:area path="bootstrap-nav"/>
+    </nav>
+
+</header>
+
+<section id="content" class="content-section">
+    <template:area path="pagecontent"/>
+</section>
 
     <jcr:nodeProperty node="${renderContext.site}" name="displayFooterLinks" var="displayLinks"/>
     <c:set var="displayFooterLinks" value="false"/>
@@ -127,18 +128,20 @@
                                         <a href="<c:url value="${childpage.url}" context="/"/>" title="${childpage.displayableName}">${childpage.displayableName}</a>
                                     </li>
                                 </c:forEach>
-                            </ul><div class="clear"></div></div>
+                            </ul><div class="clear"></div>
+                        </div>
                     </c:forEach>
                 </div>
             </div>
         </section><div class="clear"></div>
     </c:if>
-
-
-    <div class="copyright">
-        <template:area path="footer"/>
-    </div>
-
+<footer>
+    <section id="copyright" class="copyright">
+        <div class="copyright">
+            <template:area path="footer"/>
+        </div>
+    </section>
+</footer>
 </div>
 
 
