@@ -135,6 +135,7 @@
                                     jcr:primaryType="jnt:bootstrapNavBar"
                                     responsive="true">
                                 <j:translation_en jcr:language="en"
+                                       jcr:mixinTypes="mix:title"
                                        jcr:primaryType="jnt:translation"
                                        jcr:title="Bootstrap Navbar"/>
                                 <navigation-menu j:maxDepth="2"
@@ -142,6 +143,7 @@
                                       j:startLevel="0"
                                       jcr:primaryType="jnt:bootstrapNavMenu">
                                     <j:translation_en jcr:language="en"
+                                          jcr:mixinTypes="mix:title"
                                           jcr:primaryType="jnt:translation"
                                           jcr:title="Navigation Menu"/>
                                 </navigation-menu>
@@ -242,14 +244,6 @@
                                 <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
                                 <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
                             </logo.png>
-                            <logo-small.png j:height="50"
-                                  j:width="168"
-                                  jcr:mixinTypes="jmix:image"
-                                  jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </logo-small.png>
                         </img>
                     </bootstrap>
                 </files>
