@@ -157,7 +157,7 @@
                                              position="right"/>
                         </navBar>
                         <bootstrap-header jcr:primaryType="jnt:contentList">
-                            <bootstrapmenulanguageswitcher j:view="bootstrap"
+                            <bootstrapmenulanguageswitcher j:view="sampleBootstrapTemplates"
                                                  jcr:mixinTypes="jmix:renderable"
                                                  jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
                                                  position=""

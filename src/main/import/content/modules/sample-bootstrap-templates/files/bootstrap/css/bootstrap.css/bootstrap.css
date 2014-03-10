@@ -6278,7 +6278,7 @@ a.badge:focus {
   color: #fff;
   font-size: 12px;
   margin-bottom: 25px;
-  border-top: 4px solid #3399FF;
+  border-top: 4px solid #000000;
 }
 #loginForm {
   color: #000;

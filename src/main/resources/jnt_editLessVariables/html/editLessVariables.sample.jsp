@@ -68,7 +68,7 @@
     <c:otherwise><c:set var="headingsColor" value="${headingsColor.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
-    <c:when test="${empty headerTopBorder}"><c:set var="headerTopBorder" value="#000" /></c:when>
+    <c:when test="${empty headerTopBorder}"><c:set var="headerTopBorder" value="#612d50" /></c:when>
     <c:otherwise><c:set var="headerTopBorder" value="${headerTopBorder.string}" /></c:otherwise>
 </c:choose>
 
