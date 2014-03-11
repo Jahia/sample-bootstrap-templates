@@ -73,7 +73,19 @@
                                 <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
                                   jcr:primaryType="jnt:bootstrapFullComponent"
                                   layout="3_6_3"
-                                  rowType="predefined"/>
+                                  rowType="predefined">
+                                    <pagecontent-side1 jcr:primaryType="jnt:contentList">
+                                            <navigation-menu j:baselineNode="home"
+                                               j:maxDepth="2"
+                                               j:menuItemView="menuElement"
+                                               j:startLevel="1"
+                                               j:view="side"
+                                               jcr:mixinTypes="jmix:renderable"
+                                               jcr:primaryType="jnt:navMenu"/>
+                                            <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
+                                            <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                        </pagecontent-side1>
+                            </pagecontent>
                             </pagecontent>
                         </_x0033_col>
                         <_x0031_col jcr:primaryType="jnt:pageTemplate">
