@@ -116,44 +116,35 @@
                                     jcr:primaryType="jnt:translation"
                                     jcr:title="2 columns"/>
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
-                                  jcr:primaryType="jnt:bootstrapFullComponent"
-                                  layout="3_9"
-                                  rowType="predefined">
-                                    <pagecontent-side1 jcr:primaryType="jnt:contentList">
-                                        <navigation-menu j:baselineNode="home"
-                                            j:maxDepth="2"
-                                            j:menuItemView="menuElement"
-                                            j:startLevel="1"
-                                            j:view="side"
-                                            jcr:mixinTypes="jmix:renderable"
-                                            jcr:primaryType="jnt:navMenu"/>
-                                        <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
-                                        <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
-                                    </pagecontent-side1>
-                                    <pagecontent jcr:primaryType="jnt:contentList">
-                                        <bootstrap-breadcrumb displayCurrentPage="true"
-                                                 displayHome="true"
-                                                 displayLinkOnCurrentPage="false"
-                                                 displayOnFirstLevel="false"
-                                                 divider="/"
-                                                 jcr:primaryType="jnt:bootstrapBreadcrumb"/>
-                                        <page-title hideInHomePage="true" jcr:primaryType="jnt:pageTitle"/>
-                                        <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area"/>
-                            </pagecontent>
-                            </pagecontent>
-                            </pagecontent>
-                            <detail j:applyOn="jnt:article jnt:event jnt:news jnt:press"
-                                 j:hiddenTemplate="true"
-                                 j:priority="1"
-                                 jcr:primaryType="jnt:contentTemplate">
-                            <pagecontent jcr:primaryType="jnt:contentList">
-                                    <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
-                            </pagecontent>
-                                <j:translation_en jcr:language="en"
-                                       jcr:primaryType="jnt:translation"
-                                       jcr:title="Detailed template"/>
-                            </detail>
+                                <pagecontent jcr:primaryType="jnt:contentList">
+                                    <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                                     jcr:primaryType="jnt:bootstrapFullComponent"
+                                     layout="3_9"
+                                     rowType="predefined">
+                                        <pagecontent-side1 jcr:primaryType="jnt:contentList">
+                                            <navigation-menu j:baselineNode="home"
+                                               j:maxDepth="2"
+                                               j:menuItemView="menuElement"
+                                               j:startLevel="1"
+                                               j:view="side"
+                                               jcr:mixinTypes="jmix:renderable"
+                                               jcr:primaryType="jnt:navMenu"/>
+                                            <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
+                                            <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                        </pagecontent-side1>
+                                        <pagecontent jcr:primaryType="jnt:contentList">
+                                            <bootstrap-breadcrumb displayCurrentPage="true"
+                                                    displayHome="true"
+                                                    displayLinkOnCurrentPage="false"
+                                                    displayOnFirstLevel="false"
+                                                    divider="/"
+                                                    jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                            <page-title hideInHomePage="true" jcr:primaryType="jnt:pageTitle"/>
+                                            <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                                </pagecontent>
+                                            </pagecontent>
+                                        </pagecontent>
+                                    </pagecontent>
                         </_x0032_cols>
                         <bootstrap-nav jcr:primaryType="jnt:contentList">
                             <bootstrap-navbar fluid="true"
@@ -196,6 +187,45 @@
                                                  position="right"
                                                  result="/modules/sample-bootstrap-templates/search-results"/>
                         </bootstrap-header>
+                        <detail j:applyOn="jnt:article jnt:event jnt:news jnt:press"
+                       j:hiddenTemplate="true"
+                       j:priority="1"
+                       jcr:primaryType="jnt:contentTemplate">
+                            <pagecontent jcr:primaryType="jnt:contentList">
+                                <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                                  jcr:primaryType="jnt:bootstrapFullComponent"
+                                  layout="3_9"
+                                  rowType="predefined">
+                                    <pagecontent-side1 jcr:primaryType="jnt:contentList">
+                                        <navigation-menu j:baselineNode="home"
+                                            j:maxDepth="2"
+                                            j:menuItemView="menuElement"
+                                            j:startLevel="1"
+                                            j:view="side"
+                                            jcr:mixinTypes="jmix:renderable"
+                                            jcr:primaryType="jnt:navMenu"/>
+                                        <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
+                                        <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                    </pagecontent-side1>
+                                    <pagecontent jcr:primaryType="jnt:contentList">
+                                        <bootstrap-breadcrumb displayCurrentPage="true"
+                                                 displayHome="true"
+                                                 displayLinkOnCurrentPage="false"
+                                                 displayOnFirstLevel="false"
+                                                 divider="/"
+                                                 jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                        <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area">
+                                            <pagecontent jcr:primaryType="jnt:contentList">
+                                                <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
+                            </pagecontent>
+                                </pagecontent>
+                            </pagecontent>
+                            </pagecontent>
+                            </pagecontent>
+                            <j:translation_en jcr:language="en"
+                                    jcr:primaryType="jnt:translation"
+                                    jcr:title="Detailed template"/>
+                        </detail>
                     </base>
                         <site-settings-base j:view="siteSettings"
                                             jcr:mixinTypes="jmix:useUILocale"
