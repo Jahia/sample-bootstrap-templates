@@ -85,6 +85,16 @@
                                             <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
                                             <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
                                         </pagecontent-side1>
+                                    <pagecontent jcr:primaryType="jnt:contentList">
+                                        <bootstrap-breadcrumb displayCurrentPage="true"
+                                                 displayHome="true"
+                                                 displayLinkOnCurrentPage="false"
+                                                 displayOnFirstLevel="false"
+                                                 divider="/"
+                                                 jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                        <page-title hideInHomePage="false" jcr:primaryType="jnt:pageTitle"/>
+                                        <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                            </pagecontent>
                             </pagecontent>
                             </pagecontent>
                         </_x0033_col>
@@ -128,18 +138,22 @@
                                                  displayOnFirstLevel="false"
                                                  divider="/"
                                                  jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                        <page-title hideInHomePage="true" jcr:primaryType="jnt:pageTitle"/>
                                         <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area"/>
                             </pagecontent>
                             </pagecontent>
                             </pagecontent>
-                        <content-template j:applyOn="jnt:content"
+                            <detail j:applyOn="jnt:article jnt:event jnt:news jnt:press"
                                  j:hiddenTemplate="true"
                                  j:priority="1"
                                  jcr:primaryType="jnt:contentTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                                    <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
                             </pagecontent>
-                        </content-template>
+                                <j:translation_en jcr:language="en"
+                                       jcr:primaryType="jnt:translation"
+                                       jcr:title="Detailed template"/>
+                            </detail>
                         </_x0032_cols>
                         <bootstrap-nav jcr:primaryType="jnt:contentList">
                             <bootstrap-navbar fluid="true"
