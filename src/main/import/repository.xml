@@ -10,7 +10,16 @@
                              jcr:primaryType="jnt:module">
                 
                 <templates j:defaultView="bootstrap" jcr:primaryType="jnt:templatesFolder">
-                    <files jcr:primaryType="jnt:folder"/>
+                    <files jcr:primaryType="jnt:folder">
+                        <bootstrap.png j:height="16"
+                              j:width="16"
+                              jcr:mixinTypes="jmix:image"
+                              jcr:primaryType="jnt:file">
+                            <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                            <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                            <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                        </bootstrap.png>
+                    </files>
                     <contents jcr:primaryType="jnt:contentFolder"/>
                     <base j:view="bootstrap" jcr:primaryType="jnt:template">
                         <single-news j:applyOn="jnt:news"
@@ -223,6 +232,7 @@
                             </pagecontent>
                             </pagecontent>
                             <j:translation_en jcr:language="en"
+                                    jcr:mixinTypes="mix:title"
                                     jcr:primaryType="jnt:translation"
                                     jcr:title="Detailed template"/>
                         </detail>
@@ -233,6 +243,7 @@
                             <bootstrapCustomization j:applyOn="jnt:virtualsite"
                                                     j:defaultTemplate="false"
                                                     j:hiddenTemplate="true"
+                                       j:icon="/modules/sample-bootstrap-templates/templates/files/bootstrap.png"
                                                     j:priority="101"
                                                     j:requiredPermissionNames="adminBootstrapCustomization"
                                                     j:titleKey="siteSettings.label.bootstrap"
