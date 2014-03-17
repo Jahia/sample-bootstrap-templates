@@ -73,7 +73,7 @@
 </c:choose>
 
 <div class="alert alert-block">
-    <fmt:message key="sampleBootsrapTemplate.bootstrap.variables.imagesInfo"/>
+    <fmt:message key="sampleBootstrapTemplates.bootstrap.variables.imagesInfo"/>
 </div>
 <fieldset class="box-1">
     <legend>Scaffolding</legend>

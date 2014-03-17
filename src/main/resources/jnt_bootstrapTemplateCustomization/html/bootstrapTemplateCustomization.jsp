@@ -5,7 +5,7 @@
 <%@ taglib prefix="s" uri="http://www.jahia.org/tags/search" %>
 <%@ taglib prefix="functions" uri="http://www.jahia.org/tags/functions" %>
 <%@ taglib prefix="template" uri="http://www.jahia.org/tags/templateLib" %>
-<fmt:message key="label.changeSaved" var="i18nSaved"/><c:set var="i18nSaved" value="${functions:escapeJavaScript(i18nSaved)}"/>
+<fmt:message key="sampleBootstrapTemplates.settings.changeSaved" var="i18nSaved"/><c:set var="i18nSaved" value="${functions:escapeJavaScript(i18nSaved)}"/>
 <template:addResources type="css" resources="jquery.fileupload.css"/>
 <template:addResources type="javascript" resources="jquery.min.js,jquery.form.min.js,jquery.fileupload-with-ui.min.js"/>
 <template:addResources>
@@ -30,53 +30,51 @@
 </template:addResources>
 <c:set var="site" value="${renderContext.mainResource.node.resolveSite}"/>
 
-<c:set var="displayFooterLinks" value="${site.properties['displayFooterLinks']}"/>
+<c:set var="displayFooterLinks" value="${site.properties['displayFooterLinks'].string}"/>
 
-<h2>display footer links - ${fn:escapeXml(site.displayableName)}</h2>
-
+<h2><fmt:message key="jmix_bootstrapTemplateCustomization.displayFooterLinks"/></h2>
+<div class="box-1">
 <form id="updateSiteForm" action="<c:url value='${url.base}${renderContext.mainResource.node.resolveSite.path}'/>" method="post">
     <input type="hidden" name="jcrMethodToCall" value="put"/>
     <input type="hidden" name="jcr:mixinTypes" value="jmix:bootstrapTemplateCustomization"/>
-    <input type="hidden" name="jcrTargetName" value="logo.png"/>
-    <input type="hidden" name="jcrNodeName" value="logo.png"/>
 
     <label for="footerLinks" class="checkbox">
         <select id="footerLinks" name="footerLinks" onchange="updateSiteFooterLinks()">
-            <option value="all">All</option>
-            <option value="none">None</option>
-            <option value="home">Home</option>
+            <option value="all" ${displayFooterLinks eq 'all' ? 'selected' : ''}><fmt:message key="jmix_bootstrapTemplateCustomization.displayFooterLinks.all"/></option>
+            <option value="none" ${displayFooterLinks eq 'none' ? 'selected' : ''}><fmt:message key="jmix_bootstrapTemplateCustomization.displayFooterLinks.none"/></option>
+            <option value="home" ${displayFooterLinks eq 'home' ? 'selected' : ''}><fmt:message key="jmix_bootstrapTemplateCustomization.displayFooterLinks.home"/></option>
         </select>
     </label>
 </form>
-
-<fmt:message key="sampleBootsrapTemplate.setting.logo"/>
-<img class="moduleIcon" id="moduleIcon-${currentNode.identifier}" src="${not empty icon.url ? icon.url : iconUrl}"
-     alt="<fmt:message key="sampleBootsrapTemplate.logo"><fmt:param value="${title}"/></fmt:message>"/>
-
+</div>
+<h2><fmt:message key="sampleBootstrapTemplates.settings.logo"/></h2>
+<div class="box-1">
+<jcr:node var="siteLogo" path="${site.path}/files/bootstrap/img/logo.png" />
+<c:if test="${not empty siteLogo}">
+<img id="siteLogo-${currentNode.identifier}" src="${not empty siteLogo.url ? siteLogo.url : ''}"
+     alt="<fmt:message key="sampleBootstrapTemplates.logo"/>"/>
+</c:if>
 <form class="file_upload" id="file_upload_${currentNode.identifier}"
       action="<c:url value='${url.base}${renderContext.mainResource.node.resolveSite.path}.updateLogo.do'/>" method="POST" enctype="multipart/form-data"
       accept="application/json">
-    <div id="file_upload_container-${currentNode.identifier}" class="btn btn-block">
+    <div id="file_upload_container-${currentNode.identifier}" class="btn btn-primary" style="width: 200px">
         <input type="file" name="file" multiple>
-        <button><fmt:message key="sampleBootsrapTemplate.uploadLogo"/></button>
-        <div id="drop-box-file-upload-${currentNode.identifier}"><fmt:message key="sampleBootsrapTemplate.uploadLogo"/></div>
+        <button><fmt:message key="sampleBootstrapTemplates.uploadLogo"/></button>
+        <div id="drop-box-file-upload-${currentNode.identifier}"><fmt:message key="sampleBootstrapTemplates.uploadLogo"/></div>
     </div>
 </form>
 <table id="files${currentNode.identifier}" class="table"></table>
+</div>
 <script>
     /*global $ */
     $(function () {
         $('#file_upload_${currentNode.identifier}').fileUploadUI({
             namespace: 'file_upload_${currentNode.identifier}',
             onComplete: function (event, files, index, xhr, handler) {
-                <%--$('#fileList${renderContext.mainResource.node.identifier}').load('${targetNodePath}', function () {--%>
-                <%--$('#moduleScreenshotsList').triggerHandler('uploadCompleted');--%>
-                <%--});--%>
-                // refresh the icon
                 var response = JSON.parse(xhr.response);
-                if (response.iconUpdate) {
+                if (response.logoUpdate) {
                     d = new Date();
-                    $("#moduleIcon-${currentNode.identifier}").attr("src", response.iconUrl+"?"+d.getTime());
+                    $("#siteLogo-${currentNode.identifier}").attr("src", response.logoUrl+"?"+d.getTime());
                 } else {
                     alert(response.errorMessage);
                 }

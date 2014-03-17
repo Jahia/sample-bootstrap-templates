@@ -31,8 +31,8 @@
     <c:otherwise>
         <c:if test="${renderContext.editMode}">
             <div class="alert">
-                <strong><fmt:message key="sampleBootsrapTemplate.message.warning"/>!</strong> <fmt:message
-                    key="sampleBootsrapTemplate.couldNotDisplayLink"/> ${linkType}.
+                <strong><fmt:message key="sampleBootstrapTemplates.message.warning"/>!</strong> <fmt:message
+                    key="sampleBootstrapTemplates.couldNotDisplayLink"/> ${linkType}.
             </div>
         </c:if>
     </c:otherwise>
@@ -56,7 +56,7 @@
 
                 <p class="lead inverse">${lead}</p>
                 <a href="${linkUrl}" class="btn btn-large btn-primary"><i class="fa fa-chevron-right"></i>
-                    <fmt:message key="sampleBootsrapTemplate.message.readMore"/>
+                    <fmt:message key="sampleBootstrapTemplates.message.readMore"/>
                 </a>
             </div>
 
