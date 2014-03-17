@@ -42,6 +42,7 @@ package org.jahia.module.sampleBootstrapTemplate.actions;
 
 import org.apache.commons.fileupload.disk.DiskFileItem;
 import org.apache.commons.io.FilenameUtils;
+import org.apache.tika.io.IOUtils;
 import org.jahia.api.Constants;
 import org.jahia.bin.Action;
 import org.jahia.bin.ActionResult;
@@ -59,6 +60,7 @@ import org.slf4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
@@ -104,8 +106,11 @@ public class UpdateLogo extends Action {
             final File f = File.createTempFile("logo", "." + fileExtension);
             imageService.createThumb(imageService.getImage(logo), f, 200, false);
             InputStream is = new FileInputStream(f);
-            logo = logoFolder.uploadFile(LOGO_PNG,is,JCRContentUtils.getMimeType(itemEntry.getName(),itemEntry.getContentType()));
-            is.close();
+            try {
+                logo = logoFolder.uploadFile(LOGO_PNG,is,JCRContentUtils.getMimeType(itemEntry.getName(),itemEntry.getContentType()));
+            } finally {
+                IOUtils.closeQuietly(is);
+            }
             session.save();
             return new ActionResult(HttpServletResponse.SC_OK, null, new JSONObject().put("logoUpdate", true).put("logoUrl",logo.getUrl()));
         } else {
