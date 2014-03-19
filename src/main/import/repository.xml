@@ -258,6 +258,7 @@
                                  j:hiddenTemplate="true"
                                  j:icon="/modules/sample-bootstrap-templates/templates/files/bootstrap.png"
                                  j:priority="100"
+                                 j:requiredPermissionNames="adminSampleTemplatesCustomization"
                                  j:titleKey="sampleBootstrapTemplates.settings"
                                  jcr:mixinTypes="jmix:rbTitle"
                                            jcr:primaryType="jnt:contentTemplate">
