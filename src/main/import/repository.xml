@@ -9,6 +9,51 @@
                                   jcr:mixinTypes="jmix:hasExternalProviderExtension"
                              jcr:primaryType="jnt:module">
                 
+                <portlets jcr:primaryType="jnt:portletFolder"/>
+                <files jcr:primaryType="jnt:folder">
+                    <bootstrap jcr:primaryType="jnt:folder">
+                        <css jcr:primaryType="jnt:folder">
+                            <bootstrap.css jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="text/css" jcr:primaryType="jnt:resource"/>
+                            </bootstrap.css>
+                        </css>
+                        <img jcr:primaryType="jnt:folder">
+                            <glyphicons-halflings.png j:height="159"
+                                            j:width="469"
+                                            jcr:mixinTypes="jmix:image"
+                                            jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings.png>
+                            <body-bg.png j:height="400"
+                               j:width="400"
+                               jcr:mixinTypes="jmix:image"
+                               jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </body-bg.png>
+                            <glyphicons-halflings-white.png j:height="159"
+                                                  j:width="469"
+                                                  jcr:mixinTypes="jmix:image"
+                                                  jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-white.png>
+                            <logo.png j:height="100"
+                            j:width="200"
+                            jcr:mixinTypes="jmix:image"
+                            jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
+                                <thumbnail jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                                <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </logo.png>
+                        </img>
+                    </bootstrap>
+                </files>
+                <contents jcr:primaryType="jnt:contentFolder"/>
                 <templates j:defaultView="bootstrap" jcr:primaryType="jnt:templatesFolder">
                     <files jcr:primaryType="jnt:folder">
                         <bootstrap.png j:height="16"
@@ -91,8 +136,8 @@
                                                j:view="side"
                                                jcr:mixinTypes="jmix:renderable"
                                                jcr:primaryType="jnt:navMenu"/>
-                                            <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
-                                            <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                        <absolute-content j:level="1" jcr:primaryType="jnt:absoluteArea"/>
+                                        <contextual-content jcr:primaryType="jnt:area"/>
                                         </pagecontent-side1>
                                     <pagecontent jcr:primaryType="jnt:contentList">
                                         <bootstrap-breadcrumb displayCurrentPage="true"
@@ -102,7 +147,7 @@
                                                  divider="/"
                                                  jcr:primaryType="jnt:bootstrapBreadcrumb"/>
                                         <page-title hideInHomePage="false" jcr:primaryType="jnt:pageTitle"/>
-                                        <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                        <pagecontent jcr:primaryType="jnt:area"/>
                             </pagecontent>
                             </pagecontent>
                             </pagecontent>
@@ -138,8 +183,8 @@
                                                j:view="side"
                                                jcr:mixinTypes="jmix:renderable"
                                                jcr:primaryType="jnt:navMenu"/>
-                                            <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
-                                            <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                            <absolute-content j:level="1" jcr:primaryType="jnt:absoluteArea"/>
+                                            <contextual-content jcr:primaryType="jnt:area"/>
                                         </pagecontent-side1>
                                         <pagecontent jcr:primaryType="jnt:contentList">
                                             <bootstrap-breadcrumb displayCurrentPage="true"
@@ -149,7 +194,7 @@
                                                     divider="/"
                                                     jcr:primaryType="jnt:bootstrapBreadcrumb"/>
                                             <page-title hideInHomePage="true" jcr:primaryType="jnt:pageTitle"/>
-                                            <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                            <pagecontent jcr:primaryType="jnt:area"/>
                                                 </pagecontent>
                                             </pagecontent>
                                         </pagecontent>
@@ -213,8 +258,8 @@
                                             j:view="side"
                                             jcr:mixinTypes="jmix:renderable"
                                             jcr:primaryType="jnt:navMenu"/>
-                                        <absolute-content j:allowedTypes="" j:level="1" jcr:primaryType="jnt:absoluteArea"/>
-                                        <contextual-content j:allowedTypes="" jcr:primaryType="jnt:area"/>
+                                        <absolute-content j:level="1" jcr:primaryType="jnt:absoluteArea"/>
+                                        <contextual-content jcr:primaryType="jnt:area"/>
                                     </pagecontent-side1>
                                     <pagecontent jcr:primaryType="jnt:contentList">
                                         <bootstrap-breadcrumb displayCurrentPage="true"
@@ -223,7 +268,7 @@
                                                  displayOnFirstLevel="false"
                                                  divider="/"
                                                  jcr:primaryType="jnt:bootstrapBreadcrumb"/>
-                                        <pagecontent j:allowedTypes="" jcr:primaryType="jnt:area">
+                                        <pagecontent jcr:primaryType="jnt:area">
                                             <pagecontent jcr:primaryType="jnt:contentList">
                                                 <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>
                             </pagecontent>
@@ -273,51 +318,6 @@
                         </site-settings-base>
                 </templates>
 
-                <files jcr:primaryType="jnt:folder">
-                    <bootstrap jcr:primaryType="jnt:folder">
-                        <css jcr:primaryType="jnt:folder">
-                            <bootstrap.css jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="text/css" jcr:primaryType="jnt:resource"/>
-                            </bootstrap.css>
-                        </css>
-                        <img jcr:primaryType="jnt:folder">
-                            <glyphicons-halflings.png j:height="159"
-                                            j:width="469"
-                                            jcr:mixinTypes="jmix:image"
-                                            jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </glyphicons-halflings.png>
-                            <body-bg.png j:height="400"
-                               j:width="400"
-                               jcr:mixinTypes="jmix:image"
-                               jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </body-bg.png>
-                            <glyphicons-halflings-white.png j:height="159"
-                                                  j:width="469"
-                                                  jcr:mixinTypes="jmix:image"
-                                                  jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </glyphicons-halflings-white.png>
-                            <logo.png j:height="100"
-                            j:width="200"
-                            jcr:mixinTypes="jmix:image"
-                            jcr:primaryType="jnt:file">
-                                <jcr:content jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                                <thumbnail2 jcr:mimeType="image/png" jcr:primaryType="jnt:resource"/>
-                            </logo.png>
-                        </img>
-                    </bootstrap>
-                </files>
-                <portlets jcr:primaryType="jnt:portletFolder"/>
-                <contents jcr:primaryType="jnt:contentFolder"/>
             <home j:isHomePage="true"
                j:templateName="3col"
                   jcr:primaryType="jnt:page">
