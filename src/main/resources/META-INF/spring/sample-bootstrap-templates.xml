@@ -9,5 +9,8 @@
         <property name="requiredPermission" value="jcr:write"/>
         <property name="imageService" ref="imageService"/>
     </bean>
+    <bean id="linkInitializer" class="org.jahia.module.sampleBootstrapTemplate.initializers.LinkInitializer">
+        <property name="key" value="linkInitializer"/>
+    </bean>
 </beans>
 

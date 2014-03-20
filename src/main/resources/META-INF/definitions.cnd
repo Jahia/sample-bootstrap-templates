@@ -2,6 +2,17 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <mix = 'http://www.jcp.org/jcr/mix/1.0'>
 
+[jnt:sampleInternalLink] > jmix:templateMixin  mixin
+   extends=jnt:sampleCarouselItem
+   - internalLink (weakreference, picker[type='page']) < jnt:page
+
+
+[jnt:sampleExternalLink] > jmix:templateMixin  mixin
+   extends=jnt:sampleCarouselItem
+   - linkTitle (string) i18n
+   - externalLink (string) = 'http://' i18n
+
+
 [jnt:bootstrapBigText] > jnt:bigText
  - text (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) internationalized
 
