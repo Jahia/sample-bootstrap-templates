@@ -6,6 +6,8 @@
    extends=jnt:sampleCarouselItem
    - internalLink (weakreference, picker[type='page']) < jnt:page
 
+[jnt:sampleFancyGallery] > jnt:content, jmix:list, jmix:multimediaContent
+ - folder (weakreference, picker[type='folder']) mandatory internationalized < 'jnt:folder'
 
 [jnt:sampleExternalLink] > jmix:templateMixin  mixin
    extends=jnt:sampleCarouselItem
