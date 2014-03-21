@@ -19,5 +19,5 @@
     </c:if>
 </c:forEach>
 <c:if test="${renderContext.editMode}">
-    <template:module path="*"/>
+    <template:module path="*" nodeTypes="jnt:paragraph"/>
 </c:if>
