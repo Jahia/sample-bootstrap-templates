@@ -232,7 +232,7 @@
                                                  jcr:mixinTypes="jmix:renderable"
                                                  jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
                                                  position=""
-                                                 typeOfDisplay="flagPlain"/>
+                                                 typeOfDisplay="flag"/>
                             <bootstrapmenuloginform j:view="menu"
                                           jcr:mixinTypes="jmix:renderable"
                                           jcr:primaryType="jnt:bootstrapMenuLoginForm"
