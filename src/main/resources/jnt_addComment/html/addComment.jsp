@@ -52,8 +52,8 @@
                         </label>
 
                         <div class="controls">
-                            <input value="${sessionScope.formDatas['pseudo'][0]}"
-                                   type="text" size="35" name="pseudo" id="comment_pseudo"
+                            <input class="span12" value="${sessionScope.formDatas['pseudo'][0]}"
+                                   type="text" name="pseudo" id="comment_pseudo"
                                    tabindex="1"/>
                         </div>
                     </div>
@@ -64,8 +64,8 @@
                     </label>
 
                     <div class="controls">
-                        <input value="${sessionScope.formDatas['jcr:title'][0]}"
-                               type="text" size="35" id="comment-title" name="jcr:title"
+                        <input class="span12" value="${sessionScope.formDatas['jcr:title'][0]}"
+                               type="text" id="comment-title" name="jcr:title"
                                tabindex="1"/>
                     </div>
                 </div>
@@ -75,7 +75,7 @@
                     </label>
 
                     <div class="controls">
-                        <textarea rows="7" cols="35" id="jahia-comment-${boundComponent.identifier}"
+                        <textarea class="span12" rows="7" id="jahia-comment-${boundComponent.identifier}"
                                   name="content"
                                   tabindex="2"><c:if
                                 test="${not empty sessionScope.formDatas['content']}">${fn:escapeXml(sessionScope.formDatas['content'][0])}</c:if></textarea>
@@ -83,6 +83,7 @@
                 </div>
 
                 <c:if test="${not renderContext.loggedIn}">
+                <div class="control-group">
                     <label class="control-label" for="captcha">
                         <fmt:message key="label.captcha"/>
                     </label>
@@ -92,6 +93,7 @@
                     </c:if>
                     <label class="control-label" for="captcha"><fmt:message key="label.captcha.enter"/></label>
                     <input type="text" id="captcha" name="jcrCaptcha"/>
+                </div>
                 </c:if>
                 <div class="control-group">
                     <div class="controls">

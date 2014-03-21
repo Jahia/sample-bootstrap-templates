@@ -1,0 +1,9 @@
+.carousel li {
+    clear: both;
+    color: #fff !important;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.carousel li p {
+    overflow: hidden;
+}
