@@ -6,14 +6,13 @@
    extends=jnt:sampleCarouselItem
    - internalLink (weakreference, picker[type='page']) < jnt:page
 
-[jnt:sampleFancyGallery] > jnt:content, jmix:list, jmix:multimediaContent
+[jnt:sampleFancyGallery] > jnt:content, jmix:multimediaContent
  - folder (weakreference, picker[type='folder']) mandatory internationalized < 'jnt:folder'
 
 [jnt:sampleExternalLink] > jmix:templateMixin  mixin
    extends=jnt:sampleCarouselItem
    - linkTitle (string) i18n
    - externalLink (string) = 'http://' i18n
-
 
 [jnt:bootstrapBigText] > jnt:bigText
  - text (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) internationalized
