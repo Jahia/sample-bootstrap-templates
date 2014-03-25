@@ -37,7 +37,7 @@
  - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
 
 [jnt:sampleFeature] > jnt:content, mix:title, jmix:structuredContent, jmix:editorialContent
- - text (string, richtext[ckeditor.customConfig='$context/modules/generic-templates/javascript/ckconfig.js']) internationalized
+ - text (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) internationalized
  - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
  - imageHover (weakreference, picker[type='image']) internationalized < 'jnt:file'
  - imageLayout (string, choicelist[resourceBundle]) = 'default' autocreated < 'default', 'rounded', 'rounded-and-polaroid', 'circle', 'polaroid', 'circle-and-polaroid'
