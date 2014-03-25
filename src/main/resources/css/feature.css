@@ -1,0 +1,48 @@
+.feature-item {
+    margin-bottom: 30px;
+}
+.fadeParent {
+    position:relative;
+}
+
+.fadeParent .fadeChild {
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.fadeParent .fadeHover {
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.fadeParent .fadeHover:hover {
+    opacity: 1;
+}
+
+/* = icon Images Actions
+ -------------------------------------------------------------- */
+.images-actions-conteneur {
+    position: relative;
+}
+span.images-actions {
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: inline-block;
+    border-radius: 100%;
+}
+span.images-actions i.fa {
+    padding-top: 9px;
+}
+span.images-actions2 {
+    bottom: 10px;
+    left: 47px;
+}

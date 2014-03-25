@@ -2,17 +2,17 @@
 <jnt = 'http://www.jahia.org/jahia/nt/1.0'>
 <mix = 'http://www.jcp.org/jcr/mix/1.0'>
 
-[jnt:sampleInternalLink] > jmix:templateMixin  mixin
-   extends=jnt:sampleCarouselItem
-   - internalLink (weakreference, picker[type='page']) < jnt:page
+[jnt:sampleInternalLink] > jmix:templateMixin mixin
+ extends = jnt:sampleCarouselItem
+ - internalLink (weakreference, picker[type='page']) < 'jnt:page'
 
 [jnt:sampleFancyGallery] > jnt:content, jmix:list, jmix:multimediaContent
  - folder (weakreference, picker[type='folder']) mandatory internationalized < 'jnt:folder'
 
-[jnt:sampleExternalLink] > jmix:templateMixin  mixin
-   extends=jnt:sampleCarouselItem
-   - linkTitle (string) i18n
-   - externalLink (string) = 'http://' i18n
+[jnt:sampleExternalLink] > jmix:templateMixin mixin
+ extends = jnt:sampleCarouselItem
+ - linkTitle (string) internationalized
+ - externalLink (string) = 'http://' internationalized
 
 [jnt:bootstrapBigText] > jnt:bigText
  - text (string, richtext[ckeditor.customConfig='$context/modules/sample-bootstrap-templates/javascript/ckconfig.js']) internationalized
@@ -32,4 +32,17 @@
  - lead (string) mandatory internationalized
  - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
  - linkType (string, choicelist[sampleLinkInitializer,resourceBundle]) = 'internal' < 'internal', 'external'
+
+[jnt:sampleSingleImage] > jnt:content
+ - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
+
+[jnt:sampleFeature] > jnt:content, mix:title, jmix:structuredContent, jmix:editorialContent
+ - text (string, richtext[ckeditor.customConfig='$context/modules/generic-templates/javascript/ckconfig.js']) internationalized
+ - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
+ - imageHover (weakreference, picker[type='image']) internationalized < 'jnt:file'
+ - imageLayout (string, choicelist[resourceBundle]) = 'default' autocreated < 'default', 'rounded', 'rounded-and-polaroid', 'circle', 'polaroid', 'circle-and-polaroid'
+ - imageFancy (weakreference, picker[type='image']) internationalized < 'jnt:file'
+ - layout (string, choicelist[resourceBundle]) = 'imageonright' autocreated < 'imageonright', 'imageonleft'
+ - grid (string, choicelist[resourceBundle]) = '6-6' autocreated < '6-6', '8-4'
+ + * (jnt:sampleSingleImage)
 
