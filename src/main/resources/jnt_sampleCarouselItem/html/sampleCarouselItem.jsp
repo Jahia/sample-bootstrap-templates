@@ -20,13 +20,13 @@
 <c:set var="linkUrl"/>
 <c:choose>
     <c:when test="${linkType == 'internal'}">
-        <c:set var="linkNode" value="${currentNode.properties.internalLink.node}"/>
+        <c:set var="linkNode" value="${currentNode.properties['j:linknode'].node}"/>
         <c:set var="linkTitle" value="${linkNode.displayableName}"/>
         <c:url var="linkUrl" value="${url.base}${linkNode.path}.html"/>
     </c:when>
     <c:when test="${linkType == 'external'}">
-        <c:set var="linkTitle" value="${currentNode.properties.linkTitle.string}"/>
-        <c:set var="linkUrl" value="${currentNode.properties.externalLink.string}"/>
+        <c:set var="linkTitle" value="${currentNode.properties['j:linkTitle'].string}"/>
+        <c:set var="linkUrl" value="${currentNode.properties['j:url'].string}"/>
     </c:when>
     <c:otherwise>
         <c:if test="${renderContext.editMode}">

@@ -31,7 +31,7 @@
 [jnt:sampleCarouselItem] > jnt:content, mix:title
  - lead (string) mandatory internationalized
  - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
- - linkType (string, choicelist[sampleLinkInitializer,resourceBundle]) = 'internal' < 'internal', 'external'
+ - linkType (string, choicelist[linkTypeInitializer,resourceBundle]) = 'internal' mandatory
 
 [jnt:sampleSingleImage] > jnt:content
  - image (weakreference, picker[type='image']) internationalized < 'jnt:file'
