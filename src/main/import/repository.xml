@@ -67,43 +67,6 @@
                     </files>
                     <contents jcr:primaryType="jnt:contentFolder"/>
                     <base j:view="bootstrap" jcr:primaryType="jnt:template">
-                        <single-news j:applyOn="jnt:news"
-                            j:defaultTemplate="true"
-                            j:hiddenTemplate="true"
-                            j:priority="100"
-                            j:view="default"
-                            jcr:primaryType="jnt:contentTemplate">
-                            <j:translation_en jcr:language="en"
-                                    jcr:mixinTypes="mix:title"
-                                    jcr:primaryType="jnt:translation"
-                                    jcr:title="single-news"/>
-                            <pagecontent jcr:primaryType="jnt:contentList">
-                                <bootstrap-container fluid="false" jcr:primaryType="jnt:bootstrapContainer">
-                                    <bootstrap-container jcr:primaryType="jnt:contentList">
-                                        <bootstrap-row fluid="false" jcr:primaryType="jnt:bootstrapRow">
-                                            <bootstrap-column jcr:primaryType="jnt:bootstrapColumn" offset="1" span="9">
-                                                <bootstrap-column jcr:primaryType="jnt:contentList">
-                                                    <bootstrap-breadcrumb displayCurrentPage="true"
-                                                          displayHome="true"
-                                                          displayLinkOnCurrentPage="false"
-                                                          displayOnFirstLevel="false"
-                                                          divider="/"
-                                                          jcr:primaryType="jnt:bootstrapBreadcrumb"/>
-                                                </bootstrap-column>
-                                            </bootstrap-column>
-                                        </bootstrap-row>
-                                        <bootstrap-row-1 fluid="false" jcr:primaryType="jnt:bootstrapRow">
-                                            <bootstrap-column jcr:primaryType="jnt:bootstrapColumn" offset="0" span="13">
-                                                <bootstrap-column jcr:primaryType="jnt:contentList">
-                                                    <main-resource-display j:mainResourceView="bootstrap"
-                                                           jcr:primaryType="jnt:mainResourceDisplay"/>
-                                                </bootstrap-column>
-                                            </bootstrap-column>
-                                        </bootstrap-row-1>
-                                    </bootstrap-container>
-                                </bootstrap-container>
-                            </pagecontent>
-                        </single-news>
                         <footer jcr:primaryType="jnt:contentList">
                             <footer-container jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
                                     jcr:primaryType="jnt:bootstrapFullComponent"
@@ -242,8 +205,9 @@
                                                  result="/modules/sample-bootstrap-templates/search-results"/>
                         </bootstrap-header>
                         <detail j:applyOn="jnt:article jnt:event jnt:news jnt:press"
+                       j:defaultTemplate="true"
                        j:hiddenTemplate="true"
-                       j:priority="1"
+                       j:priority="150"
                        jcr:primaryType="jnt:contentTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
@@ -259,7 +223,6 @@
                                             jcr:mixinTypes="jmix:renderable"
                                             jcr:primaryType="jnt:navMenu"/>
                                         <absolute-content j:level="1" jcr:primaryType="jnt:absoluteArea"/>
-                                        <contextual-content jcr:primaryType="jnt:area"/>
                                     </pagecontent-side1>
                                     <pagecontent jcr:primaryType="jnt:contentList">
                                         <bootstrap-breadcrumb displayCurrentPage="true"
