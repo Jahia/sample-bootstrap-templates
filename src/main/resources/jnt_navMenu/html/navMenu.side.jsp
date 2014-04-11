@@ -17,8 +17,26 @@
 
 <jcr:node var="rootNode" path="${homeNode}/${paths[0]}"/>
 
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#${currentNode.identifier} li > a").each(function(i, el){
+            var $el = $(el);
+            var iconClass = "";
+            if($el.parent("li").hasClass("lvl0")){
+                iconClass = "fa fa-chevron-right";
+            }else if($el.parent("li").hasClass("lvl1")){
+                iconClass = "fa fa-caret-right";
+            }else {
+                return;
+            }
+            var newContent = "<i class='" + iconClass + "'></i> " + $el.text();
+            $el.html(newContent);
+        });
+    })
+</script>
+
 <c:if test="${rootNode.path != renderContext.site.home.path}">
-    <ul class="nav nav-list">
+    <ul class="nav nav-list" id="${currentNode.identifier}">
         <c:url var="rootUrl" value="${url.base}${rootNode.path}.html"/>
         <li class="nav-header"><a href="${rootUrl}" title="${rootNode.displayableName}">${rootNode.displayableName}</a>
         </li>
@@ -27,44 +45,45 @@
             <c:set var="activeClass" value=""/>
             <c:set var="menuElementPath" value="${menuElement.path}/"/>
             <c:if test="${fn:startsWith(renderContext.mainResource.node.path, menuElementPath) || renderContext.mainResource.node.path eq menuElement.path}">
-                <c:set var="activeClass"> class="active"</c:set>
+                <c:set var="activeClass">active</c:set>
             </c:if>
             <c:choose>
                 <c:when test="${jcr:isNodeType(menuElement, 'jnt:navMenuText')}">
                     <li class="divider"></li>
                 </c:when>
                 <c:otherwise>
-                    <c:url var="pageUrl" value="${menuElement.url}" context="/"/>
-                    <c:if test="${jcr:isNodeType(menuElement, 'jnt:externalLink')}">
-                        <c:set var="pageUrl" value="${menuElement.properties['j:url'].string}"/>
-                    </c:if>
-                    <li ${activeClass}><a href="${pageUrl}"><i
-                            class="fa fa-chevron-right"></i> ${menuElement.displayableName}</a>
-                        <c:set var="children" value="${jcr:getChildrenOfType(menuElement, 'jnt:page,jnt:nodeLink')}"/>
-                        <c:if test="${not empty activeClass and not empty children}">
-                            <c:set var="subMenuStarted" value="false" />
-                            <c:forEach items="${children}" var="subMenuElement">
-                                <c:if test="${not subMenuStarted}">
-                                    <ul class="nav nav-list">
-                                    <c:set var="subMenuStarted" value="true" />
-                                </c:if>
-                                <c:set var="subActiveClass" value=""/>
-                                <c:set var="subMenuElementPath" value="${subMenuElement.path}/"/>
-                                <c:if test="${fn:startsWith(renderContext.mainResource.node.path, subMenuElementPath) || renderContext.mainResource.node.path eq subMenuElement.path}">
-                                    <c:set var="subActiveClass"> class="active"</c:set>
-                                </c:if>
-                                <c:url var="pageUrl" value="${subMenuElement.url}" context="/"/>
-                                <c:if test="${jcr:isNodeType(subMenuElement, 'jnt:externalLink')}">
-                                    <c:set var="pageUrl" value="${subMenuElement.properties['j:url'].string}"/>
-                                </c:if>
+                    <li class="lvl0 ${activeClass}">
+                        <c:choose>
+                            <c:when test="${jcr:isNodeType(menuElement, 'jnt:nodeLink,jnt:externalLink')}">
+                                <template:module node="${menuElement}"/>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="<c:url value="${menuElement.url}" context="/"/>">${menuElement.displayableName}</a>
+                            </c:otherwise>
+                        </c:choose>
 
-                                <li ${subActiveClass}><a
-                                        href="${pageUrl}"><i
-                                        class="fa fa-caret-right"></i> ${subMenuElement.displayableName}</a></li>
-                            </c:forEach>
-                            <c:if test="${subMenuStarted}">
-                                </ul>
-                            </c:if>
+                        <c:set var="children" value="${jcr:getChildrenOfType(menuElement, 'jnt:page,jnt:nodeLink,jnt:externalLink')}"/>
+                        <c:if test="${not empty activeClass and not empty children}">
+                            <ul class="nav nav-list">
+                                <c:forEach items="${children}" var="subMenuElement">
+                                    <c:set var="subActiveClass" value=""/>
+                                    <c:set var="subMenuElementPath" value="${subMenuElement.path}/"/>
+                                    <c:if test="${fn:startsWith(renderContext.mainResource.node.path, subMenuElementPath) || renderContext.mainResource.node.path eq subMenuElement.path}">
+                                        <c:set var="subActiveClass">active</c:set>
+                                    </c:if>
+
+                                    <li class="lvl1 ${subActiveClass}">
+                                        <c:choose>
+                                            <c:when test="${jcr:isNodeType(subMenuElement, 'jnt:nodeLink,jnt:externalLink')}">
+                                                <template:module node="${subMenuElement}"/>
+                                            </c:when>
+                                            <c:otherwise>
+                                                <a href="<c:url value="${subMenuElement.url}" context="/"/>">${subMenuElement.displayableName}</a>
+                                            </c:otherwise>
+                                        </c:choose>
+                                    </li>
+                                </c:forEach>
+                            </ul>
                         </c:if>
                     </li>
                 </c:otherwise>
