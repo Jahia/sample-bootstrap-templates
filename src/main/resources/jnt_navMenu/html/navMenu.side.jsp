@@ -64,6 +64,7 @@
 
                         <c:set var="children" value="${jcr:getChildrenOfType(menuElement, 'jnt:page,jnt:nodeLink,jnt:externalLink')}"/>
                         <c:if test="${not empty activeClass and not empty children}">
+                            <template:addCacheDependency path="${menuElement.canonicalPath}"/>
                             <ul class="nav nav-list">
                                 <c:forEach items="${children}" var="subMenuElement">
                                     <c:set var="subActiveClass" value=""/>
