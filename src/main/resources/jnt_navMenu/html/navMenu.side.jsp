@@ -36,6 +36,9 @@
 </script>
 
 <c:if test="${rootNode.path != renderContext.site.home.path}">
+    <template:addCacheDependency path="${renderContext.mainResource.node.parent.path}"/>
+    <template:addCacheDependency path="${rootNode}"/>
+    
     <ul class="nav nav-list" id="${currentNode.identifier}">
         <c:url var="rootUrl" value="${url.base}${rootNode.path}.html"/>
         <li class="nav-header"><a href="${rootUrl}" title="${rootNode.displayableName}">${rootNode.displayableName}</a>
@@ -59,12 +62,12 @@
                             </c:when>
                             <c:otherwise>
                                 <a href="<c:url value="${menuElement.url}" context="/"/>">${menuElement.displayableName}</a>
+                                <template:addCacheDependency path="${menuElement.canonicalPath}"/>
                             </c:otherwise>
                         </c:choose>
 
                         <c:set var="children" value="${jcr:getChildrenOfType(menuElement, 'jnt:page,jnt:nodeLink,jnt:externalLink')}"/>
                         <c:if test="${not empty activeClass and not empty children}">
-                            <template:addCacheDependency path="${menuElement.canonicalPath}"/>
                             <ul class="nav nav-list">
                                 <c:forEach items="${children}" var="subMenuElement">
                                     <c:set var="subActiveClass" value=""/>
@@ -80,6 +83,7 @@
                                             </c:when>
                                             <c:otherwise>
                                                 <a href="<c:url value="${subMenuElement.url}" context="/"/>">${subMenuElement.displayableName}</a>
+                                                <template:addCacheDependency path="${subMenuElement.canonicalPath}"/>
                                             </c:otherwise>
                                         </c:choose>
                                     </li>
