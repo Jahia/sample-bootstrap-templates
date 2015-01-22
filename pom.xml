@@ -79,7 +79,6 @@
     <artifactId>jahia-modules</artifactId>
     <version>7.1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>org.jahia.modules</groupId>
   <artifactId>sample-bootstrap-templates</artifactId>
   <version>3.0.0-SNAPSHOT</version>
   <packaging>bundle</packaging>
@@ -90,6 +89,10 @@
     <developerConnection>scm:git:git@github.com:Jahia/sample-bootstrap-templates.git</developerConnection>
     <url>https://github.com/Jahia/sample-bootstrap-templates</url>
   </scm>
+    <properties>
+        <jahia-module-type>templatesSet</jahia-module-type>
+        <jahia-depends>bootstrap,bootstrap-components,contact,default,event,facets,search,teasers</jahia-depends>
+    </properties>
   <dependencies>
     <dependency>
       <groupId>org.jahia.modules</groupId>
@@ -112,19 +115,5 @@
       <url>https://devtools.jahia.com/nexus/content/groups/public</url>
     </repository>
   </repositories>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.felix</groupId>
-        <artifactId>maven-bundle-plugin</artifactId>
-        <extensions>true</extensions>
-        <configuration>
-          <instructions>
-            <Jahia-Module-Type>templatesSet</Jahia-Module-Type>
-            <Jahia-Depends>bootstrap,bootstrap-components,contact,default,event,facets,search,teasers</Jahia-Depends>
-          </instructions>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+
 </project>
