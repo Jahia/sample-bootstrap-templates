@@ -86,10 +86,9 @@
   <name>Sample Bootstrap Templates</name>
   <description>Template Set using Bootstrap.</description>
   <scm>
-    <connection>scm:git:https://github.com/Jahia/sample-bootstrap-templates.git</connection>
+    <connection>scm:git:git@github.com:Jahia/sample-bootstrap-templates.git</connection>
     <developerConnection>scm:git:git@github.com:Jahia/sample-bootstrap-templates.git</developerConnection>
-    <url>https://github.com/Jahia/sample-bootstrap-templates</url>
-    <tag>HEAD</tag>
+    <url>scm:git:git@github.com:Jahia/sample-bootstrap-templates</url>
   </scm>
   <dependencies>
     <dependency>
