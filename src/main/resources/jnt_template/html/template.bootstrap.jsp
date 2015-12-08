@@ -78,8 +78,8 @@
 
         <div id="header-top" class="header-top-content">
             <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="span12">
+                <div class="row">
+                    <div class="col-md-12">
                         <template:area path="bootstrap-header"/>
                     </div>
                 </div>
@@ -110,9 +110,9 @@
 
     <section class="footer-links" id="footer-links">
         <div class="container-fluid">
-            <div class="row-fluid">
+            <div class="row">
                 <c:forEach items="${jcr:getChildrenOfType(renderContext.site.home, 'jnt:page')}" var="page">
-                    <div class="span2"><h4>${page.displayableName}</h4>
+                    <div class="col-md-2"><h4>${page.displayableName}</h4>
                         <ul class="fa-ul">
                             <c:forEach items="${jcr:getChildrenOfType(page, 'jnt:page')}" var="childpage">
                                 <li><i class="fa-li fa fa-angle-right"></i>

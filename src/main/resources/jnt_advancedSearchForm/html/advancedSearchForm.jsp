@@ -42,11 +42,11 @@
 
 <c:choose>
     <c:when test="${not empty title.string}">
-        <h3>${fn:escapeXml(title.string)}&nbsp;<a class="btn btn-small btn-info" href="#" id="BtToggleSearch"><i
-                class="icon-search"></i></a></h3>
+        <h3>${fn:escapeXml(title.string)}&nbsp;<a class="btn btn-sm btn-info" href="#" id="BtToggleSearch"><i
+                class="glyphicon-search"></i></a></h3>
     </c:when>
     <c:otherwise>
-        <a class="btn btn-small btn-info" href="#" id="BtToggleSearch"><i class="icon-search"></i></a>
+        <a class="btn btn-sm btn-info" href="#" id="BtToggleSearch"><i class="glyphicon-search"></i></a>
     </c:otherwise>
 </c:choose>
 
@@ -57,7 +57,7 @@
 
         <fieldset>
             <legend><fmt:message key="search.advancedSearch.criteria.text.title"/></legend>
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="searchTerm"><fmt:message key="search"/></label>
 
                 <div class="controls">
@@ -75,7 +75,7 @@
         <fieldset>
 
             <legend><fmt:message key="search.advancedSearch.criteria.authorAndDate.title"/></legend>
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="searchCreatedBy">
                     <fmt:message key="search.advancedSearch.criteria.authorAndDate.createdBy"/>
                 </label>
@@ -108,7 +108,7 @@
         </fieldset>
         <fieldset>
             <legend><fmt:message key="search.advancedSearch.criteria.miscellanea.title"/></legend>
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="searchSite">
                     <fmt:message key="search.advancedSearch.criteria.miscellanea.site"/>
                 </label>
@@ -131,14 +131,14 @@
             <c:set var="pValues" value="${fn:join(paramValues[searchInFieldkey], ',')}"/>
             <c:set var="pFilesValue" value="${param[searchInFilesKey]}"/>
             <c:set var="pSiteContentValue" value="${param[searchInSiteContentKey]}"/>
-            <div class="control-group"
+            <div class="form-group"
                  id="search-pages-criteria" ${fn:contains(pValues, 'siteContent') || pSiteContentValue == 'true' ? '' : 'style="display:none"'}>
                 <label class="control-label" for="searchPagePath">
                     <fmt:message key="search.advancedSearch.criteria.miscellanea.pagePath"/>
                 </label>
                 <s:pagePath id="searchPagePath"/>
             </div>
-            <div class="control-group"
+            <div class="form-group"
                  id="search-documents-criteria" ${fn:contains(pValues, 'fileContent') or fn:contains(pValues, 'files') or pFilesValue == 'true' ? '' : 'style="display:none"'}>
                 <label class="control-label" for="searchFileType">
                     <fmt:message key="search.advancedSearch.criteria.miscellanea.fileType"/>
@@ -155,7 +155,7 @@
                     <s:filePath id="searchFilePath"/>
                 </div>
             </div>
-            <div class="control-group">
+            <div class="form-group">
                 <label class="control-label" for="searchResultsPerPage">
                     <fmt:message key="search.advancedSearch.criteria.miscellanea.itemsPerPage"/>
                 </label>
@@ -166,7 +166,7 @@
             </div>
         </fieldset>
         <div class="controls">
-            <input type="submit" name="search" class="btn btn-primary btn-small"
+            <input type="submit" name="search" class="btn btn-primary btn-sm"
                    value="<fmt:message key='search.advancedSearch.submit'/>"/>
         </div>
     </s:form>

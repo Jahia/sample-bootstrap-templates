@@ -17,31 +17,31 @@
         <c:set var="imageCSS" value=" class='img-rounded'"/>
     </c:when>
     <c:when test="${imageLayout == 'rounded-and-polaroid    '}">
-        <c:set var="imageCSS" value=" class='img-rounded img-polaroid'"/>
+        <c:set var="imageCSS" value=" class='img-rounded img-thumbnail'"/>
     </c:when>
     <c:when test="${imageLayout == 'circle'}">
         <c:set var="imageCSS" value=" class='img-circle'"/>
     </c:when>
     <c:when test="${imageLayout == 'polaroid'}">
-        <c:set var="imageCSS" value=" class='img-polaroid'"/>
+        <c:set var="imageCSS" value=" class='img-thumbnail'"/>
     </c:when>
     <c:when test="${imageLayout == 'circle-and-polaroid'}">
-        <c:set var="imageCSS" value=" class='img-circle img-polaroid'"/>
+        <c:set var="imageCSS" value=" class='img-circle img-thumbnail'"/>
     </c:when>
     <c:otherwise>
         <c:set var="imageCSS"/>
     </c:otherwise>
 </c:choose>
-<div class="row-fluid">
-    <div class="span6">
+<div class="row">
+    <div class="col-md-6">
         <h2>${currentNode.properties['jcr:title'].string}</h2>
 
         <p>
             ${currentNode.properties['text'].string}
         </p>
     </div>
-    <div class="span6 fadeParent">
-        <div class="span6"  >
+    <div class="col-md-6 fadeParent">
+        <div class="col-md-6"  >
             <a class="fancybox" rel="${currentNode.name}" href="${currentNode.properties['imageHover'].node.url}"><img src="${currentNode.properties['image'].node.url}" alt="${currentNode.properties['image'].node.displayableName}" ${imageCSS}/></a>
         </div>
     </div>

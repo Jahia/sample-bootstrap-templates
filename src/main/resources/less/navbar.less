@@ -7,7 +7,7 @@
 // -------------
 
 // Base class and wrapper
-.navbar {
+.navbar-nav {
   overflow: visible;
   margin-bottom: @baseLineHeight;
 
@@ -33,12 +33,12 @@
 
 // Set width to auto for default container
 // We then reset it for fixed navbars in the #gridSystem mixin
-.navbar .container {
+.navbar-nav .container {
   width: auto;
 }
 
 // Override the default collapsed state
-.nav-collapse.collapse {
+.navbar-collapse.collapse {
   height: auto;
   overflow: visible;
 }
@@ -46,7 +46,7 @@
 
 // Brand: website or project name
 // -------------------------
-.navbar .brand {
+.navbar-nav .navbar-brand {
   float: left;
   display: block;
   // Vertically center the text given @navbarHeight
@@ -82,7 +82,7 @@
 
 // Dividers in navbar
 // -------------------------
-.navbar .divider-vertical {
+.navbar-nav .divider-vertical {
   height: @navbarHeight;
   margin: 0 9px;
   border-left: 1px solid @navbarBackground;
@@ -91,15 +91,13 @@
 
 // Buttons in navbar
 // -------------------------
-.navbar .btn,
-.navbar .btn-group {
+.navbar-nav .btn,
+.navbar-nav .btn-group {
   .navbarVerticalAlign(30px); // Vertically center in navbar
 }
-.navbar .btn-group .btn,
-.navbar .input-prepend .btn,
-.navbar .input-append .btn,
-.navbar .input-prepend .btn-group,
-.navbar .input-append .btn-group {
+.navbar-nav .btn-group .btn,
+.navbar-nav .input-group .btn,
+.navbar-nav .input-group .btn-group {
   margin-top: 0; // then undo the margin here so we don't accidentally double it
 }
 
@@ -125,8 +123,8 @@
   input[type="radio"] {
     margin-top: 3px;
   }
-  .input-append,
-  .input-prepend {
+  .input-group,
+  .input-group {
     margin-top: 5px;
     white-space: nowrap; // preven two  items from separating within a .navbar-form that has .pull-left
     input {
@@ -196,7 +194,7 @@
 .navbar-static-top .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  #grid > .core > .span(@gridColumns);
+  #grid > .core > .col-md-(@gridColumns);
 }
 
 // Fixed to top
@@ -223,23 +221,23 @@
 // NAVIGATION
 // ----------
 
-.navbar .nav {
+.navbar-nav .nav {
   position: relative;
   left: 0;
   display: block;
   float: left;
   margin: 0 10px 0 0;
 }
-.navbar .nav.pull-right {
+.navbar-nav .nav.pull-right {
   float: right; // redeclare due to specificity
   margin-right: 0; // remove margin on float right nav
 }
-.navbar .nav > li {
+.navbar-nav .nav > li {
   float: left;
 }
 
 // Links
-.navbar .nav > li > a {
+.navbar-nav .nav > li > a {
   float: none;
   // Vertically center the text given @navbarHeight
   padding: ((@navbarHeight - @baseLineHeight) / 2) 14px ((@navbarHeight - @baseLineHeight) / 2);
@@ -247,22 +245,22 @@
   text-decoration: none;
   text-shadow: 0 1px 0 @navbarBackgroundHighlight;
 }
-.navbar .nav .dropdown-toggle .caret {
+.navbar-nav .nav .dropdown-toggle .caret {
   margin-top: 8px;
 }
 
 // Hover/focus
-.navbar .nav > li > a:focus,
-.navbar .nav > li > a:hover {
+.navbar-nav .nav > li > a:focus,
+.navbar-nav .nav > li > a:hover {
   background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover/:focus from .active
   color: @navbarLinkColorHover;
   text-decoration: none;
 }
 
 // Active nav items
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
+.navbar-nav .nav > .active > a,
+.navbar-nav .nav > .active > a:hover,
+.navbar-nav .nav > .active > a:focus {
   color: @navbarLinkColorActive;
   text-decoration: none;
   background-color: @navbarLinkBackgroundActive;
@@ -270,8 +268,8 @@
 }
 
 // Navbar button for toggling navbar items in responsive layouts
-// These definitions need to come after '.navbar .btn'
-.navbar .btn-navbar {
+// These definitions need to come after '.navbar-nav .btn'
+.navbar-nav .navbar-btn {
   display: none;
   float: right;
   padding: 7px 10px;
@@ -280,7 +278,7 @@
   .buttonBackground(darken(@navbarBackgroundHighlight, 5%), darken(@navbarBackground, 5%));
   //.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.1), 0 1px 0 rgba(255,255,255,.075)");
 }
-.navbar .btn-navbar .icon-bar {
+.navbar-nav .navbar-btn .glyphicon-bar {
   display: block;
   width: 18px;
   height: 2px;
@@ -288,7 +286,7 @@
   .border-radius(1px);
   .box-shadow(0 1px 0 rgba(0,0,0,.25));
 }
-.btn-navbar .icon-bar + .icon-bar {
+.navbar-btn .glyphicon-bar + .glyphicon-bar {
   margin-top: 3px;
 }
 
@@ -298,7 +296,7 @@
 // --------------
 
 // Menu position and menu carets
-.navbar .nav > li > .dropdown-menu {
+.navbar-nav .nav > li > .dropdown-menu {
   &:before {
     content: '';
     display: inline-block;
@@ -339,33 +337,33 @@
 }
 
 // Caret should match text color on hover/focus
-.navbar .nav li.dropdown > a:hover .caret,
-.navbar .nav li.dropdown > a:focus .caret {
+.navbar-nav .nav li.dropdown > a:hover .caret,
+.navbar-nav .nav li.dropdown > a:focus .caret {
   border-top-color: @navbarLinkColorHover;
   border-bottom-color: @navbarLinkColorHover;
 }
 
 // Remove background color from open dropdown
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+.navbar-nav .nav li.dropdown.open > .dropdown-toggle,
+.navbar-nav .nav li.dropdown.active > .dropdown-toggle,
+.navbar-nav .nav li.dropdown.open.active > .dropdown-toggle {
   //background-color: @navbarLinkBackgroundActive;
   color: @navbarLinkColorActive;
 }
-.navbar .nav li.dropdown > .dropdown-toggle .caret {
+.navbar-nav .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: @navbarLinkColor;
   border-bottom-color: @navbarLinkColor;
 }
-.navbar .nav li.dropdown.open > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.active > .dropdown-toggle .caret,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
+.navbar-nav .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar-nav .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar-nav .nav li.dropdown.open.active > .dropdown-toggle .caret {
   border-top-color: @navbarLinkColorActive;
   border-bottom-color: @navbarLinkColorActive;
 }
 
 // Right aligned menus need alt position
-.navbar .pull-right > li > .dropdown-menu,
-.navbar .nav > li > .dropdown-menu.pull-right {
+.navbar-nav .pull-right > li > .dropdown-menu,
+.navbar-nav .nav > li > .dropdown-menu.pull-right {
   left: auto;
   right: 0;
   &:before {
@@ -396,8 +394,8 @@
     border-color: @navbarInverseBorder;
   }
 
-  .brand,
-  .nav > li > a {
+  .navbar-brand,
+  .navbar-nav > li > a {
     color: @navbarInverseLinkColor;
     text-shadow: 0 -1px 0 rgba(0,0,0,.25);
     &:hover,
@@ -406,7 +404,7 @@
     }
   }
 
-  .brand {
+  .navbar-brand {
     color: @navbarInverseBrandColor;
 
     span {
@@ -418,15 +416,15 @@
     color: @navbarInverseText;
   }
 
-  .nav > li > a:focus,
-  .nav > li > a:hover {
+  .navbar-nav > li > a:focus,
+  .navbar-nav > li > a:hover {
     background-color: @navbarInverseLinkBackgroundHover;
     color: @navbarInverseLinkColorHover;
   }
 
-  .nav .active > a,
-  .nav .active > a:hover,
-  .nav .active > a:focus {
+  .navbar-nav .active > a,
+  .navbar-nav .active > a:hover,
+  .navbar-nav .active > a:focus {
     color: @navbarInverseLinkColorActive;
     background-color: @navbarInverseLinkBackgroundActive;
   }
@@ -447,24 +445,24 @@
   }
 
   // Dropdowns
-  .nav li.dropdown.open > .dropdown-toggle,
-  .nav li.dropdown.active > .dropdown-toggle,
-  .nav li.dropdown.open.active > .dropdown-toggle {
+  .navbar-nav li.dropdown.open > .dropdown-toggle,
+  .navbar-nav li.dropdown.active > .dropdown-toggle,
+  .navbar-nav li.dropdown.open.active > .dropdown-toggle {
     background-color: @navbarInverseLinkBackgroundActive;
     color: @navbarInverseLinkColorActive;
   }
-  .nav li.dropdown > a:hover .caret,
-  .nav li.dropdown > a:focus .caret {
+  .navbar-nav li.dropdown > a:hover .caret,
+  .navbar-nav li.dropdown > a:focus .caret {
     border-top-color: @navbarInverseLinkColorActive;
     border-bottom-color: @navbarInverseLinkColorActive;
   }
-  .nav li.dropdown > .dropdown-toggle .caret {
+  .navbar-nav li.dropdown > .dropdown-toggle .caret {
     border-top-color: @navbarInverseLinkColor;
     border-bottom-color: @navbarInverseLinkColor;
   }
-  .nav li.dropdown.open > .dropdown-toggle .caret,
-  .nav li.dropdown.active > .dropdown-toggle .caret,
-  .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  .navbar-nav li.dropdown.open > .dropdown-toggle .caret,
+  .navbar-nav li.dropdown.active > .dropdown-toggle .caret,
+  .navbar-nav li.dropdown.open.active > .dropdown-toggle .caret {
     border-top-color: @navbarInverseLinkColorActive;
     border-bottom-color: @navbarInverseLinkColorActive;
   }
@@ -494,7 +492,7 @@
   }
 
   // Navbar collapse button
-  .btn-navbar {
+  .navbar-btn {
     .buttonBackground(darken(@navbarInverseBackgroundHighlight, 5%), darken(@navbarInverseBackground, 5%));
   }
 

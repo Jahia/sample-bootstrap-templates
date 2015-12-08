@@ -29,17 +29,17 @@ em      { font-style: italic; }
 cite    { font-style: normal; }
 
 // Utility classes
-.muted               { color: @grayLight; }
-a.muted:hover,
-a.muted:focus        { color: darken(@grayLight, 10%); }
+.text-muted               { color: @grayLight; }
+a.text-muted:hover,
+a.text-muted:focus        { color: darken(@grayLight, 10%); }
 
 .text-warning        { color: @warningText; }
 a.text-warning:hover,
 a.text-warning:focus { color: darken(@warningText, 10%); }
 
-.text-error          { color: @errorText; }
-a.text-error:hover,
-a.text-error:focus   { color: darken(@errorText, 10%); }
+.text-danger          { color: @errorText; }
+a.text-danger:hover,
+a.text-danger:focus   { color: darken(@errorText, 10%); }
 
 .text-info           { color: @infoText; }
 a.text-info:hover,
@@ -118,14 +118,14 @@ li {
 }
 
 // Remove default list styles
-ul.unstyled,
+.list-unstyled,
 ol.unstyled {
   margin-left: 0;
   list-style: none;
 }
 
 // Single-line list items
-ul.inline,
+.list-inline,
 ol.inline {
   margin-left: 0;
   list-style: none;

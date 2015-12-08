@@ -53,4 +53,4 @@
         </c:if>
 </section>
 
-<template:addResources type="javascript" resources="jquery.min.js,bootstrap-carousel.js"/>
+<template:addResources type="javascript" resources="jquery.min.js,carousel.js"/>

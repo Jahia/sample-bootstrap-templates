@@ -5,7 +5,7 @@
 
 <ul class="thumbnails">
     <c:forEach items="${jcr:getChildrenOfType(currentNode, 'jnt:contact')}" var="subchild" varStatus="status">
-        <li class="span4">
+        <li class="col-md-4">
             <div class="thumbnail">
                 <template:module node="${subchild}" view="bootstrap"/>
             </div>

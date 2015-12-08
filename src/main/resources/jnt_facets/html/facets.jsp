@@ -80,7 +80,7 @@
                     <c:param name="${facetParamVarName}" value="${functions:encodeUrlParam(facetDrillDownUrl)}"/>
                 </c:url>
                 <li><a href="${facetUrl}"><facet:facetValueLabel currentActiveFacetValue="${facetValue}"
-                                                                    facetValueLabels="${facetValueLabels}"/><span class="muted">&nbsp;(${facetValue.value})</span></a>
+                                                                    facetValueLabels="${facetValueLabels}"/><span class="text-muted">&nbsp;(${facetValue.value})</span></a>
                 </li>
             </c:if>
         </c:forEach>

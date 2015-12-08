@@ -14,38 +14,13 @@
 
 <c:forEach var="level1Page" items="${jcr:getChildrenOfType(base, 'jmix:sitemap')}" varStatus="level1Status">
     <c:if test="${level1Status.first}"><ul class="sitemap"></c:if>
-    <li><i class="icon-chevron-right"></i> 
-      <c:choose>
-         <c:when test="${jcr:isNodeType(level1Page, 'jnt:navMenuText')}">
-            <a href='' onclick="return false"><strong>${level1Page.displayableName}</strong></a>
-         </c:when>
-         <c:otherwise>
-            <a href="${level1Page.url}" title="${level1Page.displayableName}"><strong>${level1Page.displayableName}</strong></a>
-         </c:otherwise>
-      </c:choose>		
+    <li><i class="glyphicon-chevron-right"></i> <a href="${level1Page.url}" title="${level1Page.displayableName}"><strong>${level1Page.displayableName}</strong></a>
         <c:forEach var="level2Page" items="${jcr:getChildrenOfType(level1Page, 'jmix:sitemap')}" varStatus="level2Status">
             <c:if test="${level2Status.first}"><ul></c:if>
-            <li><i class="icon-file"></i>
-              <c:choose>
-                 <c:when test="${jcr:isNodeType(level2Page, 'jnt:navMenuText')}">
-                    <a href='' onclick="return false"><strong>${level2Page.displayableName}</strong></a>
-                 </c:when>
-                <c:otherwise>
-                    <a href="${level2Page.url}" title="${level2Page.displayableName}">${level2Page.displayableName}</a>
-                </c:otherwise>
-              </c:choose>			
+            <li><i class="glyphicon-file"></i><a href="${level2Page.url}" title="${level2Page.displayableName}">${level2Page.displayableName}</a>
                 <c:forEach var="level3Page" items="${jcr:getChildrenOfType(level2Page, 'jmix:sitemap')}" varStatus="level3Status">
                     <c:if test="${level3Status.first}"><ul></c:if>
-                    <li><i class=" icon-play-circle"></i> 
-                    <c:choose>
-                     	<c:when test="${jcr:isNodeType(level3Page, 'jnt:navMenuText')}">
-                    		<a href='' onclick="return false"><strong>${level3Page.displayableName}</strong></a>
-                 		</c:when>
-                		<c:otherwise>
-                    		<a href="${level3Page.url}" title="${level3Page.displayableName}">${level3Page.displayableName}</a>
-                		</c:otherwise>
-              		</c:choose>                      
-                    </li>
+                    <li><i class=" glyphicon-play-circle"></i> <a href="${level3Page.url}" title="${level3Page.displayableName}">${level3Page.displayableName}</a></li>
                     <c:if test="${level3Status.last}"></ul></c:if>
                 </c:forEach>
             </li>

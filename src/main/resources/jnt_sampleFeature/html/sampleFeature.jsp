@@ -17,16 +17,16 @@
         <c:set var="imageCSS" value=" class='img-rounded'"/>
     </c:when>
     <c:when test="${imageLayout == 'rounded-and-polaroid'}">
-        <c:set var="imageCSS" value=" class='img-rounded img-polaroid'"/>
+        <c:set var="imageCSS" value=" class='img-rounded img-thumbnail'"/>
     </c:when>
     <c:when test="${imageLayout == 'circle'}">
         <c:set var="imageCSS" value=" class='img-circle'"/>
     </c:when>
     <c:when test="${imageLayout == 'polaroid'}">
-        <c:set var="imageCSS" value=" class='img-polaroid'"/>
+        <c:set var="imageCSS" value=" class='img-thumbnail'"/>
     </c:when>
     <c:when test="${imageLayout == 'circle-and-polaroid'}">
-        <c:set var="imageCSS" value=" class='img-circle img-polaroid'"/>
+        <c:set var="imageCSS" value=" class='img-circle img-thumbnail'"/>
     </c:when>
     <c:otherwise>
         <c:set var="imageCSS"/>
@@ -135,7 +135,7 @@
 
 <c:choose>
     <c:when test="${layout eq 'imageonleft'}">
-        <div class="feature-item row-fluid clearfix">
+        <div class="feature-item row clearfix">
             <div class="${imageWidth} clearfix fadeParent">
                     ${imagepart}
             </div>
@@ -145,7 +145,7 @@
         </div>
     </c:when>
     <c:otherwise>
-        <div class="feature-item row-fluid clearfix">
+        <div class="feature-item row clearfix">
             <div class="${textWidth}">
                     ${textpart}
             </div>

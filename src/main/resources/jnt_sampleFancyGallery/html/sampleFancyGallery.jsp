@@ -57,7 +57,7 @@
     </c:when>
     <c:otherwise>
         <c:if test="${renderContext.editMode}">
-            <div class="span12">
+            <div class="col-md-12">
                 <div class="alert">
                     <button type="button" class="close" data-dismiss="alert">x</button>
                     <strong><fmt:message key="label.message.warning"/>!</strong> Could not open folder.

@@ -34,13 +34,13 @@
     <div class="media-body media-body-border-left media-body-marginleft150">
 
         <h2 class="media-heading"><a href="${linkUrl}">${title.string}</a></h2>
-        <span class="label label-info"><i class="icon-star icon-white"></i>&nbsp;Auteur</span>
+        <span class="label label-info"><i class="glyphicon-star glyphicon-white"></i>&nbsp;Auteur</span>
 
         <p class="media-info">
             <jcr:nodeProperty node="${currentNode}" name="j:defaultCategory" var="cat"/>
         <p class="media-info"><c:forEach items="${cat}" var="category" varStatus="status">
             <c:if test="${not status.first}">,&nbsp;</c:if>
-            <i class="icon-tag"></i> <span class="text-info">${category.node.displayableName}</span>
+            <i class="glyphicon-tag"></i> <span class="text-info">${category.node.displayableName}</span>
         </c:forEach> </p>
         <p>${body.string}</p>
     </div>

@@ -7,7 +7,7 @@
 <c:if test="${not empty background}">
     <template:addCacheDependency node="${background.node}"/>
 </c:if>
-<div class="hero-unit">
+<div class="jumbotron">
     <h1><jcr:nodeProperty node="${currentNode}" name="jcr:title"/></h1>
     <c:if test="${not empty background}">
         <img src="${background.node.url}" alt="">

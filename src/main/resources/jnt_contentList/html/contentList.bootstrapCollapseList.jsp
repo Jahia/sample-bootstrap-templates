@@ -17,17 +17,17 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
-<div class="accordion-group">
-    <div class="accordion-heading">
+<div class="panel">
+    <div class="panel-heading">
         <a class="accordion-toggle"
            href="#collapse${currentResource.moduleParams.count}${fn:replace(currentResource.moduleParams.id,'-','')}"
            <c:if test="${not renderContext.editMode}">data-toggle="collapse"
            data-parent="#jnt_bootstrapCollapseList${fn:replace(currentResource.moduleParams.id,'-','')}"</c:if>>${fn:escapeXml(currentNode.displayableName)}</a>
     </div>
 
-    <div class="accordion-body <c:if test="${not renderContext.editMode}">collapse <c:if test="${currentResource.moduleParams.first}">in</c:if></c:if>"
+    <div class="panel-collapse <c:if test="${not renderContext.editMode}">collapse <c:if test="${currentResource.moduleParams.first}">in</c:if></c:if>"
          id="collapse${currentResource.moduleParams.count}${fn:replace(currentResource.moduleParams.id,'-','')}">
-        <div class="accordion-inner">
+        <div class="panel-body">
             <template:module path="${currentNode.path}" view="default"/>
         </div>
     </div>

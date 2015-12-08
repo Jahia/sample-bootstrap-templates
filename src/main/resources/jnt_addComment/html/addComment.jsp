@@ -46,36 +46,36 @@
             <input type="hidden" name="jcrResourceID" value="${currentNode.identifier}"/>
             <fieldset>
                 <c:if test="${not renderContext.loggedIn}">
-                    <div class="control-group">
+                    <div class="form-group">
                         <label class="control-label" for="comment_pseudo">
                             <fmt:message key="comment.pseudo"/>
                         </label>
 
                         <div class="controls">
-                            <input class="span12" value="${sessionScope.formDatas['pseudo'][0]}"
+                            <input class="col-md-12" value="${sessionScope.formDatas['pseudo'][0]}"
                                    type="text" name="pseudo" id="comment_pseudo"
                                    tabindex="1"/>
                         </div>
                     </div>
                 </c:if>
-                <div class="control-group">
+                <div class="form-group">
                     <label class="control-label" for="comment-title">
                         <fmt:message key="comment.title"/>
                     </label>
 
                     <div class="controls">
-                        <input class="span12" value="${sessionScope.formDatas['jcr:title'][0]}"
+                        <input class="col-md-12" value="${sessionScope.formDatas['jcr:title'][0]}"
                                type="text" id="comment-title" name="jcr:title"
                                tabindex="1"/>
                     </div>
                 </div>
-                <div class="control-group">
+                <div class="form-group">
                     <label class="control-label" for="jahia-comment-${boundComponent.identifier}">
                         <fmt:message key="comment.body"/>
                     </label>
 
                     <div class="controls">
-                        <textarea class="span12" rows="7" id="jahia-comment-${boundComponent.identifier}"
+                        <textarea class="col-md-12" rows="7" id="jahia-comment-${boundComponent.identifier}"
                                   name="content"
                                   tabindex="2"><c:if
                                 test="${not empty sessionScope.formDatas['content']}">${fn:escapeXml(sessionScope.formDatas['content'][0])}</c:if></textarea>
@@ -83,19 +83,19 @@
                 </div>
 
                 <c:if test="${not renderContext.loggedIn}">
-                <div class="control-group">
+                <div class="form-group">
                     <label class="control-label" for="captcha">
                         <fmt:message key="label.captcha"/>
                     </label>
                     <template:captcha/>
                     <c:if test="${not empty sessionScope.formError}">
-                        <label class="text-error">${fn:escapeXml(sessionScope.formError)}</label>
+                        <label class="text-danger">${fn:escapeXml(sessionScope.formError)}</label>
                     </c:if>
                     <label class="control-label" for="captcha"><fmt:message key="label.captcha.enter"/></label>
                     <input type="text" id="captcha" name="jcrCaptcha"/>
                 </div>
                 </c:if>
-                <div class="control-group">
+                <div class="form-group">
                     <div class="controls">
                         <input type="reset" value="<fmt:message key='label.reset'/>" class="btn"
                                tabindex="3"  ${disabled}/>

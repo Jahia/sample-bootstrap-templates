@@ -9,7 +9,7 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 
 <h1>${currentNode.properties["jcr:title"].string}</h1>
-<span class="label label-info"><i class="icon-star icon-white"></i>&nbsp;Auteur</span>
+<span class="label label-info"><i class="glyphicon-star glyphicon-white"></i>&nbsp;Auteur</span>
 <h4 class="intro">
     ${currentNode.properties.intro.string}
 </h4>

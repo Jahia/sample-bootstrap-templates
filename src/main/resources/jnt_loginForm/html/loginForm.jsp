@@ -16,7 +16,7 @@
 <%--@elvariable id="currentAliasUser" type="org.jahia.services.usermanager.JahiaUser"--%>
 
 <bootstrap:addCSS/>
-<template:addResources type="javascript" resources="bootstrap-alert.js"/>
+<template:addResources type="javascript" resources="alert.js"/>
 <c:if test="${!renderContext.loggedIn || currentAliasUser.username eq 'guest'}">
     <script type="text/javascript">
         document.onkeydown = function (e) {
@@ -25,14 +25,14 @@
     </script>
     <ui:loginArea class="form-inline">
         <ui:isLoginError var="loginResult">
-            <div class="alert alert-error">
+            <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <fmt:message
                         key="${loginResult == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/>
             </div>
         </ui:isLoginError>
         <c:if test="${not empty param['loginError']}">
-            <div class="alert alert-error">
+            <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <fmt:message
                         key="${param['loginError'] == 'account_locked' ? 'message.accountLocked' : 'message.invalidUsernamePassword'}"/>
@@ -48,7 +48,7 @@
             <input type="checkbox" id="rememberme" name="useCookie"/><fmt:message key="loginForm.rememberMe.label"/>
         </label>
 
-        <button type="submit" class="btn btn-small btn-primary"><fmt:message
+        <button type="submit" class="btn btn-sm btn-primary"><fmt:message
                 key='loginForm.loginbutton.label'/></button>
     </ui:loginArea>
 </c:if>
@@ -63,7 +63,7 @@
 
     <p><fmt:message key="label.loggedAs"/>&nbsp;${renderContext.user.username}
         <c:if test="${!empty currentAliasUser}"> (as ${currentAliasUser.username})</c:if>&nbsp;
-        <a class="btn btn-small btn-primary"
+        <a class="btn btn-sm btn-primary"
            href='<c:url value="${url.logout}"/>'><span><fmt:message key="label.logout"/></span></a>
     </p>
 </c:if>

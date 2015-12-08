@@ -42,7 +42,7 @@
     <jcr:nodeProperty node="${currentNode}" name="jcr:title" var="commentTitle"/>
     <jcr:nodeProperty node="${currentNode}" name="jcr:lastModified" var="lastModified"/>
     <h5 class="media-heading"><c:out value="${commentTitle.string}"/>
-        <small class="muted pull-right timestamp"><fmt:formatDate value="${lastModified.time}"
+        <small class="text-muted pull-right timestamp"><fmt:formatDate value="${lastModified.time}"
                                                                   pattern="yyyy/MM/dd HH:mm"/></small>
     </h5>
 

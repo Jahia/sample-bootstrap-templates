@@ -39,7 +39,7 @@
 </c:if>
 
 <a class="btn btn-primary" href="${action}" title="<fmt:message key="bootstrapComponents.events.back"/>">
-    <i class="icon-chevron-left icon-white"></i> <fmt:message key="bootstrapComponents.events.back"/> </a>
+    <i class="glyphicon-chevron-left glyphicon-white"></i> <fmt:message key="bootstrapComponents.events.back"/> </a>
 
 <article>
     <div class="media-date media-date-big media-date-big-nomarginright "><span class="month">${startDateMonth}</span><span
@@ -54,13 +54,13 @@
     </c:if>
     <div class="media-body">
         <h1>${title.string}</h1>
-        <p class="media-info"><span class="label label-info"><i class="icon-star icon-white"></i>&nbsp;<fmt:message key='jnt_event.eventsType.${currentNode.properties.eventsType.string}'/></span>
+        <p class="media-info"><span class="label label-info"><i class="glyphicon-star glyphicon-white"></i>&nbsp;<fmt:message key='jnt_event.eventsType.${currentNode.properties.eventsType.string}'/></span>
         <span class="label label-info"><i
-                class="icon-map-marker icon-white"></i>&nbsp;${currentNode.properties.location.string}</span>
+                class="glyphicon-map-marker glyphicon-white"></i>&nbsp;${currentNode.properties.location.string}</span>
             <jcr:nodeProperty node="${currentNode}" name="j:defaultCategory" var="cat"/>
         <p class="media-info"><c:forEach items="${cat}" var="category" varStatus="status">
             <c:if test="${not status.first}">,&nbsp;</c:if>
-            <i class="icon-tag"></i>&nbsp;<span class="text-info">${category.node.displayableName}</span>
+            <i class="glyphicon-tag"></i>&nbsp;<span class="text-info">${category.node.displayableName}</span>
         </c:forEach> </p>
     </div>
     <div class="media-text-big">

@@ -22,4 +22,4 @@
 <c:if test="${empty jcr:findDisplayableNode(renderContext.mainResource.node.parent, renderContext)}">
     <c:set var="action">javascript:history.back()</c:set>
 </c:if>
-<a class="btn btn-info btn-small" href="${action}" title='<fmt:message key="backToPreviousPage"/>'>${title}</a>
+<a class="btn btn-info btn-sm" href="${action}" title='<fmt:message key="backToPreviousPage"/>'>${title}</a>

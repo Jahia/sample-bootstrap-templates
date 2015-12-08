@@ -16,12 +16,12 @@
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS/>
 <template:addResources type="css" resources="languageSwitchingLinks.css"/>
-<template:addResources type="javascript" resources="bootstrap-dropdown.js"/>
+<template:addResources type="javascript" resources="dropdown.js"/>
 <c:set var="linkKind" value="${currentNode.properties.typeOfDisplay.string}"/>
 <c:set var="flag" value="${linkKind eq 'flag'}"/>
 
 <ui:initLangBarAttributes activeLanguagesOnly="${renderContext.liveMode}"/>
-<div class="btn-group btn-mini">
+<div class="btn-group btn-xs">
     <c:forEach items="${requestScope.languageCodes}" var="language">
         <c:if test="${language eq currentResource.locale}">
             <ui:displayLanguageSwitchLink languageCode="${language}" display="false" urlVar="switchUrl"

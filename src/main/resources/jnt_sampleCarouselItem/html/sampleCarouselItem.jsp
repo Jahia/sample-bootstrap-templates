@@ -55,7 +55,7 @@
                 <h2>${title}</h2>
 
                 <p class="lead inverse">${lead}</p>
-                <a href="${linkUrl}" class="btn btn-large btn-primary"><i class="fa fa-chevron-right"></i>
+                <a href="${linkUrl}" class="btn btn-lg btn-primary"><i class="fa fa-chevron-right"></i>
                     <fmt:message key="sampleBootstrapTemplates.message.readMore"/>
                 </a>
             </div>

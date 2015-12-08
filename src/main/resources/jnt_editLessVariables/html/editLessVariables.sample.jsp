@@ -77,31 +77,31 @@
 </div>
 <fieldset class="box-1">
     <legend>Scaffolding</legend>
-    <label><div class="row-fluid">
-        <div class="span3">bodyBackground</div>
-        <div class="span9"><input type="text" id="bodyBackground" name="bodyBackground" value="${fn:escapeXml(bodyBackground)}" /></div>
+    <label><div class="row">
+        <div class="col-md-3">bodyBackground</div>
+        <div class="col-md-9"><input type="text" id="bodyBackground" name="bodyBackground" value="${fn:escapeXml(bodyBackground)}" /></div>
     </div></label>
-    <label><div class="row-fluid">
-        <div class="span3">textColor</div>
-        <div class="span9"><input type="text" id="textColor" name="textColor" value="${fn:escapeXml(textColor)}" /></div>
+    <label><div class="row">
+        <div class="col-md-3">textColor</div>
+        <div class="col-md-9"><input type="text" id="textColor" name="textColor" value="${fn:escapeXml(textColor)}" /></div>
     </div></label>
 </fieldset>
 <fieldset class="box-1">
     <legend>Links</legend>
-    <label><div class="row-fluid">
-        <div class="span3">linkColor</div>
-        <div class="span9"><input type="text" id="linkColor" name="linkColor" value="${fn:escapeXml(linkColor)}" /></div>
+    <label><div class="row">
+        <div class="col-md-3">linkColor</div>
+        <div class="col-md-9"><input type="text" id="linkColor" name="linkColor" value="${fn:escapeXml(linkColor)}" /></div>
     </div></label>
 </fieldset>
 <fieldset class="box-1">
     <legend>Typography</legend>
-    <label><div class="row-fluid">
-        <div class="span3">baseFontSize</div>
-        <div class="span9"><input type="text" name="baseFontSize" value="${fn:escapeXml(baseFontSize)}" /></div>
+    <label><div class="row">
+        <div class="col-md-3">baseFontSize</div>
+        <div class="col-md-9"><input type="text" name="baseFontSize" value="${fn:escapeXml(baseFontSize)}" /></div>
     </div></label>
-    <label><div class="row-fluid">
-        <div class="span3">baseFontFamily</div>
-        <div class="span9">
+    <label><div class="row">
+        <div class="col-md-3">baseFontFamily</div>
+        <div class="col-md-9">
             <select name="baseFontFamily">
                 <option value="@sansFontFamily" <c:if test="${baseFontFamily eq '@sansFontFamily'}">selected="selected" </c:if>>Sans-Serif Fonts</option>
                 <option value="@serifFontFamily" <c:if test="${baseFontFamily eq '@serifFontFamily'}">selected="selected" </c:if>>Serif Fonts</option>
@@ -109,13 +109,13 @@
             </select>
         </div>
     </div></label>
-    <label><div class="row-fluid">
-        <div class="span3">baseLineHeight</div>
-        <div class="span9"><input type="text" name="baseLineHeight" value="${fn:escapeXml(baseLineHeight)}" /></div>
+    <label><div class="row">
+        <div class="col-md-3">baseLineHeight</div>
+        <div class="col-md-9"><input type="text" name="baseLineHeight" value="${fn:escapeXml(baseLineHeight)}" /></div>
     </div></label>
-    <label><div class="row-fluid">
-        <div class="span3">headingsFontFamily</div>
-        <div class="span9">
+    <label><div class="row">
+        <div class="col-md-3">headingsFontFamily</div>
+        <div class="col-md-9">
             <select name="headingsFontFamily">
                 <option value="'Scada',@sansFontFamily" <c:if test="${headingsFontFamily eq '\\\'Scada\\\',@sansFontFamily'}">selected="selected" </c:if>>Scada + Sans-Serif Fonts</option>
                 <option value="@sansFontFamily" <c:if test="${headingsFontFamily eq '@sansFontFamily'}">selected="selected" </c:if>>Sans-Serif Fonts</option>
@@ -124,9 +124,9 @@
             </select>
         </div>
     </div></label>
-    <label><div class="row-fluid">
-        <div class="span3">headingsFontWeight</div>
-        <div class="span9">
+    <label><div class="row">
+        <div class="col-md-3">headingsFontWeight</div>
+        <div class="col-md-9">
             <select name="headingsFontWeight">
                 <option value="normal" <c:if test="${headingsFontWeight eq 'normal'}">selected="selected" </c:if>>normal</option>
                 <option value="bold" <c:if test="${headingsFontWeight eq 'bold'}">selected="selected" </c:if>>bold</option>
@@ -134,16 +134,16 @@
 
         </div>
     </div></label>
-    <label><div class="row-fluid">
-        <div class="span3">headingsColor</div>
-        <div class="span9"><input type="text" id="headingsColor" name="headingsColor" value="${fn:escapeXml(headingsColor)}" /></div>
+    <label><div class="row">
+        <div class="col-md-3">headingsColor</div>
+        <div class="col-md-9"><input type="text" id="headingsColor" name="headingsColor" value="${fn:escapeXml(headingsColor)}" /></div>
     </div></label>
 </fieldset>
 <fieldset class="box-1">
     <legend>Header</legend>
-    <label><div class="row-fluid">
-        <div class="span3">headerTopBorder</div>
-        <div class="span9"><input type="text" id="headerTopBorder" name="headerTopBorder" value="${headerTopBorder}" /></div>
+    <label><div class="row">
+        <div class="col-md-3">headerTopBorder</div>
+        <div class="col-md-9"><input type="text" id="headerTopBorder" name="headerTopBorder" value="${headerTopBorder}" /></div>
     </div></label>
 </fieldset>
 

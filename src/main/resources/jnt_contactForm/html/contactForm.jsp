@@ -21,7 +21,7 @@
 <fieldset>
 <legend><fmt:message key="jnt_contact"/></legend>
 <c:if test="${props.gender.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="gender">
                 ${fn:escapeXml(jcr:label(props.gender.definition,currentResource.locale))}
         </label>
@@ -37,7 +37,7 @@
     </div>
 </c:if>
 <c:if test="${props.title.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="title">
                 ${fn:escapeXml(jcr:label(props.title.definition,currentResource.locale))}
         </label>
@@ -53,7 +53,7 @@
     </div>
 </c:if>
 <c:if test="${props.firstname.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="firstname">
                 ${fn:escapeXml(jcr:label(props.firstname.definition,currentResource.locale))}
         </label>
@@ -65,7 +65,7 @@
 </c:if>
 
 <c:if test="${props.lastname.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="lastname">
                 ${fn:escapeXml(jcr:label(props.lastname.definition,currentResource.locale))}
         </label>
@@ -77,7 +77,7 @@
 </c:if>
 
 <c:if test="${props.age.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="age">
                 ${fn:escapeXml(jcr:label(props.age.definition,currentResource.locale))}
         </label>
@@ -88,7 +88,7 @@
     </div>
 </c:if>
 <c:if test="${props.birthdate.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="birthdate">
                 ${fn:escapeXml(jcr:label(props.birthdate.definition,currentResource.locale))}
         </label>
@@ -100,7 +100,7 @@
 </c:if>
 
 <c:if test="${props.profession.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="profession">
                 ${fn:escapeXml(jcr:label(props.profession.definition,currentResource.locale))}
         </label>
@@ -111,7 +111,7 @@
     </div>
 </c:if>
 <c:if test="${props.maritalStatus.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="maritalStatus">
                 ${fn:escapeXml(jcr:label(props.maritalStatus.definition,currentResource.locale))}
         </label>
@@ -127,7 +127,7 @@
     </div>
 </c:if>
 <c:if test="${props.hobbies.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="hobbies">
                 ${fn:escapeXml(jcr:label(props.hobbies.definition,currentResource.locale))}
         </label>
@@ -138,7 +138,7 @@
     </div>
 </c:if>
 <c:if test="${props.subject.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="subject">
                 ${fn:escapeXml(jcr:label(props.subject.definition,currentResource.locale))}
         </label>
@@ -154,7 +154,7 @@
     </div>
 </c:if>
 <c:if test="${props.address.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="address">
                 ${fn:escapeXml(jcr:label(props.address.definition,currentResource.locale))}
         </label>
@@ -164,7 +164,7 @@
     </div>
 </c:if>
 <c:if test="${props.city.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="city">
                 ${fn:escapeXml(jcr:label(props.city.definition,currentResource.locale))}
         </label>
@@ -174,7 +174,7 @@
     </div>
 </c:if>
 <c:if test="${props.state.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="state">
                 ${fn:escapeXml(jcr:label(props.state.definition,currentResource.locale))}
         </label>
@@ -184,7 +184,7 @@
     </div>
 </c:if>
 <c:if test="${props.zip.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="zip">
                 ${fn:escapeXml(jcr:label(props.zip.definition,currentResource.locale))}
         </label>
@@ -194,7 +194,7 @@
     </div>
 </c:if>
 <c:if test="${props.country.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="country">
                 ${fn:escapeXml(jcr:label(props.country.definition,currentResource.locale))}
         </label>
@@ -204,7 +204,7 @@
     </div>
 </c:if>
 <c:if test="${props.remarks.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="remarks">
                 ${fn:escapeXml(jcr:label(props.remarks.definition,currentResource.locale))}
         </label>
@@ -214,7 +214,7 @@
     </div>
 </c:if>
 <c:if test="${props.captcha.boolean}">
-    <div class="control-group">
+    <div class="form-group">
         <label class="control-label" for="captcha">
                 ${fn:escapeXml(jcr:label(props.captcha.definition,currentResource.locale))}
         </label>
