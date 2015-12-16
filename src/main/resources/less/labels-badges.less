@@ -66,15 +66,6 @@ a {
   // Inverse (black)
   &-inverse           { background-color: @grayDark; }
   &-inverse[href]     { background-color: darken(@grayDark, 10%); }
-  // media-info (media-info)
-    &-media-info           { background-color: @linkColor; }
-    &-media-info[href]     { background-color: darken(@linkColor, 10%); }
-    // media-webinar (media-webinar)
-      &-media-webinar           { background-color: @green; }
-      &-media-webinar[href]     { background-color: darken(@green, 10%); }
-    // FACET (label)
-      &-facet           { background-color: @linkColor; line-height: 20px; }
-      &-facet[href]     { background-color: darken(@linkColor, 10%); line-height: 20px;}
 }
 
 // Quick fix for labels/badges in buttons
@@ -85,7 +76,7 @@ a {
     top: -1px;
   }
 }
-.btn-xs {
+.btn-mini {
   .label,
   .badge {
     top: 0;
