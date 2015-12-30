@@ -15,7 +15,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS />
-<template:addResources type="javascript" resources="jquery.js,dropdown.js"/>
+<template:addResources type="javascript" resources="jquery.js,bootstrap3-dropdown.js"/>
 
 <template:include view="hidden.header"/>
 <c:if test="${not empty moduleMap.currentList}">

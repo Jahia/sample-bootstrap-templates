@@ -17,7 +17,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="bootstrapComponents.css"/>
+<template:addResources type="css" resources="bootstrap3Components.css"/>
 <c:if test="${!empty jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}">
     <c:url value='${url.base}${jcr:getParentOfType(renderContext.mainResource.node, "jnt:page").path}.html' var="action"/>
 </c:if>

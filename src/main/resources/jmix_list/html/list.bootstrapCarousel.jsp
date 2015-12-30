@@ -18,7 +18,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS/>
-<template:addResources type="javascript" resources="carousel.js"/>
+<template:addResources type="javascript" resources="bootstrap3-carousel.js"/>
 <c:set var="resourceReadOnly" value="${currentResource.moduleParams.readOnly}"/>
 <template:include view="hidden.header"/>
 <c:set var="isEmpty" value="true"/>
@@ -39,7 +39,7 @@
     </c:when>
     <c:otherwise>
         <c:set var="divID" value="myCarousel${fn:replace(currentNode.identifier,'-', '')}"/>
-        <c:if test="${jcr:isNodeType(currentNode, 'jmix:bootstrapCarouselInterval')}">
+        <c:if test="${jcr:isNodeType(currentNode, 'jmix:bootstrap3CarouselInterval')}">
             <script type='text/javascript'>
                 $(document).ready(function () {
                     $('#${divID}').carousel({
@@ -50,7 +50,7 @@
             </script>
         </c:if>
         <div id="${divID}" class="carousel slide" <c:if
-                test="${jcr:isNodeType(currentNode, 'jmix:bootstrapCarouselInterval')}"> data-interval="${currentNode.properties.interval.long}" data-pause="hover"</c:if>>
+                test="${jcr:isNodeType(currentNode, 'jmix:bootstrap3CarouselInterval')}"> data-interval="${currentNode.properties.interval.long}" data-pause="hover"</c:if>>
             <ol class="carousel-indicators">
                 <c:forEach items="${moduleMap.currentList}" var="subchild" begin="${moduleMap.begin}"
                            end="${moduleMap.end}" varStatus="status">

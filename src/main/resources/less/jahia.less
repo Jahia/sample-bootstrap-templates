@@ -1,3 +1,5 @@
+@logoPath:"../img/logo.png";
+
 .clearfix {
     *zoom: 1;
 }
@@ -50,7 +52,7 @@
 }
 /* = Utils
  -------------------------------------------------------------- */
-.navbar-nav .navbar-navbar-brand {
+.navbar-nav .navbar-brand {
     display: block;
     float: left;
     margin-left: -20px;
@@ -199,7 +201,7 @@ header .container {
   background: #fff;
   text-shadow:none;
 }
-.navbar-nav .navbar-btn .glyphicon-bar {
+.navbar-nav .navbar-btn .glyphicon-hamburger {
   background-color: #333;
 }
 .navbar-nav .navbar-btn span.nb_left {
@@ -309,4 +311,22 @@ ul.sitemap li li li{display:inline-block;*display:inline}
     margin-top: 20px;
   }
 
+}
+
+// Navbar search
+// -------------------------
+.navbar-search {
+  position: relative;
+  float: left;
+  .navbar-vertical-align(30px); // Vertically center in navbar
+  margin-bottom: 0;
+  .search-query {
+    color: #000;
+    margin-bottom: 0;
+    padding: 4px 14px;
+    .border-top-radius(15px); // redeclare because of specificity of the type attribute
+    .border-right-radius(15px); // redeclare because of specificity of the type attribute
+    .border-bottom-radius(15px); // redeclare because of specificity of the type attribute
+    .border-left-radius(15px); // redeclare because of specificity of the type attribute
+  }
 }

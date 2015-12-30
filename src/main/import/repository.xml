@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
     <modules jcr:primaryType="jnt:modules">
-        <sample-bootstrap-templates j:dependencies="bootstrap bootstrap-components contact default event facets search teasers"
+        <sample-bootstrap-templates j:dependencies="bootstrap bootstrap-components bootstrap3-components contact default event facets search teasers"
                              j:installedModules="sample-bootstrap-templates"
                                   j:modulePriority="0"
                              j:moduleType="templatesSet"
@@ -51,10 +51,32 @@
                                 <thumbnail2 jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
                             </logo.png>
                         </img>
+                        <fonts jcr:primaryType="jnt:folder">
+                            <glyphicons-halflings-regular.svg jcr:mixinTypes="jmix:image" jcr:primaryType="jnt:file">
+                                <jcr:content j:lastExtractionDate="2015-12-29T23:22:51.742+01:00"
+                                  jcr:mimeType="image/svg+xml"
+                                  jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-regular.svg>
+                            <glyphicons-halflings-regular.ttf jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="application/x-font-ttf" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-regular.ttf>
+                            <glyphicons-halflings-regular.eot jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="application/vnd.ms-fontobject"
+                                  jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-regular.eot>
+                            <glyphicons-halflings-regular.woff2 jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="application/binary" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-regular.woff2>
+                            <glyphicons-halflings-regular.woff jcr:primaryType="jnt:file">
+                                <jcr:content jcr:mimeType="application/x-font-woff" jcr:primaryType="jnt:resource"/>
+                            </glyphicons-halflings-regular.woff>
+                        </fonts>
                     </bootstrap>
                 </files>
                 <contents jcr:primaryType="jnt:contentFolder"/>
-                <templates jcr:primaryType="jnt:templatesFolder">
+                <templates bootstrapVersion="less3"
+                    jcr:mixinTypes="jmix:bootstrapVersion"
+                    jcr:primaryType="jnt:templatesFolder">
                     <files jcr:primaryType="jnt:folder">
                         <bootstrap.png j:height="16"
                               j:width="16"
@@ -68,8 +90,8 @@
                     <contents jcr:primaryType="jnt:contentFolder"/>
                     <base j:view="bootstrap" jcr:primaryType="jnt:template">
                         <footer jcr:primaryType="jnt:contentList">
-                            <footer-container jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
-                                    jcr:primaryType="jnt:bootstrapFullComponent"
+                            <footer-container jcr:mixinTypes="jmix:bootstrap3FullComponentRowPredefined"
+                                    jcr:primaryType="jnt:bootstrap3FullComponent"
                                     layout="12"
                                     rowType="predefined">
                                 <footer-container jcr:primaryType="jnt:contentList">
@@ -102,8 +124,8 @@
                                     jcr:primaryType="jnt:translation"
                                     jcr:title="3 Columns"/>
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
-                                  jcr:primaryType="jnt:bootstrapFullComponent"
+                                <pagecontent jcr:mixinTypes="jmix:bootstrap3FullComponentRowPredefined"
+                                  jcr:primaryType="jnt:bootstrap3FullComponent"
                                   layout="3_6_3"
                                   rowType="predefined">
                                     <pagecontent-side1 jcr:primaryType="jnt:contentList">
@@ -123,7 +145,7 @@
                                                  displayLinkOnCurrentPage="false"
                                                  displayOnFirstLevel="false"
                                                  divider="/"
-                                                 jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                                 jcr:primaryType="jnt:bootstrap3Breadcrumb"/>
                                         <page-title hideInHomePage="false" jcr:primaryType="jnt:pageTitle"/>
                                         <pagecontent jcr:primaryType="jnt:area"/>
                             </pagecontent>
@@ -136,8 +158,8 @@
                                     jcr:primaryType="jnt:translation"
                                     jcr:title="1 Column"/>
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
-                                  jcr:primaryType="jnt:bootstrapFullComponent"
+                                <pagecontent jcr:mixinTypes="jmix:bootstrap3FullComponentRowPredefined"
+                                  jcr:primaryType="jnt:bootstrap3FullComponent"
                                   layout="12"
                                   rowType="predefined"/>
                             </pagecontent>
@@ -149,8 +171,8 @@
                                     jcr:title="2 columns"/>
                             <pagecontent jcr:primaryType="jnt:contentList">
                                 <pagecontent jcr:primaryType="jnt:contentList">
-                                    <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
-                                     jcr:primaryType="jnt:bootstrapFullComponent"
+                                    <pagecontent jcr:mixinTypes="jmix:bootstrap3FullComponentRowPredefined"
+                                     jcr:primaryType="jnt:bootstrap3FullComponent"
                                      layout="3_9"
                                      rowType="predefined">
                                         <pagecontent-side1 jcr:primaryType="jnt:contentList">
@@ -170,7 +192,7 @@
                                                     displayLinkOnCurrentPage="false"
                                                     displayOnFirstLevel="false"
                                                     divider="/"
-                                                    jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                                    jcr:primaryType="jnt:bootstrap3Breadcrumb"/>
                                             <page-title hideInHomePage="true" jcr:primaryType="jnt:pageTitle"/>
                                             <pagecontent jcr:primaryType="jnt:area"/>
                                                 </pagecontent>
@@ -181,7 +203,7 @@
                         <bootstrap-nav jcr:primaryType="jnt:contentList">
                             <bootstrap-navbar fluid="true"
                                     inverse="false"
-                                    jcr:primaryType="jnt:bootstrapNavBar"
+                                    jcr:primaryType="jnt:bootstrap3NavBar"
                                     responsive="true">
                                 <j:translation_en jcr:language="en"
                                        jcr:mixinTypes="mix:title"
@@ -190,7 +212,7 @@
                                 <navigation-menu j:maxDepth="2"
                                       j:menuItemView="menuElement"
                                       j:startLevel="0"
-                                      jcr:primaryType="jnt:bootstrapNavMenu">
+                                      jcr:primaryType="jnt:bootstrap3NavMenu">
                                     <j:translation_en jcr:language="en"
                                           jcr:mixinTypes="mix:title"
                                           jcr:primaryType="jnt:translation"
@@ -202,20 +224,20 @@
                             <bootstrap-navigation-menu j:maxDepth="2"
                                              j:menuItemView="menuDropdown"
                                              j:startLevel="0"
-                                             jcr:primaryType="jnt:bootstrapNavMenu"
+                                             jcr:primaryType="jnt:bootstrap3NavMenu"
                                              position="right"/>
                         </navBar>
                         <bootstrap-header jcr:primaryType="jnt:contentList">
                             <bootstrapmenulanguageswitcher j:view="sampleBootstrapTemplates"
                                                  jcr:mixinTypes="jmix:renderable"
-                                                 jcr:primaryType="jnt:bootstrapMenuLanguageSwitcher"
+                                                 jcr:primaryType="jnt:bootstrap3MenuLanguageSwitcher"
                                                  position="left"
                                                  typeOfDisplay="flag"/>
                             <bootstrapmenuloginform j:view="menu"
                                           jcr:mixinTypes="jmix:renderable"
-                                          jcr:primaryType="jnt:bootstrapMenuLoginForm"
+                                          jcr:primaryType="jnt:bootstrap3MenuLoginForm"
                                           position="right"/>
-                            <bootstrapmenusimplesearchform jcr:primaryType="jnt:bootstrapMenuSimpleSearchForm"
+                            <bootstrapmenusimplesearchform jcr:primaryType="jnt:bootstrap3MenuSimpleSearchForm"
                                                  position="right"
                                                  result="/modules/sample-bootstrap-templates/search-results"/>
                         </bootstrap-header>
@@ -225,8 +247,8 @@
                        j:priority="150"
                        jcr:primaryType="jnt:contentTemplate">
                             <pagecontent jcr:primaryType="jnt:contentList">
-                                <pagecontent jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
-                                  jcr:primaryType="jnt:bootstrapFullComponent"
+                                <pagecontent jcr:mixinTypes="jmix:bootstrap3FullComponentRowPredefined"
+                                  jcr:primaryType="jnt:bootstrap3FullComponent"
                                   layout="3_9"
                                   rowType="predefined">
                                     <pagecontent-side1 jcr:primaryType="jnt:contentList">
@@ -245,7 +267,7 @@
                                                  displayLinkOnCurrentPage="false"
                                                  displayOnFirstLevel="false"
                                                  divider="/"
-                                                 jcr:primaryType="jnt:bootstrapBreadcrumb"/>
+                                                 jcr:primaryType="jnt:bootstrap3Breadcrumb"/>
                                         <pagecontent jcr:primaryType="jnt:area">
                                             <pagecontent jcr:primaryType="jnt:contentList">
                                                 <main-resource-display j:mainResourceView="detail" jcr:primaryType="jnt:mainResourceDisplay"/>

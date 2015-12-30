@@ -17,7 +17,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="bootstrapComponents.css"/>
+<template:addResources type="css" resources="bootstrap3Components.css"/>
 <c:if test="${!empty jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}">
     <c:url value='${url.base}${jcr:getParentOfType(renderContext.mainResource.node, "jnt:page").path}.html' var="action"/>
 </c:if>
@@ -39,7 +39,7 @@
 </c:if>
 
 <a class="btn btn-primary" href="${action}" title="<fmt:message key="bootstrapComponents.events.back"/>">
-    <i class="glyphicon-chevron-left glyphicon-white"></i> <fmt:message key="bootstrapComponents.events.back"/> </a>
+    <i class="glyphicon glyphicon-chevron-left glyphicon-white"></i> <fmt:message key="bootstrapComponents.events.back"/> </a>
 
 <article>
     <div class="media-date media-date-big media-date-big-nomarginright "><span class="month">${startDateMonth}</span><span
@@ -56,11 +56,11 @@
         <h1>${title.string}</h1>
         <p class="media-info"><span class="label label-info"><i class="glyphicon-star glyphicon-white"></i>&nbsp;<fmt:message key='jnt_event.eventsType.${currentNode.properties.eventsType.string}'/></span>
         <span class="label label-info"><i
-                class="glyphicon-map-marker glyphicon-white"></i>&nbsp;${currentNode.properties.location.string}</span>
+                class="glyphicon glyphicon-map-marker glyphicon-white"></i>&nbsp;${currentNode.properties.location.string}</span>
             <jcr:nodeProperty node="${currentNode}" name="j:defaultCategory" var="cat"/>
         <p class="media-info"><c:forEach items="${cat}" var="category" varStatus="status">
             <c:if test="${not status.first}">,&nbsp;</c:if>
-            <i class="glyphicon-tag"></i>&nbsp;<span class="text-info">${category.node.displayableName}</span>
+            <i class="glyphicon glyphicon-tag"></i>&nbsp;<span class="text-info">${category.node.displayableName}</span>
         </c:forEach> </p>
     </div>
     <div class="media-text-big">

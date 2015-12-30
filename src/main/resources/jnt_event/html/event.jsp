@@ -17,7 +17,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="bootstrapComponents.css"/>
+<template:addResources type="css" resources="bootstrap3Components.css"/>
 <c:if test="${!empty jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}">
     <c:url value='${url.base}${jcr:getParentOfType(renderContext.mainResource.node, "jnt:page").path}.html' var="action"/>
 </c:if>
@@ -51,13 +51,13 @@
 
         <h2 class="media-heading"><a href="${linkUrl}">${title.string}</a></h2>
         <p class="media-info">
-            <span class="label label-info"><i class="glyphicon-star glyphicon-white"></i>&nbsp;<fmt:message key='jnt_event.eventsType.${currentNode.properties.eventsType.string}'/></span>
+            <span class="label label-info"><i class="glyphicon glyphicon-star glyphicon-white"></i>&nbsp;<fmt:message key='jnt_event.eventsType.${currentNode.properties.eventsType.string}'/></span>
     <span class="label label-info"><i
-            class="glyphicon-map-marker glyphicon-white"></i>${currentNode.properties.location.string}</span></p>
+            class="glyphicon glyphicon-map-marker glyphicon-white"></i>${currentNode.properties.location.string}</span></p>
         <jcr:nodeProperty node="${currentNode}" name="j:defaultCategory" var="cat"/>
         <p class="media-info"><c:forEach items="${cat}" var="category" varStatus="status">
             <c:if test="${not status.first}">,&nbsp;</c:if>
-            <i class="glyphicon-tag"></i> <span class="text-info">${category.node.displayableName}</span>
+            <i class="glyphicon glyphicon-tag"></i> <span class="text-info">${category.node.displayableName}</span>
         </c:forEach> </p>
         <p>${functions:abbreviate(functions:removeHtmlTags(body.string),400,450,'...')}</p>
     </div>

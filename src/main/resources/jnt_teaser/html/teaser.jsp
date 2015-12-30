@@ -7,7 +7,7 @@
 <%--@elvariable id="currentNode" type="org.jahia.services.content.JCRNodeWrapper"--%>
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="bootstrapComponents.css"/>
+<template:addResources type="css" resources="bootstrap3Components.css"/>
 
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
 <fmt:message key="bootstrapComponents.teaser.readMore" var="linkTitle"/>

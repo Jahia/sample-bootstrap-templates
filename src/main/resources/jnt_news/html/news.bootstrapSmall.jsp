@@ -17,7 +17,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="bootstrapComponents.css"/>
+<template:addResources type="css" resources="bootstrap3Components.css"/>
 
 <jcr:nodeProperty node="${currentNode}" name="jcr:title" var="newsTitle"/>
 <c:set var="newsTitleEscaped" value="${not empty newsTitle ? fn:escapeXml(newsTitle.string) : ''}"/>
@@ -31,7 +31,7 @@
         <h3 class="media-heading-small"><a href="${linkUrl}">${newsTitle.string}</a></h3>
         <fmt:message key="bootstrapComponents.news.datePattern" var="datePattern"/>
         <p class="media-info">
-            <span class="label label-media-info"><i class="glyphicon-calendar glyphicon-white"></i> <fmt:formatDate value="${newsDate.time}" pattern="${datePattern}"/></span>
+            <span class="label label-media-info"><i class="glyphicon glyphicon-calendar glyphicon-white"></i> <fmt:formatDate value="${newsDate.time}" pattern="${datePattern}"/></span>
         </p>
     </div>
 </article>

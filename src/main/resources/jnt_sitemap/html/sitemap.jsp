@@ -14,13 +14,13 @@
 
 <c:forEach var="level1Page" items="${jcr:getChildrenOfType(base, 'jmix:sitemap')}" varStatus="level1Status">
     <c:if test="${level1Status.first}"><ul class="sitemap"></c:if>
-    <li><i class="glyphicon-chevron-right"></i> <a href="${level1Page.url}" title="${level1Page.displayableName}"><strong>${level1Page.displayableName}</strong></a>
+    <li><i class="glyphicon glyphicon-chevron-right"></i> <a href="${level1Page.url}" title="${level1Page.displayableName}"><strong>${level1Page.displayableName}</strong></a>
         <c:forEach var="level2Page" items="${jcr:getChildrenOfType(level1Page, 'jmix:sitemap')}" varStatus="level2Status">
             <c:if test="${level2Status.first}"><ul></c:if>
-            <li><i class="glyphicon-file"></i><a href="${level2Page.url}" title="${level2Page.displayableName}">${level2Page.displayableName}</a>
+            <li><i class="glyphicon glyphicon-file"></i><a href="${level2Page.url}" title="${level2Page.displayableName}">${level2Page.displayableName}</a>
                 <c:forEach var="level3Page" items="${jcr:getChildrenOfType(level2Page, 'jmix:sitemap')}" varStatus="level3Status">
                     <c:if test="${level3Status.first}"><ul></c:if>
-                    <li><i class=" glyphicon-play-circle"></i> <a href="${level3Page.url}" title="${level3Page.displayableName}">${level3Page.displayableName}</a></li>
+                    <li><i class="glyphicon glyphicon-play-circle"></i> <a href="${level3Page.url}" title="${level3Page.displayableName}">${level3Page.displayableName}</a></li>
                     <c:if test="${level3Status.last}"></ul></c:if>
                 </c:forEach>
             </li>

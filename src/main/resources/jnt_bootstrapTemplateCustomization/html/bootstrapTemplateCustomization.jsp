@@ -36,7 +36,7 @@
 <div class="box-1">
 <form id="updateSiteForm" action="<c:url value='${url.base}${renderContext.mainResource.node.resolveSite.path}'/>" method="post">
     <input type="hidden" name="jcrMethodToCall" value="put"/>
-    <input type="hidden" name="jcr:mixinTypes" value="jmix:bootstrapTemplateCustomization"/>
+    <input type="hidden" name="jcr:mixinTypes" value="jmix:bootstrap3TemplateCustomization"/>
 
     <label for="footerLinks" class="checkbox">
         <select id="footerLinks" name="footerLinks" onchange="updateSiteFooterLinks()">

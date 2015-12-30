@@ -16,7 +16,7 @@
 <%--@elvariable id="currentAliasUser" type="org.jahia.services.usermanager.JahiaUser"--%>
 
 <bootstrap:addCSS/>
-<template:addResources type="javascript" resources="alert.js"/>
+<template:addResources type="javascript" resources="bootstrap3-alert.js"/>
 <c:if test="${!renderContext.loggedIn || currentAliasUser.username eq 'guest'}">
     <script type="text/javascript">
         document.onkeydown = function (e) {

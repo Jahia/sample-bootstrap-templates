@@ -17,7 +17,7 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 <bootstrap:addCSS/>
-<template:addResources type="css" resources="bootstrapComponents.css"/>
+<template:addResources type="css" resources="bootstrap3Components.css"/>
 <c:if test="${!empty jcr:getParentOfType(renderContext.mainResource.node, 'jnt:page')}">
     <c:url value='${url.base}${jcr:getParentOfType(renderContext.mainResource.node, "jnt:page").path}.html' var="action"/>
 </c:if>
@@ -37,8 +37,8 @@
         <h3 class="media-heading"><a href="${linkUrl}">${title.string}</a></h3>
         <fmt:message key="bootstrapComponents.event.datePattern" var="datePattern"/>
         <p class="media-info">
-            <span class="label label-media-info"><i class="glyphicon-calendar glyphicon-white"></i>&nbsp;<fmt:formatDate value="${currentNode.properties.startDate.time}" pattern="${datePattern}"/></span>
-            <span class="label label-info"><i class="glyphicon-star glyphicon-white"></i>&nbsp;<fmt:message key='jnt_event.eventsType.${currentNode.properties.eventsType.string}'/></span>
+            <span class="label label-media-info"><i class="glyphicon glyphicon-calendar glyphicon-white"></i>&nbsp;<fmt:formatDate value="${currentNode.properties.startDate.time}" pattern="${datePattern}"/></span>
+            <span class="label label-info"><i class="glyphicon glyphicon-star glyphicon-white"></i>&nbsp;<fmt:message key='jnt_event.eventsType.${currentNode.properties.eventsType.string}'/></span>
         </p>
     </div>
 </article>

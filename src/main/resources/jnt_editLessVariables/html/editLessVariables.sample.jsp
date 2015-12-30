@@ -32,7 +32,7 @@
     <jcr:nodeProperty node="${bootstrapVariables}" name="headerTopBorder" var="headerTopBorder" />
 </c:if>
 <c:choose>
-    <c:when test="${empty bodyBackground}"><c:set var="bodyBackground" value="@white" /></c:when>
+    <c:when test="${empty bodyBackground}"><c:set var="bodyBackground" value="#fff" /></c:when>
     <c:otherwise><c:set var="bodyBackground" value="${bodyBackground.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
@@ -48,7 +48,7 @@
     <c:otherwise><c:set var="baseFontSize" value="${baseFontSize.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
-    <c:when test="${empty baseFontFamily}"><c:set var="baseFontFamily" value="@sansFontFamily" /></c:when>
+    <c:when test="${empty baseFontFamily}"><c:set var="baseFontFamily" value="@font-family-sans-serif" /></c:when>
     <c:otherwise><c:set var="baseFontFamily" value="${baseFontFamily.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
@@ -56,7 +56,7 @@
     <c:otherwise><c:set var="baseLineHeight" value="${baseLineHeight.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
-    <c:when test="${empty headingsFontFamily}"><c:set var="headingsFontFamily" value="'Scada',@sansFontFamily" /></c:when>
+    <c:when test="${empty headingsFontFamily}"><c:set var="headingsFontFamily" value="'Scada',@font-family-sans-serif" /></c:when>
     <c:otherwise><c:set var="headingsFontFamily" value="${headingsFontFamily.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
@@ -64,7 +64,7 @@
     <c:otherwise><c:set var="headingsFontWeight" value="${headingsFontWeight.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
-    <c:when test="${empty headingsColor}"><c:set var="headingsColor" value="@black" /></c:when>
+    <c:when test="${empty headingsColor}"><c:set var="headingsColor" value="#000" /></c:when>
     <c:otherwise><c:set var="headingsColor" value="${headingsColor.string}" /></c:otherwise>
 </c:choose>
 <c:choose>
@@ -103,9 +103,9 @@
         <div class="col-md-3">baseFontFamily</div>
         <div class="col-md-9">
             <select name="baseFontFamily">
-                <option value="@sansFontFamily" <c:if test="${baseFontFamily eq '@sansFontFamily'}">selected="selected" </c:if>>Sans-Serif Fonts</option>
-                <option value="@serifFontFamily" <c:if test="${baseFontFamily eq '@serifFontFamily'}">selected="selected" </c:if>>Serif Fonts</option>
-                <option value="@monoFontFamily" <c:if test="${baseFontFamily eq '@monoFontFamily'}">selected="selected" </c:if>>Monospace Fonts</option>
+                <option value="@font-family-sans-serif" <c:if test="${baseFontFamily eq '@font-family-sans-serif'}">selected="selected" </c:if>>Sans-Serif Fonts</option>
+                <option value="@font-family-serif" <c:if test="${baseFontFamily eq '@font-family-serif'}">selected="selected" </c:if>>Serif Fonts</option>
+                <option value="@font-family-monospace" <c:if test="${baseFontFamily eq '@font-family-monospace'}">selected="selected" </c:if>>Monospace Fonts</option>
             </select>
         </div>
     </div></label>
@@ -117,10 +117,10 @@
         <div class="col-md-3">headingsFontFamily</div>
         <div class="col-md-9">
             <select name="headingsFontFamily">
-                <option value="'Scada',@sansFontFamily" <c:if test="${headingsFontFamily eq '\\\'Scada\\\',@sansFontFamily'}">selected="selected" </c:if>>Scada + Sans-Serif Fonts</option>
-                <option value="@sansFontFamily" <c:if test="${headingsFontFamily eq '@sansFontFamily'}">selected="selected" </c:if>>Sans-Serif Fonts</option>
-                <option value="@serifFontFamily" <c:if test="${headingsFontFamily eq '@serifFontFamily'}">selected="selected" </c:if>>Serif Fonts</option>
-                <option value="@monoFontFamily" <c:if test="${headingsFontFamily eq '@monoFontFamily'}">selected="selected" </c:if>>Monospace Fonts</option>
+                <option value="'Scada',@font-family-sans-serif" <c:if test="${headingsFontFamily eq '\\\'Scada\\\',@font-family-sans-serif'}">selected="selected" </c:if>>Scada + Sans-Serif Fonts</option>
+                <option value="@font-family-sans-serif" <c:if test="${headingsFontFamily eq '@font-family-sans-serif'}">selected="selected" </c:if>>Sans-Serif Fonts</option>
+                <option value="@font-family-serif" <c:if test="${headingsFontFamily eq '@font-family-serif'}">selected="selected" </c:if>>Serif Fonts</option>
+                <option value="@font-family-monospace" <c:if test="${headingsFontFamily eq '@font-family-monospace'}">selected="selected" </c:if>>Monospace Fonts</option>
             </select>
         </div>
     </div></label>
