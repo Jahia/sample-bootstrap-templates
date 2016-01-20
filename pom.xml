@@ -52,7 +52,7 @@
     <version>7.1.0.0</version>
   </parent>
   <artifactId>sample-bootstrap-templates</artifactId>
-  <version>3.0.2</version>
+  <version>3.0.3-SNAPSHOT</version>
   <packaging>bundle</packaging>
   <name>Sample Bootstrap Templates</name>
   <description>Template Set using Bootstrap.</description>
@@ -60,7 +60,7 @@
     <connection>scm:git:git@github.com:Jahia/sample-bootstrap-templates.git</connection>
     <developerConnection>scm:git:git@github.com:Jahia/sample-bootstrap-templates.git</developerConnection>
     <url>scm:git:git@github.com:Jahia/sample-bootstrap-templates</url>
-    <tag>3_0_2</tag>
+    <tag>HEAD</tag>
   </scm>
     <properties>
         <jahia-module-type>templatesSet</jahia-module-type>
