@@ -46,3 +46,4 @@
  - grid (string, choicelist[resourceBundle]) = '6-6' autocreated < '6-6', '8-4'
  + * (jnt:sampleSingleImage)
 
+[jnt:footerLinks] > jnt:content, jmix:structuredContent, jmix:editorialContent

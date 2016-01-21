@@ -8,7 +8,7 @@
                              j:title="Sample Bootstrap Templates"
                                   jcr:mixinTypes="jmix:hasExternalProviderExtension"
                              jcr:primaryType="jnt:module">
-                
+
                 <portlets jcr:primaryType="jnt:portletFolder"/>
                 <files jcr:primaryType="jnt:folder">
                     <bootstrap jcr:primaryType="jnt:folder">
@@ -67,6 +67,16 @@
                     </files>
                     <contents jcr:primaryType="jnt:contentFolder"/>
                     <base j:view="bootstrap" jcr:primaryType="jnt:template">
+                        <footerlinks jcr:primaryType="jnt:contentList">
+                            <footerlinks-container jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
+                                         jcr:primaryType="jnt:bootstrapFullComponent"
+                                         layout="12"
+                                         rowType="predefined">
+                                <footerlinks-container jcr:primaryType="jnt:contentList">
+                                    <footerlinks jcr:primaryType="jnt:footerLinks"/>
+                                </footerlinks-container>
+                            </footerlinks-container>
+                        </footerlinks>
                         <footer jcr:primaryType="jnt:contentList">
                             <footer-container jcr:mixinTypes="jmix:bootstrapFullComponentRowPredefined"
                                     jcr:primaryType="jnt:bootstrapFullComponent"
