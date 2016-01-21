@@ -37,7 +37,6 @@
 
     <%-- font-awesome icons --%>
     <template:addResources type="css" resources="font-awesome.css"/>
-    <template:addCacheDependency path="${renderContext.site.path}"/>
 
     <%-- Fav and touch icons --%>
     <link rel="shortcut icon" href="<c:url value='${url.currentModule}/img/icon/favicon.ico'/>" type="image/x-icon">
