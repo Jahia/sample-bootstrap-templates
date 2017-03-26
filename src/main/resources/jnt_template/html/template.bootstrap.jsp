@@ -36,7 +36,7 @@
     <template:addResources type="javascript" resources="html5shiv.js" condition="if lt IE 9"/>
 
     <%-- font-awesome icons --%>
-    <template:addResources type="css" resources="font-awesome.css"/>
+    <template:addResources type="css" resources="font-awesome.min.css"/>
 
     <%-- Fav and touch icons --%>
     <link rel="shortcut icon" href="<c:url value='${url.currentModule}/img/icon/favicon.ico'/>" type="image/x-icon">
