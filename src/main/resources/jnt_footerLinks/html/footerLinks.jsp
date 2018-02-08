@@ -14,6 +14,8 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
+<template:addResources type="javascript" resources="fa-v4-shims.min.js"/>
+<template:addResources type="javascript" resources="fontawesome-all.min.js"/>
 <template:addCacheDependency node="${renderContext.site}"/>
 <jcr:nodeProperty node="${renderContext.site}" name="displayFooterLinks" var="displayLinks"/>
         <c:set var="displayFooterLinks" value="false"/>

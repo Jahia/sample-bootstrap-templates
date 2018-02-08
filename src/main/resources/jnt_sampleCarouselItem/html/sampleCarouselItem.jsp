@@ -11,6 +11,8 @@
 <%--@elvariable id="renderContext" type="org.jahia.services.render.RenderContext"--%>
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
+<template:addResources type="javascript" resources="fa-v4-shims.min.js"/>
+<template:addResources type="javascript" resources="fontawesome-all.min.js"/>
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>
 <c:set var="lead" value="${currentNode.properties['lead'].string}"/>
 <c:set var="title" value="${currentNode.properties['jcr:title'].string}"/>

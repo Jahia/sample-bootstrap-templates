@@ -36,7 +36,8 @@
     <template:addResources type="javascript" resources="html5shiv.js" condition="if lt IE 9"/>
 
     <%-- font-awesome icons --%>
-    <template:addResources type="css" resources="font-awesome.css"/>
+    <template:addResources type="javascript" resources="fa-v4-shims.min.js"/>
+    <template:addResources type="javascript" resources="fontawesome-all.min.js"/>
 
     <%-- Fav and touch icons --%>
     <link rel="shortcut icon" href="<c:url value='${url.currentModule}/img/icon/favicon.ico'/>" type="image/x-icon">
@@ -57,16 +58,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <%-- Google fonts--%>
-    <c:set var="s" value="${renderContext.request.scheme=='https'?'s':''}"/>
-    <link href='http${s}://fonts.googleapis.com/css?family=Scada' rel='stylesheet' type='text/css'>
-
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900|Scada&amp;subset=latin-ext" rel="stylesheet">
+    <template:addResources type="css" resources="jahia-old-responsive.css,jahia-old.css"/>
 
 </head>
 
 <body>
-
-<%-- Les styles old--%>
-<template:addResources type="css" resources="jahia-old-responsive.css,jahia-old.css"/>
 
 <template:addResources type="javascript" resources="jquery.min.js" />
 <bootstrap:addThemeJS/>
@@ -74,42 +71,40 @@
 
 <div class="wrapper bodywrapper">
 
-    <header>
-
-        <div id="header-top" class="header-top-content">
-            <div class="container-fluid">
-                <div class="row-fluid">
-                    <div class="span12">
-                        <template:area path="bootstrap-header"/>
-                    </div>
+<header>
+    <div id="header-top" class="header-top-content">
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span12">
+                    <template:area path="bootstrap-header"/>
                 </div>
             </div>
         </div>
+    </div>
 
-        <nav id="nav">
-            <template:area path="bootstrap-nav"/>
-        </nav>
+    <nav id="nav">
+        <template:area path="bootstrap-nav"/>
+    </nav>
 
-    </header>
+</header>
 
-    <section id="content" class="content-section">
-        <template:area path="pagecontent"/>
+<section id="content" class="content-section">
+    <template:area path="pagecontent"/>
 
+</section>
+
+<section id="links" class="links-section">
+    <template:area path="footerlinks"/>
+</section>
+
+<footer>
+    <section id="copyright" class="copyright">
+            <template:area path="footer"/>
     </section>
+</footer>
 
-    <section id="links" class="links-section">
-        <template:area path="footerlinks"/>
-    </section>
-
-    <footer>
-        <section id="copyright" class="copyright">
-                <template:area path="footer"/>
-        </section>
-    </footer>
 
 </div>
-
-
 <c:if test="${renderContext.editMode}">
     <template:addResources type="css" resources="edit.css" />
 </c:if>

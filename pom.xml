@@ -64,7 +64,7 @@
   </scm>
     <properties>
         <jahia-module-type>templatesSet</jahia-module-type>
-        <jahia-depends>bootstrap,bootstrap-components,contact,default,event,facets,search,teasers</jahia-depends>
+        <jahia-depends>bootstrap,bootstrap-components,contact,default,event,facets,search,teasers,font-awesome</jahia-depends>
     </properties>
   <dependencies>
     <dependency>
