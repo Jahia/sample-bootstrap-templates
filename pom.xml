@@ -49,7 +49,7 @@
   <parent>
     <groupId>org.jahia.modules</groupId>
     <artifactId>jahia-modules</artifactId>
-    <version>7.5.0.0-SNAPSHOT</version>
+    <version>8.0.0.0-SNAPSHOT</version>
   </parent>
   <artifactId>sample-bootstrap-templates</artifactId>
   <version>4.0.0-SNAPSHOT</version>
@@ -65,7 +65,7 @@
     <properties>
         <jahia-module-type>templatesSet</jahia-module-type>
         <jahia-depends>bootstrap,bootstrap-components,contact,default,event,facets,search,teasers,font-awesome</jahia-depends>
-        <jahia-module-signature>MC4CFQCWF504jsIutg7UZVndWOin4SeiAwIVAIePrCG5C3esbBgbRsY3saxgzGbG</jahia-module-signature>
+        <jahia-module-signature>MC4CFQCWF504jsIutg8.0.0.0-SNAPSHOTOin4SeiAwIVAIePrCG5C3esbBgbRsY3saxgzGbG</jahia-module-signature>
     </properties>
   <dependencies>
     <dependency>
